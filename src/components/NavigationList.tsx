@@ -29,10 +29,10 @@ export default function NavigationList() {
           />
         </Link>
         <div
-          className={`absolute z-10 left-0 top-full mt-3 w-56 p-4 bg-white shadow-lg transition-opacity transform ${
+          className={`absolute z-10 left-0 top-full mt-3 w-56 p-4 bg-white shadow-lg duration-500 transition-transform transform ${
             servicesDropdownOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
+              ? "opacity-100 -translate-y-0 pointer-events-auto"
+              : "opacity-0 translate-y-28 pointer-events-none"
           }`}
         >
           <div className="flex space-x-4">
@@ -112,10 +112,10 @@ export default function NavigationList() {
           />
         </Link>
         <div
-          className={`absolute z-10 left-0 top-full mt-3 w-56 p-4 bg-white shadow-lg rounded transition-opacity transform ${
+          className={`absolute z-10 left-0 top-full mt-3 w-56 p-4 bg-white shadow-lg duration-500 transition-transform transform ${
             taxDropdownOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
+              ? "opacity-100 -translate-y-0 pointer-events-auto"
+              : "opacity-0 translate-y-28 pointer-events-none"
           }`}
         >
           <div className="flex space-x-4">
@@ -173,10 +173,10 @@ export default function NavigationList() {
           />
         </Link>
         <div
-          className={`absolute z-10 left-0 top-full mt-3 w-56 p-4 bg-white shadow-lg rounded transition-opacity transform ${
+          className={`absolute z-10 left-0 top-full mt-3 w-56 p-4 bg-white shadow-lg duration-500 transition-transform transform ${
             productsDropdownOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
+              ? "opacity-100 -translate-y-0 pointer-events-auto"
+              : "opacity-0 translate-y-28 pointer-events-none"
           }`}
         >
           <div className="flex space-x-4">
@@ -264,10 +264,10 @@ export default function NavigationList() {
           />
         </Link>
         <div
-          className={`absolute z-10 left-0 top-full mt-3 w-36 p-4 bg-white shadow-lg rounded transition-opacity transform ${
+          className={`absolute z-10 left-0 top-full mt-3 w-36 p-4 bg-white shadow-lg duration-500 transition-transform transform ${
             aboutDropdownOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
+              ? "opacity-100 -translate-y-0 pointer-events-auto"
+              : "opacity-0 translate-y-28 pointer-events-none"
           }`}
         >
           <div className="flex space-x-4">
@@ -333,10 +333,10 @@ export default function NavigationList() {
           />
         </Link>
         <div
-          className={`absolute z-10 left-0 top-full mt-3 w-44 p-4 bg-white shadow-lg rounded transition-opacity transform ${
+          className={`absolute z-10 left-0 top-full mt-3 w-44 p-4 bg-white shadow-lg duration-500 transition-transform transform ${
             resourcesDropdownOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
+              ? "opacity-100 -translate-y-0 pointer-events-auto"
+              : "opacity-0 translate-y-28 pointer-events-none"
           }`}
         >
           <div className="flex space-x-4">
