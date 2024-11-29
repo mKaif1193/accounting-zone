@@ -8,6 +8,15 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        bounce: "bounce 2s infinite ease-in-out",
+      },
+      keyframes: {
+        bounce: {
+          "0%, 100%": { transform: "scale(0)" },
+          "50%": { transform: "scale(1)" },
+        },
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

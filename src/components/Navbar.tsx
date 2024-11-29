@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
 
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
@@ -432,9 +434,10 @@ export default function Navbar() {
         </li>
         <li className="mr-4 lg:mr-10">
           <button
-            className="font-semibold text-white hover:text-black hover:bg-yellow-500 bg-black px-3 py-1.5 rounded-3xl duration-500 hover:scale-105 transition-all"
+            onClick={() => router.push("contact")}
+            className="font-semibold hover:text-white text-black bg-[#fbc710] hover:bg-black px-4 py-2 rounded-3xl duration-500 hover:scale-105 transition-all"
           >
-            <Link href="/contact">Contact Us</Link>
+            Contact Us
           </button>
         </li>
       </ul>
