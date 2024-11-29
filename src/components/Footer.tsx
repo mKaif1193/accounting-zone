@@ -5,6 +5,7 @@ import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaPhone, FaXTwitter } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
+import { Button } from "./ui/button";
 
 export default function Footer() {
   const router = useRouter();
@@ -148,12 +149,12 @@ export default function Footer() {
                 <FaPhone className="size-4 sm:size-5" /> +1-760-686-0609
               </li>
               <li>
-                <button
+                <Button
                   onClick={() => router.push("get-a-consultation")}
-                  className="font-semibold hover:text-white text-black bg-[#fbc710] hover:bg-black rounded-3xl sm:px-4 px-2.5 py-1.5 sm:py-2 duration-500 hover:scale-105 transition-all"
+                  variant="acc"
                 >
                   Schedule Your Consultation
-                </button>
+                </Button>
               </li>
             </ul>
           </div>

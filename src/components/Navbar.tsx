@@ -4,6 +4,7 @@ import Link from "next/link";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { useRouter } from "next/navigation";
+import { Button } from "./ui/button";
 
 export default function Navbar() {
   const router = useRouter();
@@ -433,12 +434,9 @@ export default function Navbar() {
           </div>
         </li>
         <li className="mr-4 lg:mr-10">
-          <button
-            onClick={() => router.push("contact")}
-            className="font-semibold hover:text-white text-black bg-[#fbc710] hover:bg-black px-4 py-2 rounded-3xl duration-500 hover:scale-105 transition-all"
-          >
+          <Button onClick={() => router.push("contact")} variant="acc">
             Contact Us
-          </button>
+          </Button>
         </li>
       </ul>
 
