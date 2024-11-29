@@ -90,12 +90,11 @@ export default function Footer() {
                 <FaPhone /> +1-760-686-0609
               </li>
               <li>
-                <Link
-                  href="/get-a-consultation"
-                  className="hover:text-black bg-black text-white hover:bg-yellow-500 px-4 py-2 rounded-3xl transition-colors duration-300"
-                >
-                  Schedule Your Consultation
-                </Link>
+                <button className="font-semibold text-white hover:text-black hover:bg-yellow-500 bg-black rounded-3xl px-4 py-2 duration-500 hover:scale-105 transition-all">
+                  <Link href="/get-a-consultation">
+                    Schedule Your Consultation
+                  </Link>
+                </button>
               </li>
             </ul>
           </div>

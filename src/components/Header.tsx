@@ -1,44 +1,24 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import MenuToggle from "./MenuToggle";
-import NavigationList from "./NavigationList";
+import Navbar from "./Navbar";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-    console.log("Button clicked");
-  };
-
   return (
     <header className="relative w-full z-20 bg-white">
-      <div className="flex fixed top-0 left-0 bg-transparent items-center justify-evenly w-full mx-auto px-4 py-4 md:py-6 lg:py-10">
-        <div className="flex-shrink-0 mr-5">
+      <div className="flex fixed top-0 left-0 bg-transparent items-center justify-evenly w-full mx-auto py-4 px-1 sm:p-4 md:py-6 lg:py-10">
+        <div className="sm:mr-5">
           <Link href="/">
             <Image
               src="/logo/logo.png"
               alt="Accountings Zone Logo"
-              width={250}
-              height={250}
+              width={100}
+              height={100}
+              className="w-[150px] sm:w-56 h-auto"
             />
           </Link>
         </div>
-
-        <nav className="relative bg-white p-4">
-          <MenuToggle isOpen={isOpen} onClick={handleClick} />
-          <NavigationList />
-        </nav>
-
-        <button
-          className="lg:hidden flex flex-col space-y-1.5 focus:outline-none"
-          aria-label="Toggle Menu"
-        >
-          <span className="block w-6 h-0.5 bg-black"></span>
-          <span className="block w-6 h-0.5 bg-black"></span>
-        </button>
+        <Navbar />
       </div>
     </header>
   );
