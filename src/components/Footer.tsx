@@ -2,14 +2,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedin,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 import { FaPhone, FaXTwitter } from "react-icons/fa6";
-import { useRouter } from "next/navigation";
-import { Button } from "./ui/button";
+import { MdEmail } from "react-icons/md";
 
 export default function Footer() {
-  const router = useRouter();
-
   return (
     <footer className="bg-white">
       <div className="relative mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 md:py-16 lg:py-20 xl:py-[150px] before:absolute before:left-[15px] before:top-0 before:w-[calc(100%-30px)] before:border-t before:border-gray-400">
@@ -145,16 +147,16 @@ export default function Footer() {
               Contact Us
             </h3>
             <ul className="space-y-3 sm:space-y-6 text-xs sm:text-sm">
-              <li className="flex gap-2">
-                <FaPhone className="size-4 sm:size-5" /> +1-760-686-0609
+              <li className="flex items-center gap-2">
+                <FaPhone className="size-4" /> +1-760-686-0609
               </li>
-              <li>
-                <Button
-                  onClick={() => router.push("get-a-consultation")}
-                  variant="acc"
-                >
-                  Schedule Your Consultation
-                </Button>
+              <li className="flex items-center gap-2">
+                <MdEmail className="size-4 sm:size-5" />{" "}
+                info@accountingszone.com
+              </li>
+              <li className="flex items-center gap-2">
+                <FaMapMarkerAlt className="size-4 sm:size-5" /> 124 S Gemstone
+                Street, Ridgecrest California 93555
               </li>
             </ul>
           </div>

@@ -3,17 +3,17 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { Button } from "./ui/button";
 
 export default function Navbar() {
   const router = useRouter();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const [taxDropdownOpen, setTaxDropdownOpen] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
-  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
 
   const handleDropdownClick = (dropdownName: string) => {
@@ -22,28 +22,18 @@ export default function Navbar() {
         setServicesDropdownOpen(!servicesDropdownOpen);
         setTaxDropdownOpen(false);
         setProductsDropdownOpen(false);
-        setAboutDropdownOpen(false);
         setResourcesDropdownOpen(false);
         break;
       case "tax":
         setTaxDropdownOpen(!taxDropdownOpen);
         setServicesDropdownOpen(false);
         setProductsDropdownOpen(false);
-        setAboutDropdownOpen(false);
         setResourcesDropdownOpen(false);
         break;
       case "products":
         setProductsDropdownOpen(!productsDropdownOpen);
         setServicesDropdownOpen(false);
         setTaxDropdownOpen(false);
-        setAboutDropdownOpen(false);
-        setResourcesDropdownOpen(false);
-        break;
-      case "about":
-        setAboutDropdownOpen(!aboutDropdownOpen);
-        setServicesDropdownOpen(false);
-        setTaxDropdownOpen(false);
-        setProductsDropdownOpen(false);
         setResourcesDropdownOpen(false);
         break;
       case "resources":
@@ -51,7 +41,6 @@ export default function Navbar() {
         setServicesDropdownOpen(false);
         setTaxDropdownOpen(false);
         setProductsDropdownOpen(false);
-        setAboutDropdownOpen(false);
         break;
     }
   };
@@ -77,9 +66,11 @@ export default function Navbar() {
         >
           <Link
             href="/services"
-            className="flex justify-center items-center gap-1 font-semibold text-black hover:text-yellow-400 transition-colors"
+            className="flex justify-center items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors"
           >
-            <span>Services</span>
+            <span className={pathname === "/services" ? "text-[#fbc710]" : ""}>
+              Services
+            </span>
             <IoMdArrowDropdown
               className={`${
                 servicesDropdownOpen ? "rotate-180" : ""
@@ -98,7 +89,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Outsourced Controller
                   </Link>
@@ -106,7 +97,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Resolution
                   </Link>
@@ -114,7 +105,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     PFP Loan Forgiveness Assistance
                   </Link>
@@ -122,7 +113,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Bookkeeping
                   </Link>
@@ -130,7 +121,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Advisory Services
                   </Link>
@@ -138,7 +129,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Business Consulting Solutions
                   </Link>
@@ -146,7 +137,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Consulting For QuickBooks
                   </Link>
@@ -162,9 +153,15 @@ export default function Navbar() {
         >
           <Link
             href="/tax-planning"
-            className="flex justify-center items-center gap-1 font-semibold text-black hover:text-yellow-400 transition-colors"
+            className="flex justify-center items-center gap-1 font-semibold hover:text-[#fbc710] transition-colors"
           >
-            <span>Tax Planning</span>
+            <span
+              className={`${
+                pathname === "/tax-planning" ? "text-[#fbc710]" : "text-black"
+              }`}
+            >
+              Tax Planning
+            </span>
             <IoMdArrowDropdown
               className={`${taxDropdownOpen && "rotate-180"} duration-300`}
             />
@@ -181,7 +178,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     What is Tax Planning
                   </Link>
@@ -189,7 +186,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Planning Strategies
                   </Link>
@@ -197,7 +194,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Hiring Children Tax Strategy
                   </Link>
@@ -205,7 +202,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Bookkeeping
                   </Link>
@@ -221,9 +218,15 @@ export default function Navbar() {
         >
           <Link
             href="/products"
-            className="flex justify-center items-center gap-1 font-semibold text-black hover:text-yellow-400 transition-colors"
+            className="flex justify-center items-center gap-1 font-semibold hover:text-[#fbc710] transition-colors"
           >
-            <span>Products</span>
+            <span
+              className={`${
+                pathname === "/products" ? "text-[#fbc710]" : "text-black"
+              }`}
+            >
+              Products
+            </span>
             <IoMdArrowDropdown
               className={`${productsDropdownOpen && "rotate-180"} duration-300`}
             />
@@ -240,7 +243,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Planning
                   </Link>
@@ -248,7 +251,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Client Collaboration
                   </Link>
@@ -256,7 +259,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Federal Tax Planning
                   </Link>
@@ -264,7 +267,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     State & Local Planning
                   </Link>
@@ -272,7 +275,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Multi-Entity Tax Planning
                   </Link>
@@ -280,7 +283,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Plans
                   </Link>
@@ -288,7 +291,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Smart Questionnaires
                   </Link>
@@ -296,76 +299,9 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Client Requests
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
-        <li
-          className="relative group mr-4 lg:mr-10"
-          onMouseEnter={() => setAboutDropdownOpen(true)}
-          onMouseLeave={() => setAboutDropdownOpen(false)}
-        >
-          <Link
-            href="/about"
-            className="flex justify-center items-center gap-1 font-semibold text-black hover:text-yellow-400 transition-colors"
-          >
-            <span>About</span>
-            <IoMdArrowDropdown
-              className={`${aboutDropdownOpen && "rotate-180"} duration-300`}
-            />
-          </Link>
-          <div
-            className={`absolute z-10 left-0 top-full mt-3 w-36 p-4 bg-white shadow-lg duration-500 transition-transform transform ${
-              aboutDropdownOpen
-                ? "opacity-100 -translate-y-0 pointer-events-auto"
-                : "opacity-0 translate-y-28 pointer-events-none"
-            }`}
-          >
-            <div className="flex space-x-4">
-              <ul className="list-none space-y-4 divide-y-2">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
-                  >
-                    Testimonials
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
-                  >
-                    Awards
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
-                  >
-                    Referrals
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
-                  >
-                    Careers
                   </Link>
                 </li>
               </ul>
@@ -379,9 +315,15 @@ export default function Navbar() {
         >
           <Link
             href="/resources"
-            className="flex justify-center items-center gap-1 font-semibold text-black hover:text-yellow-400 transition-colors"
+            className="flex justify-center items-center gap-1 font-semibold hover:text-[#fbc710] transition-colors"
           >
-            <span>Resources</span>
+            <span
+              className={`${
+                pathname === "/resources" ? "text-[#fbc710]" : "text-black"
+              }`}
+            >
+              Resources
+            </span>
             <IoMdArrowDropdown
               className={`${
                 resourcesDropdownOpen && "rotate-180"
@@ -400,7 +342,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Blog
                   </Link>
@@ -408,7 +350,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Case Studies
                   </Link>
@@ -416,7 +358,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     State Tax Deadlines
                   </Link>
@@ -424,7 +366,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     FAQs
                   </Link>
@@ -432,6 +374,16 @@ export default function Navbar() {
               </ul>
             </div>
           </div>
+        </li>
+        <li className="mr-4 lg:mr-10">
+          <Link
+            href="/about"
+            className={`flex justify-center items-center gap-1 font-semibold  hover:text-[#fbc710] transition-colors ${
+              pathname === "/about" ? "text-[#fbc710]" : "text-black"
+            }`}
+          >
+            About Us
+          </Link>
         </li>
         <li className="mr-4 lg:mr-10">
           <Button onClick={() => router.push("contact")} variant="acc">
@@ -448,7 +400,7 @@ export default function Navbar() {
         }`}
       >
         <li className="group" onClick={() => handleDropdownClick("services")}>
-          <div className="flex justify-between px-4 items-center gap-1 hover:text-yellow-400 transition-colors font-semibold text-black">
+          <div className="flex justify-between px-4 items-center gap-1 hover:text-[#fbc710] transition-colors font-semibold text-black">
             <Link href="/services">Services</Link>
             <IoMdArrowDropdown
               className={`${servicesDropdownOpen && "rotate-180"} duration-300`}
@@ -467,7 +419,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Outsourced Controller
                   </Link>
@@ -475,7 +427,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Resolution
                   </Link>
@@ -483,7 +435,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     PFP Loan Forgiveness Assistance
                   </Link>
@@ -491,7 +443,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Bookkeeping
                   </Link>
@@ -499,7 +451,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Advisory Services
                   </Link>
@@ -507,7 +459,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Business Consulting Solutions
                   </Link>
@@ -515,7 +467,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Consulting For QuickBooks
                   </Link>
@@ -525,7 +477,7 @@ export default function Navbar() {
           </div>
         </li>
         <li className="group" onClick={() => handleDropdownClick("tax")}>
-          <div className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-yellow-400 transition-colors">
+          <div className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors">
             <Link href="/tax-planning">Tax Planning</Link>
             <IoMdArrowDropdown
               className={`${taxDropdownOpen && "rotate-180"} duration-300`}
@@ -544,7 +496,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     What is Tax Planning
                   </Link>
@@ -552,7 +504,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Planning Strategies
                   </Link>
@@ -560,7 +512,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Hiring Children Tax Strategy
                   </Link>
@@ -568,7 +520,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Bookkeeping
                   </Link>
@@ -578,7 +530,7 @@ export default function Navbar() {
           </div>
         </li>
         <li className="group" onClick={() => handleDropdownClick("products")}>
-          <div className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-yellow-400 transition-colors">
+          <div className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors">
             <Link href="/products">Products</Link>
             <IoMdArrowDropdown
               className={`${productsDropdownOpen && "rotate-180"} duration-300`}
@@ -596,7 +548,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Planning
                   </Link>
@@ -604,7 +556,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Client Collaboration
                   </Link>
@@ -612,7 +564,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Federal Tax Planning
                   </Link>
@@ -620,7 +572,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     State & Local Planning
                   </Link>
@@ -628,7 +580,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Multi-Entity Tax Planning
                   </Link>
@@ -636,7 +588,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Plans
                   </Link>
@@ -644,7 +596,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Smart Questionnaires
                   </Link>
@@ -652,7 +604,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Client Requests
                   </Link>
@@ -661,69 +613,8 @@ export default function Navbar() {
             </div>
           </div>
         </li>
-        <li className="group" onClick={() => handleDropdownClick("about")}>
-          <div className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-yellow-400 transition-colors">
-            <Link href="/about">About</Link>
-            <IoMdArrowDropdown
-              className={`${aboutDropdownOpen && "rotate-180"} duration-300`}
-            />
-          </div>
-
-          <div
-            className={`mt-1 w-full px-4 ${
-              aboutDropdownOpen
-                ? "block pointer-events-auto"
-                : "hidden pointer-events-none"
-            }`}
-          >
-            <div className="flex w-full px-6">
-              <ul className="list-none space-y-2 grid grid-cols-1 gap-x-2 md:grid-cols-3 sm:grid-cols-2 w-full text-sm">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
-                  >
-                    Testimonials
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
-                  >
-                    Awards
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
-                  >
-                    Referrals
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
-                  >
-                    Careers
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
         <li className="group" onClick={() => handleDropdownClick("resources")}>
-          <div className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-yellow-400 transition-colors">
+          <div className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors">
             <Link href="/resources">Resources</Link>
             <IoMdArrowDropdown
               className={`${
@@ -743,7 +634,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Blog
                   </Link>
@@ -751,7 +642,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Case Studies
                   </Link>
@@ -759,7 +650,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     State Tax Deadlines
                   </Link>
@@ -767,7 +658,7 @@ export default function Navbar() {
                 <li>
                   <Link
                     href="#"
-                    className="text-black hover:text-yellow-400 transition-colors"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     FAQs
                   </Link>
@@ -778,8 +669,16 @@ export default function Navbar() {
         </li>
         <li>
           <Link
+            href="/about"
+            className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors"
+          >
+            About Us
+          </Link>
+        </li>
+        <li>
+          <Link
             href="/contact"
-            className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-yellow-400 transition-colors"
+            className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors"
           >
             Contact Us
           </Link>

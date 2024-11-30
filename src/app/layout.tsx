@@ -4,12 +4,6 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 
-// const swanse = localFont({
-//   src: "./fonts/SWANSEBI.TTF",
-//   variable: "--font-swanse",
-//   weight: "100 900",
-// });
-
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
