@@ -6,17 +6,17 @@ export default function About() {
   return (
     <main className="min-h-screen space-y-16 sm:space-y-24 md:space-y-36 lg:space-y-48">
       <div className="overflow-hidden mx-auto container max-w-[1300px] py-10 md:py-15 lg:py-28 xl:py-40">
-        <div className="container mx-auto w-[1300px] flex gap-20">
-          <div className="space-y-8">
+        <section className="container px-8 mx-auto sm:w-[1300px] flex flex-col md:flex-row gap-20">
+          <div className="space-y-6 sm:space-y-8">
             <h1 className="text-lg sm:text-xl lg:text-2xl text-[#fbc710] md:text-5xl uppercase">
               ABOUT US
             </h1>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-semibold">
               Building Bridges for
               <span className="text-yellow-500"> Sustainable</span> and
               <span className="text-yellow-500"> Inclusive Growth</span>
             </h2>
-            <div className="flex flex-col gap-4 text-lg text-gray-700">
+            <div className="flex flex-col gap-4 text-base md:text-lg text-gray-700">
               <p>
                 At Accountings Zone, we are a renowned global consulting firm
                 committed to collaborating with business and societal leaders in
@@ -32,7 +32,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="container mb-10 mx-auto lg:max-w-[700px]">
+          <div className="container hidden sm:block mb-10 mx-auto lg:max-w-[700px]">
             <Image
               src="/about/about1.jpg"
               alt="About Hero"
@@ -41,21 +41,21 @@ export default function About() {
               className="block w-full h-auto"
             />
           </div>
-        </div>
+        </section>
 
-        <section className="container mx-auto w-[1300px] flex items-center gap-20">
-          <div className="relative w-[80%] py-10 md:py-15 lg:py-28">
-            <div className="mb-12" data-aos="fade">
-              <h2 className="text-3xl mb-4 md:text-4xl mx-auto lg:text-5xl text-[#fbc710] font-semibold">
+        <section className="container mx-auto px-8 sm:w-[1300px] flex flex-col md:flex-row gap-20">
+          <div className="relative w-[1300px%] py-10 md:py-15 lg:py-28">
+            <div className="mb-6 md:mb-12" data-aos="fade">
+              <h2 className="text-2xl sm:text-3xl mb-4 md:text-4xl mx-auto lg:text-5xl text-[#fbc710] font-semibold">
                 Our Expertise
               </h2>
-              <p className="text-base mb-4 w-[700px] md:text-xl lg:text-3xl text-gray-900">
+              <p className="text-base mb-2 sm:mb-4 w-[700px] md:text-xl lg:text-3xl text-gray-900">
                 Personal connection at global scale
               </p>
             </div>
 
             <div className="space-y-6" data-aos="fade">
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-700">
                 Across 45 global markets, Accountings Zone operates with a
                 unique level of autonomy, allowing us to swiftly adapt and
                 prioritize what best serves our clients. This distinctive
@@ -64,7 +64,7 @@ export default function About() {
                 in assisting you in overcoming your most significant challenges
                 and transforming your vision into a tangible reality.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-700">
                 At Accountings Zone, our dedication extends far beyond the
                 immediate project. We place great emphasis on establishing trust
                 and fostering your long-term success. We meet you at your
@@ -75,7 +75,7 @@ export default function About() {
             </div>
           </div>
 
-          <div className="container mb-10 mx-auto lg:max-w-[488px]">
+          <div className="container hidden sm:block mb-10 mx-auto lg:max-w-[488px]">
             <Image
               src="/about/about2.jpg"
               alt="About Hero"
@@ -86,16 +86,16 @@ export default function About() {
           </div>
         </section>
 
-        <section className="container mx-auto">
+        <section className="container px-8 mx-auto">
           <div className="relative py-10 md:py-15 mx-auto lg:py-28">
-            <div className="mb-12" data-aos="fade">
-              <h2 className="text-3xl md:text-4xl mx-auto lg:text-5xl text-[#fbc710] font-semibold">
+            <div className="mb-8 md:mb-12" data-aos="fade">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl mx-auto lg:text-5xl text-[#fbc710] font-semibold">
                 Our Purpose
               </h2>
             </div>
 
             <div className="space-y-6 mb-6 sm:mb-14">
-              <ul className="grid grid-cols-1 *:p-4 gap-4 sm:grid-cols-5 sm:gap-8">
+              <ul className="grid grid-cols-1 *:p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 sm:gap-8">
                 <li data-aos="fade">
                   <h4 className="font-semibold text-lg mb-2">
                     Insight to light
@@ -147,13 +147,13 @@ export default function About() {
           </div>
         </section>
 
-        <section className="container mx-auto items-center">
-          <div className="relative py-10 md:py-15 mx-auto">
-            <div className="mb-12" data-aos="fade">
-              <h2 className="text-3xl mb-4 md:text-4xl mx-auto lg:text-5xl text-[#fbc710] font-semibold">
+        <section className="container px-8 mx-auto items-center flex flex-col md:flex-row sm:gap-20">
+          <div className="relative sm:py-10 md:py-15 mx-auto">
+            <div className="mb-8 sm:mb-12" data-aos="fade">
+              <h2 className="text-2xl sm:text-3xl mb-4 md:text-4xl mx-auto lg:text-5xl text-[#fbc710] font-semibold">
                 How We Work
               </h2>
-              <p className="text-sm mb-4 w-[700px] md:text-base  lg:text-lg text-gray-700">
+              <p className="text-sm mb-4 w-full md:w-[700px] md:text-base lg:text-lg text-gray-700">
                 Transforming organizations sustainably. Unlocking performance
                 excellence. Nurturing thriving workforces for generations.
                 Partner with us for success.
@@ -161,22 +161,23 @@ export default function About() {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-8 items-center mx-auto">
-            <div className="space-y-6 mb-6 sm:mb-14">
-              <ul className="grid grid-cols-1 gap-4 sm:grsid-cols-2 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-8 md:items-center mx-auto">
+            <div className="sm:mb-6 p-4 md:mb-14">
+              <ul className="grid grid-cols-1 gap-4 sm:gap-8">
                 <li data-aos="fade">
-                  <h4 className="font-semibold text-3xl">
+                  <h4 className="font-semibold text-base sm:text-2xl md:text-3xl">
                     Innovation & Technology
                   </h4>
-                  <p className="text-lg p-2 text-gray-700">
+                  <p className="sm:text-base md:text-lg p-2 text-gray-700">
                     In a rapidly changing world, continuous progress is
                     imperative to meet evolving demands.
                   </p>
                 </li>
-
                 <li data-aos="fade">
-                  <h4 className="font-semibold text-3xl">Save Money</h4>
-                  <p className="text-lg p-2 text-gray-700">
+                  <h4 className="font-semibold text-base sm:text-2xl md:text-3xl">
+                    Save Money
+                  </h4>
+                  <p className="sm:text-base md:text-lg p-2 text-gray-700">
                     Choose quality from the start. Save time and money by
                     getting it right with us.
                   </p>
@@ -184,7 +185,7 @@ export default function About() {
               </ul>
             </div>
 
-            <div className="relative mx-auto max-w-sm">
+            <div className="relative hidden sm:block mx-auto max-w-sm">
               <Image
                 src="/about/how-we-work.svg"
                 width="200"
@@ -195,20 +196,22 @@ export default function About() {
               />
             </div>
 
-            <div className="space-y-6 mb-6 p-4 sm:mb-14">
+            <div className="sm:mb-6 p-4 md:mb-14">
               <ul className="grid grid-cols-1 gap-4 sm:gap-8">
                 <li data-aos="fade">
-                  <h4 className="font-semibold text-3xl">
+                  <h4 className="font-semibold text-base sm:text-2xl md:text-3xl">
                     Client Capabilities Network
                   </h4>
-                  <p className="text-lg p-2 text-gray-700">
+                  <p className="sm:text-base md:text-lg p-2 text-gray-700">
                     With our expertise and cutting-edge competencies, we drive
                     impactful and enduring change.
                   </p>
                 </li>
                 <li data-aos="fade">
-                  <h4 className="font-semibold text-3xl">Ongoing Support</h4>
-                  <p className="text-lg p-2 text-gray-700">
+                  <h4 className="font-semibold text-base sm:text-2xl md:text-3xl">
+                    Ongoing Support
+                  </h4>
+                  <p className="sm:text-base md:text-lg p-2 text-gray-700">
                     We don&apos;t just plan, we execute. Our talented team
                     supports your implementation, as part of your founding team
                     or on project basis.

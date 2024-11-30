@@ -23,7 +23,7 @@ const reviews = [
 
 export default function Testimonials() {
   return (
-    <section className="flex flex-wrap my-16 sm:my-24 md:my-36 lg:my-48 sm:flex-col mx-auto container">
+    <section className="flex flex-wrap mt-16 px-8 sm:mt-24 md:mt-36 lg:mt-48 sm:flex-col mx-auto container">
       <h2
         className="w-full md:w-1/2 flex lg:w-[90%] mx-auto mb-4 md:mb-8 text-lg sm:text-xl lg:text-2xl text-[#fbc710] uppercase"
         data-aos="fade"
@@ -46,8 +46,8 @@ export default function Testimonials() {
             <ReviewCard key={review.name} {...review} />
           ))}
         </Marquee>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-[10%] bg-gradient-to-r from-white dark:from-background"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-[10%] bg-gradient-to-l from-white dark:from-background"></div>
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-[10%] bg-gradient-to-r from-white dark:from-background" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-[10%] bg-gradient-to-l from-white dark:from-background" />
       </div>
     </section>
   );

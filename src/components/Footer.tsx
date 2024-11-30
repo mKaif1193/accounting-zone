@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer className="bg-white">
       <div className="relative mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 md:py-16 lg:py-20 xl:py-[150px] before:absolute before:left-[15px] before:top-0 before:w-[calc(100%-30px)] before:border-t before:border-gray-400">
-        <div className="flex flex-wrap gap-2 sm:gap-8 justify-evenly">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-2 sm:gap-8 justify-evenly">
           <div className="mb-4 w-72 sm:mb-0">
             <Link href="/">
               <Image
@@ -147,16 +147,31 @@ export default function Footer() {
               Contact Us
             </h3>
             <ul className="space-y-3 sm:space-y-6 text-xs sm:text-sm">
-              <li className="flex items-center gap-2">
-                <FaPhone className="size-4" /> +1-760-686-0609
+              <li>
+                <Link
+                  href="tel:+17606860609"
+                  className="flex items-center gap-2 text-black transition-colors duration-300 hover:text-[#fbc710]"
+                >
+                  <FaPhone className="size-4" /> +1-760-686-0609
+                </Link>
               </li>
-              <li className="flex items-center gap-2">
-                <MdEmail className="size-4 sm:size-5" />{" "}
-                info@accountingszone.com
+              <li>
+                <Link
+                  href="mailto:info@accountingszone.com"
+                  className="flex items-center gap-2 text-black transition-colors duration-300 hover:text-[#fbc710]"
+                >
+                  <MdEmail className="size-4 sm:size-5" />
+                  info@accountingszone.com
+                </Link>
               </li>
-              <li className="flex items-center gap-2">
-                <FaMapMarkerAlt className="size-4 sm:size-5" /> 124 S Gemstone
-                Street, Ridgecrest California 93555
+              <li>
+                <Link
+                  href="https://g.co/kgs/82Pdpx9"
+                  className="flex items-center gap-2 text-black transition-colors duration-300 hover:text-[#fbc710]"
+                >
+                  <FaMapMarkerAlt className="size-4 sm:size-5" /> 124 S Gemstone
+                  Street, Ridgecrest California 93555
+                </Link>
               </li>
             </ul>
           </div>
