@@ -179,21 +179,21 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="flex gap-4 items-center w-full text-gray-700 mx-auto justify-center text-center font-semibold text-sm mb-6 sm:mb-12 sm:text-lg">
-        <span className="hover:text-[#fbA010] cursor-default duration-300">
-          Design & Developed by DevEdge Solutions
-        </span>
+      <div className="flex gap-3 items-center w-full text-gray-600 mx-auto justify-center text-center font-semibold text-sm mb-6 sm:mb-12 sm:text-base">
+        <span>Design & Developed by DevEdge Solutions</span>
         <Link
           href="mailto:devedge.sol@gmail.com"
-          className="hover:text-[#fbA010] duration-300"
+          className="hover:text-[#fbA010] duration-300 flex gap-1 items-center justify-center"
         >
-          <MdEmail className="size-4 sm:size-6" />
+          <MdEmail className="size-4 sm:size-5" />
+          Email
         </Link>
         <Link
           href="https://mkaif.vercel.app"
-          className="hover:text-[#fbA010] duration-300"
+          className="hover:text-[#fbA010] duration-300 flex gap-1 items-center justify-center"
         >
-          <IoGlobeOutline className="size-4 sm:size-6" />
+          <IoGlobeOutline className="size-4 sm:size-5" />
+          Website
         </Link>
       </div>
     </footer>

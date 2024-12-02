@@ -118,7 +118,7 @@ export default function TaxPlanning() {
             </div>
 
             <div className="space-y-6 mb-6 sm:mb-14">
-              <ul className="grid grid-cols-1 *:p-8 divide-x-2 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8">
+              <ul className="grid grid-cols-1 *:p-6 sm:grid-cols-2 lg:grid-cols-3 sm:gap-8">
                 <li data-aos="fade">
                   <h4 className="font-semibold text-xl mb-2">
                     Tax-Free Retirement Plans
@@ -159,88 +159,27 @@ export default function TaxPlanning() {
                     traps and properly managing life insurance and other assets.
                   </p>
                 </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="container px-8 mx-auto flex flex-col sm:gap-20">
-          <div className="relative sm:py-10 md:py-15 mx-auto md:mx-0">
-            <div className="mb-8 sm:mb-12" data-aos="fade">
-              <h2
-                className="text-2xl sm:text-3xl mb-4 md:text-4xl mx-auto lg:text-5xl text-[#fbc710] font-semibold"
-                data-aos="fade"
-              >
-                How We Work
-              </h2>
-              <p
-                className="text-sm mb-4 w-full md:w-[700px] md:text-base lg:text-lg text-gray-700"
-                data-aos="fade"
-              >
-                Transforming organizations sustainably. Unlocking performance
-                excellence. Nurturing thriving workforces for generations.
-                Partner with us for success.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-8 md:items-center mx-auto">
-            <div className="sm:mb-6 p-4 md:mb-14">
-              <ul className="grid grid-cols-1 gap-4 sm:gap-8">
                 <li data-aos="fade">
-                  <h4 className="font-semibold text-base sm:text-2xl md:text-3xl">
-                    Innovation & Technology
+                  <h4 className="font-semibold text-xl mb-2">
+                    Irrevocable Trusts
                   </h4>
-                  <p className="sm:text-base md:text-lg p-2 text-gray-700">
-                    In a rapidly changing world, continuous progress is
-                    imperative to meet evolving demands.
+                  <p className="text-gray-700">
+                    Through irrevocable trusts, assets are transferred into the
+                    trust for later ownership by the beneficiary, and the
+                    grantor’s ownership is completely removed from these assets.
+                    Irrevocable trusts can include life insurance policies,
+                    cash, investments, businesses and more.
                   </p>
                 </li>
                 <li data-aos="fade">
-                  <h4 className="font-semibold text-base sm:text-2xl md:text-3xl">
-                    Save Money
+                  <h4 className="font-semibold text-xl mb-2">
+                    Captive Insurance Companies
                   </h4>
-                  <p className="sm:text-base md:text-lg p-2 text-gray-700">
-                    Choose quality from the start. Save time and money by
-                    getting it right with us.
-                  </p>
-                </li>
-              </ul>
-            </div>
-
-            <div
-              className="relative hidden sm:block mx-auto max-w-sm"
-              data-aos="fade"
-            >
-              <Image
-                src="/about/how-we-work.svg"
-                width="200"
-                height="200"
-                alt="How we work"
-                className="max-w-full h-auto"
-                data-aos="fade"
-              />
-            </div>
-
-            <div className="sm:mb-6 p-4 md:mb-14">
-              <ul className="grid grid-cols-1 gap-4 sm:gap-8">
-                <li data-aos="fade">
-                  <h4 className="font-semibold text-base sm:text-2xl md:text-3xl">
-                    Client Capabilities Network
-                  </h4>
-                  <p className="sm:text-base md:text-lg p-2 text-gray-700">
-                    With our expertise and cutting-edge competencies, we drive
-                    impactful and enduring change.
-                  </p>
-                </li>
-                <li data-aos="fade">
-                  <h4 className="font-semibold text-base sm:text-2xl md:text-3xl">
-                    Ongoing Support
-                  </h4>
-                  <p className="sm:text-base md:text-lg p-2 text-gray-700">
-                    We don&apos;t just plan, we execute. Our talented team
-                    supports your implementation, as part of your founding team
-                    or on project basis.
+                  <p className="text-gray-700">
+                    A captive insurance company – which is an insurance company
+                    affiliated with an operating business entity -- is typically
+                    formed to provide insurance to the business as a supplement
+                    to its commercial coverage.
                   </p>
                 </li>
               </ul>

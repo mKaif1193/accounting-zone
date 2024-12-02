@@ -212,10 +212,7 @@ export default function About() {
               </ul>
             </div>
 
-            <div
-              className="relative hidden sm:block mx-auto max-w-sm"
-              data-aos="fade"
-            >
+            <div className="relative hidden sm:block mx-auto max-w-sm">
               <Image
                 src="/about/how-we-work.svg"
                 width="200"

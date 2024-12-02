@@ -40,7 +40,7 @@ export default function WhyUs() {
             src="/why-us/why-us-man.svg"
             width="800"
             height="800"
-            alt="accounting2"
+            alt="Why Us"
             className="max-w-full h-auto"
             data-aos="fade"
           />

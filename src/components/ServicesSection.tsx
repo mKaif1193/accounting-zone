@@ -12,66 +12,34 @@ import Image from "next/image";
 
 const servicesCards = [
   {
-    title: "Financial Statements",
-    description:
-      "We prepare comprehensive financial, income, cash flow statements and balance sheets.",
+    title: "Tax Resolution",
     icon: BsFillBarChartFill,
-    iconClassName: "size-[56px]",
+    iconClassName: "size-14",
   },
-  //   {
-  //     title: "Ledger Maintenance",
-  //     description:
-  //       "Our team ensures that your general ledger is accurate and up-to-date.",
-  //     icon: BsBookFill,
-  //     iconClassName: "size-11",
-  //   },
   {
-    title: "Payroll Accounting",
-    description:
-      "Accurate payroll accounting is crucial for compliance and employee satisfaction.",
+    title: "PFP Loan Forgiveness Assistance",
     icon: FaMoneyCheckAlt,
-    iconClassName: "size-11",
+    iconClassName: "size-14",
   },
-  {
-    title: "Financial Record Keeping",
-    description:
-      "Ensure your financial transactions are meticulously recorded and organized.",
-    icon: FaChartLine,
-    iconClassName: "size-[56px]",
-  },
-  //   {
-  //     title: "Reconciliation and Reporting",
-  //     description: "Keep your accounts balanced and up-to-date.",
-  //     icon: MdPieChart,
-  //     iconClassName: "size-11",
-  //   },
   {
     title: "Custom Bookkeeping Solutions",
-    description:
-      "Tailored to fit your business needs, our customizable bookkeeping services.",
     icon: FaFileInvoiceDollar,
-    iconClassName: "size-[42px]",
+    iconClassName: "size-14",
   },
-  {
-    title: "Strategic Tax Optimization",
-    description:
-      "Maximize your savings with our strategic tax planning services.",
-    icon: FaFileAlt,
-    iconClassName: "size-[38px]",
-  },
-  //   {
-  //     title: "Comprehensive Tax Compliance",
-  //     description:
-  //       "Our expert team ensures your tax filings are accurate and timely, helping you avoid penalties and optimize your tax liabilities.",
-  //     icon: RxAvatar,
-  //     iconClassName: "size-24",
-  //   },
   {
     title: "Proactive Tax Advisory",
-    description:
-      "We provide ongoing advice and updates on tax law changes, ensuring your business remains compliant and financially efficient.",
     icon: FaHandshake,
-    iconClassName: "size-[110px]",
+    iconClassName: "size-20",
+  },
+  {
+    title: "Business Consulting Solutions",
+    icon: FaChartLine,
+    iconClassName: "size-14",
+  },
+  {
+    title: "Consulting For QuickBooks",
+    icon: FaFileAlt,
+    iconClassName: "size-14",
   },
 ];
 
@@ -103,7 +71,6 @@ export default function ServicesSection() {
             <ServicesCard
               key={index}
               title={card.title}
-              description={card.description}
               icon={card.icon}
               iconClassName={card.iconClassName}
             />
