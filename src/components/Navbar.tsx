@@ -64,11 +64,10 @@ export default function Navbar() {
           onMouseEnter={() => setServicesDropdownOpen(true)}
           onMouseLeave={() => setServicesDropdownOpen(false)}
         >
-          <Link
-            href="/services"
-            className="flex justify-center items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors"
-          >
-            <span className={pathname === "/services" ? "text-[#fbc710]" : ""}>
+          <div className="flex justify-center items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors cursor-pointer">
+            <span
+              className={`${pathname.includes("services") && "text-[#fbc710]"}`}
+            >
               Services
             </span>
             <IoMdArrowDropdown
@@ -76,67 +75,64 @@ export default function Navbar() {
                 servicesDropdownOpen ? "rotate-180" : ""
               } duration-300`}
             />
-          </Link>
+          </div>
           <div
-            className={`absolute z-10 left-0 top-full mt-3 w-56 p-4 bg-white shadow-lg duration-500 transition-transform transform ${
+            className={`absolute z-10 left-0 top-full w-56 p-4 rounded-sm bg-white shadow-lg duration-500 transition-transform transform ${
               servicesDropdownOpen
                 ? "opacity-100 -translate-y-0 pointer-events-auto"
                 : "opacity-0 translate-y-28 pointer-events-none"
             }`}
           >
             <div className="flex space-x-4">
-              <ul className="list-none space-y-4 divide-y-2">
+              <ul className="list-none flex flex-col justify-center gap-y-4">
                 <li>
                   <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Outsourced Controller
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
+                    href="/services/tax-resolution"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Resolution
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
-                    href="#"
+                    href="/services/pfp-loan-forgiveness-assistance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     PFP Loan Forgiveness Assistance
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
-                    href="#"
+                    href="/bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Bookkeeping
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
-                    href="#"
+                    href="/services/advisory-services"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Advisory Services
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
-                    href="#"
+                    href="/services/business-consulting-solutions"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Business Consulting Solutions
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
-                    href="#"
+                    href="/services/consulting-for-quickbooks"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Consulting For QuickBooks
@@ -153,12 +149,10 @@ export default function Navbar() {
         >
           <Link
             href="/tax-planning"
-            className="flex justify-center items-center gap-1 font-semibold hover:text-[#fbc710] transition-colors"
+            className="flex justify-center items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors"
           >
             <span
-              className={`${
-                pathname === "/tax-planning" ? "text-[#fbc710]" : "text-black"
-              }`}
+              className={`${pathname === "/tax-planning" && "text-[#fbc710]"}`}
             >
               Tax Planning
             </span>
@@ -167,41 +161,35 @@ export default function Navbar() {
             />
           </Link>
           <div
-            className={`absolute z-10 left-0 top-full mt-3 w-56 p-4 bg-white shadow-lg duration-500 transition-transform transform ${
+            className={`absolute z-10 left-0 top-full w-56 p-4 rounded-sm bg-white shadow-lg duration-500 transition-transform transform ${
               taxDropdownOpen
                 ? "opacity-100 -translate-y-0 pointer-events-auto"
                 : "opacity-0 translate-y-28 pointer-events-none"
             }`}
           >
             <div className="flex space-x-4">
-              <ul className="list-none space-y-4 divide-y-2">
+              <ul className="list-none flex flex-col justify-center gap-y-4">
                 <li>
                   <Link
-                    href="#"
+                    href="/tax-planning"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     What is Tax Planning
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
-                    href="#"
+                    href="/tax-planning"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Planning Strategies
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Hiring Children Tax Strategy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
+                    href="/bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Bookkeeping
@@ -211,20 +199,16 @@ export default function Navbar() {
             </div>
           </div>
         </li>
-        <li
+        {/* <li
           className="relative group mr-4 lg:mr-10"
           onMouseEnter={() => setProductsDropdownOpen(true)}
           onMouseLeave={() => setProductsDropdownOpen(false)}
         >
           <Link
             href="/products"
-            className="flex justify-center items-center gap-1 font-semibold hover:text-[#fbc710] transition-colors"
+            className="flex justify-center items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors"
           >
-            <span
-              className={`${
-                pathname === "/products" ? "text-[#fbc710]" : "text-black"
-              }`}
-            >
+            <span className={`${pathname === "/products" && "text-[#fbc710]"}`}>
               Products
             </span>
             <IoMdArrowDropdown
@@ -232,22 +216,14 @@ export default function Navbar() {
             />
           </Link>
           <div
-            className={`absolute z-10 left-0 top-full mt-3 w-56 p-4 bg-white shadow-lg duration-500 transition-transform transform ${
+            className={`absolute z-10 left-0 top-full w-56 p-4 rounded-sm bg-white shadow-lg duration-500 transition-transform transform ${
               productsDropdownOpen
                 ? "opacity-100 -translate-y-0 pointer-events-auto"
                 : "opacity-0 translate-y-28 pointer-events-none"
             }`}
           >
             <div className="flex space-x-4">
-              <ul className="list-none space-y-4 divide-y-2">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Tax Planning
-                  </Link>
-                </li>
+              <ul className="list-none flex flex-col justify-center gap-y-4">
                 <li>
                   <Link
                     href="#"
@@ -256,6 +232,7 @@ export default function Navbar() {
                     Client Collaboration
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
                     href="#"
@@ -264,6 +241,7 @@ export default function Navbar() {
                     Federal Tax Planning
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
                     href="#"
@@ -272,6 +250,7 @@ export default function Navbar() {
                     State & Local Planning
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
                     href="#"
@@ -280,6 +259,7 @@ export default function Navbar() {
                     Multi-Entity Tax Planning
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
                     href="#"
@@ -288,6 +268,7 @@ export default function Navbar() {
                     Tax Plans
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
                     href="#"
@@ -296,6 +277,7 @@ export default function Navbar() {
                     Smart Questionnaires
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
                     href="#"
@@ -307,7 +289,7 @@ export default function Navbar() {
               </ul>
             </div>
           </div>
-        </li>
+        </li> */}
         <li
           className="relative group mr-4 lg:mr-10"
           onMouseEnter={() => setResourcesDropdownOpen(true)}
@@ -315,12 +297,10 @@ export default function Navbar() {
         >
           <Link
             href="/resources"
-            className="flex justify-center items-center gap-1 font-semibold hover:text-[#fbc710] transition-colors"
+            className="flex justify-center items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors"
           >
             <span
-              className={`${
-                pathname === "/resources" ? "text-[#fbc710]" : "text-black"
-              }`}
+              className={`${pathname === "/resources" && "text-[#fbc710]"}`}
             >
               Resources
             </span>
@@ -331,14 +311,14 @@ export default function Navbar() {
             />
           </Link>
           <div
-            className={`absolute z-10 left-0 top-full mt-3 w-44 p-4 bg-white shadow-lg duration-500 transition-transform transform ${
+            className={`absolute z-10 left-0 top-full w-44 p-4 rounded-sm bg-white shadow-lg duration-500 transition-transform transform ${
               resourcesDropdownOpen
                 ? "opacity-100 -translate-y-0 pointer-events-auto"
                 : "opacity-0 translate-y-28 pointer-events-none"
             }`}
           >
             <div className="flex space-x-4">
-              <ul className="list-none space-y-4 divide-y-2">
+              <ul className="list-none flex flex-col justify-center gap-y-4">
                 <li>
                   <Link
                     href="#"
@@ -347,6 +327,7 @@ export default function Navbar() {
                     Blog
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
                     href="#"
@@ -355,6 +336,7 @@ export default function Navbar() {
                     Case Studies
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
                     href="#"
@@ -363,6 +345,7 @@ export default function Navbar() {
                     State Tax Deadlines
                   </Link>
                 </li>
+                <hr />
                 <li>
                   <Link
                     href="#"
@@ -378,8 +361,8 @@ export default function Navbar() {
         <li className="mr-4 lg:mr-10">
           <Link
             href="/about"
-            className={`flex justify-center items-center gap-1 font-semibold  hover:text-[#fbc710] transition-colors ${
-              pathname === "/about" ? "text-[#fbc710]" : "text-black"
+            className={`flex justify-center items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors ${
+              pathname === "/about" && "text-[#fbc710]"
             }`}
           >
             About Us
@@ -401,12 +384,11 @@ export default function Navbar() {
       >
         <li className="group" onClick={() => handleDropdownClick("services")}>
           <div className="flex justify-between px-4 items-center gap-1 hover:text-[#fbc710] transition-colors font-semibold text-black">
-            <Link href="/services">Services</Link>
+            <span>Services</span>
             <IoMdArrowDropdown
               className={`${servicesDropdownOpen && "rotate-180"} duration-300`}
             />
           </div>
-
           <div
             className={`mt-1 w-full px-4 ${
               servicesDropdownOpen
@@ -418,15 +400,7 @@ export default function Navbar() {
               <ul className="list-none space-y-2 grid grid-cols-1 gap-x-2 md:grid-cols-3 sm:grid-cols-2 w-full text-sm">
                 <li>
                   <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Outsourced Controller
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
+                    href="/services/tax-resolution"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Resolution
@@ -434,7 +408,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/services/pfp-loan-forgiveness-assistance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     PFP Loan Forgiveness Assistance
@@ -442,7 +416,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Bookkeeping
@@ -450,7 +424,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/services/advisory-services"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Advisory Services
@@ -458,7 +432,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/services/business-consulting-solutions"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Business Consulting Solutions
@@ -466,7 +440,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/services/consulting-for-quickbooks"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Consulting For QuickBooks
@@ -495,7 +469,7 @@ export default function Navbar() {
               <ul className="list-none space-y-2 grid grid-cols-1 gap-x-2 md:grid-cols-3 sm:grid-cols-2 w-full text-sm">
                 <li>
                   <Link
-                    href="#"
+                    href="/tax-planning"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     What is Tax Planning
@@ -503,23 +477,15 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/tax-planning"
+                    className="text-black hover:text-[/tax-planningfbc710] transition-colors"
                   >
                     Tax Planning Strategies
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Hiring Children Tax Strategy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
+                    href="/bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Bookkeeping
@@ -529,7 +495,7 @@ export default function Navbar() {
             </div>
           </div>
         </li>
-        <li className="group" onClick={() => handleDropdownClick("products")}>
+        {/* <li className="group" onClick={() => handleDropdownClick("products")}>
           <div className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors">
             <Link href="/products">Products</Link>
             <IoMdArrowDropdown
@@ -612,7 +578,7 @@ export default function Navbar() {
               </ul>
             </div>
           </div>
-        </li>
+        </li> */}
         <li className="group" onClick={() => handleDropdownClick("resources")}>
           <div className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors">
             <Link href="/resources">Resources</Link>

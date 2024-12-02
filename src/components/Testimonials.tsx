@@ -25,17 +25,23 @@ export default function Testimonials() {
   return (
     <section className="flex flex-wrap mt-16 px-8 sm:mt-24 md:mt-36 lg:mt-48 sm:flex-col mx-auto container">
       <h2
-        className="w-full md:w-1/2 flex lg:w-[90%] mx-auto mb-4 md:mb-8 text-lg sm:text-xl lg:text-2xl text-[#fbc710] uppercase"
+        className="w-full flex lg:w-[90%] mx-auto mb-4 md:mb-8 text-lg sm:text-xl lg:text-2xl text-[#fbc710] uppercase"
         data-aos="fade"
       >
         TESTIMONIALS
       </h2>
-      <div className="w-full md:w-1/2 flex flex-col gap-3 lg:w-[90%] mx-auto">
-        <h3 className="text-2xl sm:text-3xl font-semibold lg:text-4xl">
+      <div className="w-full flex flex-col gap-3 lg:w-[90%] mx-auto">
+        <h3
+          className="text-2xl sm:text-3xl font-semibold lg:text-4xl"
+          data-aos="fade"
+        >
           Our
           <span className="text-[#fbc710]"> Clients</span> Say It Best
         </h3>
-        <p className="text-base sm:text-lg lg:text-xl text-gray-700">
+        <p
+          className="text-base sm:text-lg lg:text-xl text-gray-700"
+          data-aos="fade"
+        >
           Join 10,000+ customers who are already saving money in taxes.
         </p>
       </div>

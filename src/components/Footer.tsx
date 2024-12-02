@@ -10,11 +10,12 @@ import {
 } from "react-icons/fa";
 import { FaPhone, FaXTwitter } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { IoGlobeOutline } from "react-icons/io5";
 
 export default function Footer() {
   return (
     <footer className="bg-white">
-      <div className="relative mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 md:py-16 lg:py-20 xl:py-[150px] before:absolute before:left-[15px] before:top-0 before:w-[calc(100%-30px)] before:border-t before:border-gray-400">
+      <div className="relative mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 md:py-16 lg:py-20 xl:py-[150px] before:absolute before:left-[15px] before:top-0 before:w-[calc(100%-30px)] before:border-t before:border-[#fbc710]/50">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-2 sm:gap-8 justify-evenly">
           <div className="mb-4 w-72 sm:mb-0">
             <Link href="/">
@@ -26,7 +27,7 @@ export default function Footer() {
                 className="w-[150px] sm:w-56 h-auto"
               />
             </Link>
-            <div className="flex mt-1 sm:mt-4 gap-1 flex-col">
+            <div className="flex mt-12 lg:mt-6 gap-1 flex-col">
               <h3 className="sm:text-base text-sm font-semibold">
                 Building wealth, creating futures.
               </h3>
@@ -84,23 +85,23 @@ export default function Footer() {
             <ul className="space-y-1 sm:space-y-3 text-xs sm:text-sm">
               <li>
                 <Link
-                  href="#"
+                  href="/tax-resolution"
                   className="text-black transition-colors duration-300 hover:text-[#fbc710]"
                 >
-                  Financial Statements
+                  Tax Resolution
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/bookkeeping"
                   className="text-black transition-colors duration-300 hover:text-[#fbc710]"
                 >
-                  Bookkeeping Services
+                  Bookkeeping
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/tax-planning"
                   className="text-black transition-colors duration-300 hover:text-[#fbc710]"
                 >
                   Tax Planning
@@ -176,6 +177,24 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+      </div>
+
+      <div className="flex gap-4 items-center w-full text-gray-700 mx-auto justify-center text-center font-semibold text-sm mb-6 sm:mb-12 sm:text-lg">
+        <span className="hover:text-[#fbA010] cursor-default duration-300">
+          Design & Developed by DevEdge Solutions
+        </span>
+        <Link
+          href="mailto:devedge.sol@gmail.com"
+          className="hover:text-[#fbA010] duration-300"
+        >
+          <MdEmail className="size-4 sm:size-6" />
+        </Link>
+        <Link
+          href="https://mkaif.vercel.app"
+          className="hover:text-[#fbA010] duration-300"
+        >
+          <IoGlobeOutline className="size-4 sm:size-6" />
+        </Link>
       </div>
     </footer>
   );
