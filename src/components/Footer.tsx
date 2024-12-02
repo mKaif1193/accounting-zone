@@ -15,7 +15,7 @@ import { IoGlobeOutline } from "react-icons/io5";
 export default function Footer() {
   return (
     <footer className="bg-white">
-      <div className="relative mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 md:py-16 lg:py-20 xl:py-[150px] before:absolute before:left-[15px] before:top-0 before:w-[calc(100%-30px)] before:border-t before:border-[#fbc710]/50">
+      <div className="relative mx-auto w-[85%] px-4 sm:px-6 lg:px-8 py-8 md:py-16 lg:py-20 xl:py-[150px] before:absolute before:left-[15px] before:top-0 before:w-full before:border-t before:border-[#fbc710]/50">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-2 sm:gap-8 justify-evenly">
           <div className="mb-4 w-72 sm:mb-0">
             <Link href="/">
@@ -24,7 +24,7 @@ export default function Footer() {
                 alt="Accountings Zone Logo"
                 width={100}
                 height={100}
-                className="w-[150px] sm:w-56 h-auto"
+                className="w-[140px] sm:w-52 h-auto"
               />
             </Link>
             <div className="flex mt-12 lg:mt-6 gap-1 flex-col">
@@ -179,7 +179,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="flex gap-3 items-center w-full text-gray-600 mx-auto justify-center text-center font-semibold text-sm mb-6 sm:mb-12 sm:text-base">
+      <div className="flex gap-3 items-center w-full text-gray-600 mx-auto justify-center text-center font-semibold text-sm mb-7 sm:mb-14 sm:text-base">
         <span>Design & Developed by DevEdge Solutions</span>
         <Link
           href="mailto:devedge.sol@gmail.com"
