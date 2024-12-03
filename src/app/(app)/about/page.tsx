@@ -1,19 +1,18 @@
-import Testimonials from "@/components/Testimonials";
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+import Testimonials from "@/components/Testimonials";
+import Slider from "@/components/Slider";
+
+const images = ["/consultation/consultation3.jpg"];
 
 export default function About() {
   return (
     <main className="min-h-screen space-y-16 sm:space-y-24 md:space-y-36 lg:space-y-48">
-      <div className="overflow-hidden mx-auto container max-w-[1300px] py-10 md:py-15 lg:py-28 xl:py-40">
+      <Slider title="About Us" images={images} />
+
+      <div className="overflow-hidden mx-auto container max-w-[1300px] py-10 md:py-15 lg:py-28">
         <section className="container px-8 mx-auto lg:w-[1300px] flex flex-col md:items-center lg:flex-row gap-20">
           <div className="space-y-6 sm:space-y-8">
-            <h1
-              className="text-lg sm:text-xl mt-12 xl:mt-2 lg:text-3xl text-[#fbc710] md:text-2xl uppercase"
-              data-aos="fade"
-            >
-              ABOUT US
-            </h1>
             <h2
               className="text-2xl sm:text-4xl lg:text-5xl font-semibold"
               data-aos="fade"

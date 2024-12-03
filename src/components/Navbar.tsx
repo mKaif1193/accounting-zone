@@ -87,24 +87,6 @@ export default function Navbar() {
               <ul className="list-none flex flex-col justify-center gap-y-4">
                 <li>
                   <Link
-                    href="/services/tax-resolution"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Tax Resolution
-                  </Link>
-                </li>
-                <hr />
-                <li>
-                  <Link
-                    href="/services/pfp-loan-forgiveness-assistance"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    PFP Loan Forgiveness Assistance
-                  </Link>
-                </li>
-                <hr />
-                <li>
-                  <Link
                     href="/bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
@@ -365,7 +347,7 @@ export default function Navbar() {
               pathname === "/about" && "text-[#fbc710]"
             }`}
           >
-            About Us
+            About
           </Link>
         </li>
         <li className="mr-4 lg:mr-10">
@@ -376,7 +358,7 @@ export default function Navbar() {
       </ul>
 
       <ul
-        className={`list-none absolute top-full right-0 z-10 block lg:hidden space-y-2 mt-3 w-full p-4 bg-white shadow-lg duration-500 transition-transform transform ${
+        className={`list-none absolute top-full right-0 z-10 block lg:hidden space-y-2 w-full p-4 bg-white shadow-lg duration-500 transition-transform transform ${
           isOpen
             ? "flex flex-col pointer-events-auto"
             : "pointer-events-none hidden"
@@ -398,22 +380,6 @@ export default function Navbar() {
           >
             <div className="flex w-full px-6">
               <ul className="list-none space-y-2 grid grid-cols-1 gap-x-2 md:grid-cols-3 sm:grid-cols-2 w-full text-sm">
-                <li>
-                  <Link
-                    href="/services/tax-resolution"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Tax Resolution
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/pfp-loan-forgiveness-assistance"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    PFP Loan Forgiveness Assistance
-                  </Link>
-                </li>
                 <li>
                   <Link
                     href="/bookkeeping"
@@ -638,7 +604,7 @@ export default function Navbar() {
             href="/about"
             className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors"
           >
-            About Us
+            About
           </Link>
         </li>
         <li>

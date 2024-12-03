@@ -1,6 +1,6 @@
-import Slider from "@/components/Slider";
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+import Slider from "@/components/Slider";
 
 const images = ["/consultation/consultation3.jpg"];
 
@@ -105,7 +105,7 @@ export default function TaxPlanning() {
           </div>
         </section>
 
-        <section id="" className="container px-8 mx-auto">
+        <section id="advanced-tax-planning" className="container px-8 mx-auto">
           <div className="relative py-10 md:py-15 mx-auto lg:py-28">
             <div className="mb-8 md:mb-12" data-aos="fade">
               <h2
@@ -183,6 +183,176 @@ export default function TaxPlanning() {
                   </p>
                 </li>
               </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="tax-planning-involve" className="container px-8 mx-auto">
+          <div className="relative py-10 md:py-15 mx-auto lg:py-28">
+            <div className="mb-8 md:mb-12" data-aos="fade">
+              <h2
+                className="text-2xl sm:text-3xl md:text-4xl mx-auto lg:text-5xl font-semibold"
+                data-aos="fade"
+              >
+                <span className="text-yellow-500">Tax planning </span>
+                can involve:
+              </h2>
+              <p className="text-gray-700 mt-4 md:mt-8">
+                We use extensive financial modeling to test and forecast the
+                impact of any financial decision that affects you. By
+                consultation and utilization of these models, we help you make
+                the most advantageous business tax planning or family tax
+                planning decisions.
+              </p>
+            </div>
+
+            <div className="space-y-6 mb-6 sm:mb-14">
+              <ul className="grid grid-cols-1 *:p-8 sm:grid-cols-2 lg:grid-cols-3 gap-y-6 sm:gap-10">
+                <li
+                  className="max-w-lg bg-gray-50 flex flex-col p-4 gap-4 border items-center rounded-lg shadow-md overflow-hidden"
+                  data-aos="fade"
+                >
+                  <h4 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                    Our Suite of Business Tax Services
+                  </h4>
+                  <span className="text-sm lg:text-base font-semibold text-gray-800">
+                    We offer a wide variety of business year-end tax planning
+                    services to help organizations stay compliant and take
+                    advantage of the latest money-saving opportunities. We’ve
+                    also created a Year-End Tax Planning Resource Center that
+                    acts as an on-demand one-stop-shop for corporate tax
+                    preparation tips.
+                  </span>
+                </li>
+                <li
+                  className="max-w-lg bg-gray-50 flex flex-col p-4 gap-4 border items-center rounded-lg shadow-md overflow-hidden"
+                  data-aos="fade"
+                >
+                  <h4 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                    International Tax Compliance Services
+                  </h4>
+                  <span className="text-sm lg:text-base font-semibold text-gray-800">
+                    Businesses that operate internationally faces the unique
+                    challenge of having the stay compliant with multiple
+                    countries’ tax rules and regulations. Our international tax
+                    advisors work with organizations to maintain tax
+                    transparency, remediate cross-border tax disputes, minimize
+                    the risk of double-taxation and achieve maximum savings
+                    through international tax incentives.
+                  </span>
+                </li>
+                <li
+                  className="max-w-lg bg-gray-50 flex flex-col p-4 gap-4 border items-center rounded-lg shadow-md overflow-hidden"
+                  data-aos="fade"
+                >
+                  <h4 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                    Business Tax Controversy Services
+                  </h4>
+                  <span className="text-sm lg:text-base font-semibold text-gray-800">
+                    For organizations facing corporate tax controversy issues,
+                    our tax consultants are well-equipped to handle various
+                    issue resolutions, dispute avoidance, and more. We&apos;ll
+                    put together a plan that describes the particular
+                    controversy, outlines a custom resolution, and establishes
+                    measures to prevent the issues from reoccurring.
+                  </span>
+                </li>
+                <li
+                  className="max-w-lg bg-gray-50 flex flex-col p-4 gap-4 border items-center rounded-lg shadow-md overflow-hidden"
+                  data-aos="fade"
+                >
+                  <h4 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                    Corporate Tax Accounting Services
+                  </h4>
+                  <span className="text-sm lg:text-base font-semibold text-gray-800">
+                    The constantly evolving nature of national and international
+                    tax laws – and the increased scrutiny surrounding them – can
+                    make corporate income tax accounting complicated. Our tax
+                    accounting services cover stock-based compensation, tax
+                    validation projects, valuation assessments, statement and
+                    balance sheet support, tax position consulting, and more.
+                    They also include ASC 740 consulting, preparation,
+                    remediation, internal controls assistance, transaction
+                    services, provision assistance, and training.
+                  </span>
+                </li>
+                <li
+                  className="max-w-lg bg-gray-50 flex flex-col p-4 gap-4 border items-center rounded-lg shadow-md overflow-hidden"
+                  data-aos="fade"
+                >
+                  <h4 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                    U.S. Tax Reform Services
+                  </h4>
+                  <span className="text-sm lg:text-base font-semibold text-gray-800">
+                    Depending on the organization, tax reform laws can cause
+                    unforeseen complications, or provide promising
+                    opportunities. Withum&apos;s business tax advisors help
+                    businesses navigate the changing waters of U.S. tax reform.
+                    Our business tax services include the creation of corporate
+                    tax planning strategies built upon the insights gained from
+                    analysis and modeling tools. We work with organizations to
+                    predict and analyze tax reform impacts and outline the
+                    options that make sense for them. For more information,
+                    check out our Tax Reform Resource Center.
+                  </span>
+                </li>
+                <li
+                  className="max-w-lg bg-gray-50 flex flex-col p-4 gap-4 border items-center rounded-lg shadow-md overflow-hidden"
+                  data-aos="fade"
+                >
+                  <h4 className="text-xl lg:text-2xl font-semibold text-gray-800">
+                    Pass-Through Tax Services
+                  </h4>
+                  <span className="text-sm lg:text-base font-semibold text-gray-800">
+                    With partnerships offering the most flexibility out of any
+                    tax structure and S corporations having the most strict
+                    rules, knowledge and experience are key to businesses that
+                    operate in these structures. Our team of seasoned experts
+                    can help your business navigate the pass-through tax waters
+                    and put you in a position to succeed.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="" className="bg-yellow-50 px-8">
+          <div className="relative container w-[75%] py-10 md:py-15 space-y-12 md:space-y-20 mx-auto lg:mx-0 lg:py-28">
+            <div className="mb-8 md:mb-12" data-aos="fade">
+              <h2
+                className="text-2xl sm:text-3xl md:text-4xl mx-auto lg:text-5xl font-semibold"
+                data-aos="fade"
+              >
+                Clients Deserve It & Will Pay More
+              </h2>
+              <p className="text-gray-700 mt-4 md:mt-8">
+                Whether your client is brand new or has been with you for 10
+                years, they deserve one thing: smarter tax decisions.
+              </p>
+              <p className="text-gray-700 mt-1 md:mt-2">
+                They may choose to do something that results in paying higher
+                taxes, but with tax planning, you&apos;ll be able to present
+                them with options before they take action.
+              </p>
+            </div>
+
+            <div className="mb-8 md:mb-12" data-aos="fade">
+              <h2
+                className="text-2xl sm:text-3xl md:text-4xl mx-auto lg:text-5xl font-semibold"
+                data-aos="fade"
+              >
+                It&apos;s Who You Are
+              </h2>
+              <p className="text-gray-700 mt-4 md:mt-8">
+                You&apos;ve dedicated your career to being a tax advisor. Before
+                now, understanding how tens of thousands of tax forms,
+                strategies and industries work hasn&apos;t been possible.
+              </p>
+              <p className="text-gray-700 mt-1 md:mt-2">
+                By offering tax planning, you can turn tax into a year-round
+                business by helping clients save money with Accountings Zone.
+              </p>
             </div>
           </div>
         </section>

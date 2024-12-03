@@ -6,7 +6,10 @@ export const contactMessageSchema = z.object({
     .min(2, "Name must be at least 2 characters!!")
     .max(20, "Name must be maximum 20 characters!!"),
   email: z.string().email({ message: "Invalid email address!!" }),
-  phone: z.bigint().positive(),
+  phone: z
+    .string()
+    .min(10, "Phone number must be at least 2 characters!!")
+    .max(15, "Phone number must be maximum 20 characters!!"),
   company: z
     .string()
     .min(2, "Company must be at least 2 characters!!")

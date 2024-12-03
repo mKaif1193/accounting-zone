@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 type SliderProps = {
   images: string[];
   title: string;
-  description: string;
+  description?: string;
 };
 
 export default function Slider({ images, title, description }: SliderProps) {

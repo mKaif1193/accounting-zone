@@ -38,6 +38,7 @@ export default function Contact() {
       name: "",
       email: "",
       company: "",
+      phone: "",
       reason: "",
       subject: "",
       message: "",
@@ -72,20 +73,14 @@ export default function Contact() {
 
   return (
     <main className="min-h-screen space-y-16 sm:space-y-24 md:space-y-36 lg:space-y-48">
-      <Slider images={images} />
+      <Slider title="Contact Us" images={images} />
 
-      <div className="overflow-hidden mx-auto container max-w-[1300px] py-10 md:py-15 lg:py-28 xl:py-40">
+      <div className="overflow-hidden mx-auto container max-w-[1300px] py-10 md:py-15 lg:py-28">
         <section
           id="contact-us"
           className="container px-8 mx-auto lg:w-[1300px] flex flex-col lg:flex-row gap-20"
         >
           <div className="space-y-6 sm:space-y-8">
-            <h1
-              className="text-lg sm:text-xl mt-12 xl:mt-2 lg:text-3xl text-[#fbc710] md:text-2xl uppercase"
-              data-aos="fade"
-            >
-              CONTACT US
-            </h1>
             <h2
               className="text-2xl sm:text-4xl lg:text-5xl font-semibold"
               data-aos="fade"
@@ -167,145 +162,149 @@ export default function Contact() {
           id="contact-form"
           className="container px-8 mx-auto flex flex-col sm:gap-20"
         >
-          <div className="relative sm:py-10 md:py-15 mx-auto md:mx-0">
-            <div className="mb-8 sm:mb-12" data-aos="fade">
-              <h2
-                className="text-2xl sm:text-3xl mb-4 md:text-4xl mx-auto lg:text-5xl text-[#fbc710] font-semibold"
-                data-aos="fade"
-              >
-                Contact Form
-              </h2>
-            </div>
+          <div className="relative mx-auto md:mx-0">
+            <h2
+              className="text-2xl sm:text-3xl md:text-4xl mx-auto lg:text-5xl text-[#fbc710] font-semibold"
+              data-aos="fade"
+            >
+              Contact Form
+            </h2>
           </div>
 
-          <div className="sm:mb-6 p-4 md:mb-14">
+          <div className="sm:mb-6 md:mb-14">
             <Form {...form}>
               <form
                 onSubmit={form.handleSubmit(onSubmit)}
-                className="space-y-6 grid grid-cols-3"
+                className="flex flex-col gap-y-8"
               >
-                <FormField
-                  name="name"
-                  control={form.control}
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Name</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="text"
-                          placeholder="Enter your full name"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  name="email"
-                  control={form.control}
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Email</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="email"
-                          placeholder="example@email.com"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  name="phone"
-                  control={form.control}
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Phone number</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="tel"
-                          placeholder="1-234-567-8910"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  name="company"
-                  control={form.control}
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Company</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="text"
-                          placeholder="Enter your company name"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  name="reason"
-                  control={form.control}
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Reason</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="text"
-                          placeholder="Enter reason"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  name="subject"
-                  control={form.control}
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Subject</FormLabel>
-                      <FormControl>
-                        <Input
-                          type="text"
-                          placeholder="Enter subject"
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  name="message"
-                  control={form.control}
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>Message</FormLabel>
-                      <FormControl>
-                        <Textarea
-                          placeholder="Enter your message here..."
-                          {...field}
-                        />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
+                <div className="flex flex-col gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 items-center justify-center">
+                    <FormField
+                      name="name"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-lg">Name</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="text"
+                              placeholder="Enter your full name"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      name="email"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-lg">Email</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="email"
+                              placeholder="Enter your email address"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      name="phone"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-lg">
+                            Phone number
+                          </FormLabel>
+                          <FormControl>
+                            <Input
+                              type="tel"
+                              placeholder="Enter your phone number"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      name="company"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-lg">Company</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="text"
+                              placeholder="Enter your company name"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      name="reason"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-lg">Reason</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="text"
+                              placeholder="Enter reason"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      name="subject"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-lg">Subject</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="text"
+                              placeholder="Enter subject"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+                  <FormField
+                    name="message"
+                    control={form.control}
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-lg">Message</FormLabel>
+                        <FormControl>
+                          <Textarea
+                            placeholder="Enter your message here..."
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
                 <Button
                   type="submit"
                   variant="acc"
-                  className="w-full"
+                  className="w-28 ml-auto"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
