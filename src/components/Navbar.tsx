@@ -1,52 +1,91 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { IoMdArrowDropdown } from "react-icons/io";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
-import { useRouter, usePathname } from "next/navigation";
-import { Button } from "./ui/button";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-  const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const [taxDropdownOpen, setTaxDropdownOpen] = useState(false);
-  const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
+  const [contactDropdownOpen, setContactDropdownOpen] = useState(false);
+  const [insightsDropdownOpen, setInsightsDropdownOpen] = useState(false);
+  const [industriesDropdownOpen, setIndustriesDropdownOpen] = useState(false);
+  const [featuresDropdownOpen, setFeaturesDropdownOpen] = useState(false);
+  const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
 
   const handleDropdownClick = (dropdownName: string) => {
     switch (dropdownName) {
       case "services":
         setServicesDropdownOpen(!servicesDropdownOpen);
-        setTaxDropdownOpen(false);
-        setProductsDropdownOpen(false);
+        setFeaturesDropdownOpen(false);
+        setIndustriesDropdownOpen(false);
+        setInsightsDropdownOpen(false);
+        setContactDropdownOpen(false);
+        setAboutDropdownOpen(false);
         setResourcesDropdownOpen(false);
         break;
-      case "tax":
-        setTaxDropdownOpen(!taxDropdownOpen);
+      case "features":
+        setFeaturesDropdownOpen(!featuresDropdownOpen);
         setServicesDropdownOpen(false);
-        setProductsDropdownOpen(false);
+        setIndustriesDropdownOpen(false);
+        setInsightsDropdownOpen(false);
+        setContactDropdownOpen(false);
+        setAboutDropdownOpen(false);
         setResourcesDropdownOpen(false);
         break;
-      case "products":
-        setProductsDropdownOpen(!productsDropdownOpen);
+      case "insights":
+        setInsightsDropdownOpen(!insightsDropdownOpen);
+        setFeaturesDropdownOpen(false);
+        setIndustriesDropdownOpen(false);
         setServicesDropdownOpen(false);
-        setTaxDropdownOpen(false);
+        setContactDropdownOpen(false);
+        setAboutDropdownOpen(false);
+        setResourcesDropdownOpen(false);
+        break;
+      case "industries":
+        setIndustriesDropdownOpen(!industriesDropdownOpen);
+        setFeaturesDropdownOpen(false);
+        setInsightsDropdownOpen(false);
+        setServicesDropdownOpen(false);
+        setContactDropdownOpen(false);
+        setAboutDropdownOpen(false);
+        setResourcesDropdownOpen(false);
+        break;
+      case "contact":
+        setContactDropdownOpen(!contactDropdownOpen);
+        setFeaturesDropdownOpen(false);
+        setIndustriesDropdownOpen(false);
+        setInsightsDropdownOpen(false);
+        setServicesDropdownOpen(false);
+        setAboutDropdownOpen(false);
+        setResourcesDropdownOpen(false);
+        break;
+      case "about":
+        setAboutDropdownOpen(!aboutDropdownOpen);
+        setFeaturesDropdownOpen(false);
+        setIndustriesDropdownOpen(false);
+        setInsightsDropdownOpen(false);
+        setServicesDropdownOpen(false);
+        setContactDropdownOpen(false);
         setResourcesDropdownOpen(false);
         break;
       case "resources":
         setResourcesDropdownOpen(!resourcesDropdownOpen);
+        setFeaturesDropdownOpen(false);
+        setIndustriesDropdownOpen(false);
+        setInsightsDropdownOpen(false);
         setServicesDropdownOpen(false);
-        setTaxDropdownOpen(false);
-        setProductsDropdownOpen(false);
+        setContactDropdownOpen(false);
+        setAboutDropdownOpen(false);
         break;
     }
   };
 
   return (
-    <nav className="bg-white p-4">
+    <nav className="bg-white justify-self-end p-4">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="lg:hidden block w-6 h-3 bg-transparent appearance-none cursor-pointer"
@@ -58,66 +97,184 @@ export default function Navbar() {
         )}
       </button>
 
-      <ul className="list-none hidden lg:flex">
+      <ul className="hidden xl:flex items-end">
+        <li className="mr-4 lg:mr-10">
+          <Link
+            href="/"
+            className={`font-semibold 2xl:text-base text-sm hover:text-[#fbc710] transition-colors uppercase ${
+              pathname === "/" ? "text-[#fbc710]" : "text-black"
+            }`}
+          >
+            HOME
+          </Link>
+        </li>
         <li
           className="relative group mr-4 lg:mr-10"
           onMouseEnter={() => setServicesDropdownOpen(true)}
           onMouseLeave={() => setServicesDropdownOpen(false)}
         >
-          <div className="flex justify-center items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors cursor-pointer">
-            <span
-              className={`${pathname.includes("services") && "text-[#fbc710]"}`}
-            >
-              Services
-            </span>
-            <IoMdArrowDropdown
-              className={`${
-                servicesDropdownOpen ? "rotate-180" : ""
-              } duration-300`}
-            />
+          <div
+            className={`font-semibold 2xl:text-base text-sm hover:text-[#fbc710] transition-colors cursor-pointer uppercase ${
+              pathname.includes("services") ? "text-[#fbc710]" : "text-black"
+            }`}
+          >
+            SERVICES
           </div>
           <div
-            className={`absolute z-10 left-0 top-full w-56 p-4 rounded-sm bg-white shadow-lg duration-500 transition-transform transform ${
+            className={`absolute z-10 -lesft-[50px] -left-[250px] top-full w-[1000px] w-s96 p-20 bg-white shadow-lg duration-300 transition-opacity ${
               servicesDropdownOpen
-                ? "opacity-100 -translate-y-0 pointer-events-auto"
-                : "opacity-0 translate-y-28 pointer-events-none"
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
             }`}
           >
             <div className="flex space-x-4">
-              <ul className="list-none flex flex-col justify-center gap-y-4">
+              <ul className="grid grid-cols-3 gap-x-20 flexs flex-cols text-sm justify-center gap-y-4 w-full">
                 <li>
                   <Link
-                    href="/bookkeeping"
+                    href="/services/financial-statements"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Accounting
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/financial-statements"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Financial Statements
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/financial-statements"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Ledger Maintenance
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/financial-statements"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Payroll Accounting
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/advisory"
+                    className={`hover:text-[#fbc710] transition-colors ${
+                      pathname === "/services/advisory"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
+                  >
+                    Advisory
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Bookkeeping
                   </Link>
                 </li>
-                <hr />
                 <li>
                   <Link
-                    href="/services/advisory-services"
+                    href="/services/bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Advisory Services
+                    Financial Record Keeping
                   </Link>
                 </li>
-                <hr />
                 <li>
                   <Link
-                    href="/services/business-consulting-solutions"
+                    href="/services/bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Business Consulting Solutions
+                    Reconciliation and Reporting
                   </Link>
                 </li>
-                <hr />
                 <li>
                   <Link
-                    href="/services/consulting-for-quickbooks"
+                    href="/services/bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Consulting For QuickBooks
+                    Custom Bookkeeping Solutions
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Tax Planning & Strategies
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Strategic Tax Optimization
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Comprehensive Tax Compliance
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Proactive Tax Advisory
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Tax Calculation
+                  </Link>
+                </li>
+                {/* <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Entity & Compensation Optimization
+                  </Link>
+                </li> */}
+                <li>
+                  <Link
+                    href="/services/multi-entity-tax-planning"
+                    className={`hover:text-[#fbc710] transition-colors ${
+                      pathname === "/services/multi-entity-tax-planning"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
+                  >
+                    Multi Entity Tax Planning
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-plans-proposals"
+                    className={`hover:text-[#fbc710] transition-colors ${
+                      pathname === "/services/tax-plans-proposals"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
+                  >
+                    Tax Plans & Proposals
                   </Link>
                 </li>
               </ul>
@@ -126,212 +283,217 @@ export default function Navbar() {
         </li>
         <li
           className="relative group mr-4 lg:mr-10"
-          onMouseEnter={() => setTaxDropdownOpen(true)}
-          onMouseLeave={() => setTaxDropdownOpen(false)}
+          onMouseEnter={() => setIndustriesDropdownOpen(true)}
+          onMouseLeave={() => setIndustriesDropdownOpen(false)}
         >
           <Link
-            href="/tax-planning"
-            className="flex justify-center items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors"
+            href="/industries"
+            className={`font-semibold 2xl:text-base text-sm hover:text-[#fbc710] transition-colors cursor-pointer uppercase ${
+              pathname.includes("industries") ? "text-[#fbc710]" : "text-black"
+            }`}
           >
-            <span
-              className={`${pathname === "/tax-planning" && "text-[#fbc710]"}`}
-            >
-              Tax Planning
-            </span>
-            <IoMdArrowDropdown
-              className={`${taxDropdownOpen && "rotate-180"} duration-300`}
-            />
+            INDUSTRIES
           </Link>
           <div
-            className={`absolute z-10 left-0 top-full w-56 p-4 rounded-sm bg-white shadow-lg duration-500 transition-transform transform ${
-              taxDropdownOpen
-                ? "opacity-100 -translate-y-0 pointer-events-auto"
-                : "opacity-0 translate-y-28 pointer-events-none"
+            className={`absolute z-10 -left-[50px] top-full w-96 p-20 bg-white shadow-lg duration-300 transition-opacity ${
+              industriesDropdownOpen
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
             }`}
           >
             <div className="flex space-x-4">
-              <ul className="list-none flex flex-col justify-center gap-y-4">
+              <ul className="flex flex-col text-sm justify-center gap-y-4 w-full">
                 <li>
                   <Link
-                    href="/tax-planning"
+                    href="/industries"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    What is Tax Planning
+                    Small Businesses
                   </Link>
                 </li>
-                <hr />
                 <li>
                   <Link
-                    href="/tax-planning"
+                    href="/industries"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Tax Planning Strategies
+                    Corporations
                   </Link>
                 </li>
-                <hr />
                 <li>
                   <Link
-                    href="/bookkeeping"
+                    href="/industries"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Bookkeeping
+                    Non-Profits
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/industries"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Startups
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
         </li>
-        {/* <li
+        <li
           className="relative group mr-4 lg:mr-10"
-          onMouseEnter={() => setProductsDropdownOpen(true)}
-          onMouseLeave={() => setProductsDropdownOpen(false)}
+          onMouseEnter={() => setFeaturesDropdownOpen(true)}
+          onMouseLeave={() => setFeaturesDropdownOpen(false)}
         >
           <Link
-            href="/products"
-            className="flex justify-center items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors"
+            href="/features"
+            className={`font-semibold 2xl:text-base text-sm hover:text-[#fbc710] transition-colors cursor-pointer uppercase ${
+              pathname.includes("features") ? "text-[#fbc710]" : "text-black"
+            }`}
           >
-            <span className={`${pathname === "/products" && "text-[#fbc710]"}`}>
-              Products
-            </span>
-            <IoMdArrowDropdown
-              className={`${productsDropdownOpen && "rotate-180"} duration-300`}
-            />
+            FEATURES
           </Link>
           <div
-            className={`absolute z-10 left-0 top-full w-56 p-4 rounded-sm bg-white shadow-lg duration-500 transition-transform transform ${
-              productsDropdownOpen
-                ? "opacity-100 -translate-y-0 pointer-events-auto"
-                : "opacity-0 translate-y-28 pointer-events-none"
+            className={`absolute z-10 -left-[50px] top-full w-96 p-20 bg-white shadow-lg duration-300 transition-opacity ${
+              featuresDropdownOpen
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
             }`}
           >
             <div className="flex space-x-4">
-              <ul className="list-none flex flex-col justify-center gap-y-4">
+              <ul className="flex flex-col text-sm justify-center gap-y-4 w-full">
                 <li>
                   <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Client Collaboration
-                  </Link>
-                </li>
-                <hr />
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Federal Tax Planning
-                  </Link>
-                </li>
-                <hr />
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    State & Local Planning
-                  </Link>
-                </li>
-                <hr />
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Multi-Entity Tax Planning
-                  </Link>
-                </li>
-                <hr />
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Tax Plans
-                  </Link>
-                </li>
-                <hr />
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/features/smart-questionnaires"
+                    className={`hover:text-[#fbc710] transition-colors ${
+                      pathname === "/features/smart-questionnaires"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
                   >
                     Smart Questionnaires
                   </Link>
                 </li>
-                <hr />
                 <li>
                   <Link
-                    href="#"
+                    href="/features"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Client Requests
+                    Tax Compliance Tools
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/features"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Multi-Year Tax Scenarios
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
-        </li> */}
+        </li>
+        <li
+          className="relative group mr-4 lg:mr-10"
+          onMouseEnter={() => setInsightsDropdownOpen(true)}
+          onMouseLeave={() => setInsightsDropdownOpen(false)}
+        >
+          <Link
+            href="/insights"
+            className={`font-semibold 2xl:text-base text-sm hover:text-[#fbc710] transition-colors uppercase ${
+              pathname.includes("/insights") ? "text-[#fbc710]" : "text-black"
+            }`}
+          >
+            INSIGHTS
+          </Link>
+          <div
+            className={`absolute z-10 -left-[50px] top-full w-96 p-20 bg-white shadow-lg duration-300 transition-opacity ${
+              insightsDropdownOpen
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
+            }`}
+          >
+            <div className="flex space-x-4">
+              <ul className="text-sm flex flex-col justify-center gap-y-4 w-full">
+                <li>
+                  <Link
+                    href="/insights/case-studies"
+                    className={`hover:text-[#fbc710] transition-colors ${
+                      pathname === "/insights/case-studies"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
+                  >
+                    Case Studies
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/insights"
+                    className={`hover:text-[#fbc710] transition-colors ${
+                      pathname === "/insights" ? "text-[#fbc710]" : "text-black"
+                    }`}
+                  >
+                    Media Mentions
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
         <li
           className="relative group mr-4 lg:mr-10"
           onMouseEnter={() => setResourcesDropdownOpen(true)}
           onMouseLeave={() => setResourcesDropdownOpen(false)}
         >
-          <Link
-            href="/resources"
-            className="flex justify-center items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors"
-          >
-            <span
-              className={`${pathname === "/resources" && "text-[#fbc710]"}`}
-            >
-              Resources
-            </span>
-            <IoMdArrowDropdown
-              className={`${
-                resourcesDropdownOpen && "rotate-180"
-              } duration-300`}
-            />
-          </Link>
           <div
-            className={`absolute z-10 left-0 top-full w-44 p-4 rounded-sm bg-white shadow-lg duration-500 transition-transform transform ${
+            className={`2xl:text-base text-sm font-semibold hover:text-[#fbc710] transition-colors cursor-pointer uppercase ${
+              pathname.includes("/resources") ? "text-[#fbc710]" : "text-black"
+            }`}
+          >
+            RESOURCES
+          </div>
+          <div
+            className={`absolute z-10 -left-[50px] top-full w-96 p-20 bg-white shadow-lg duration-300 transition-opacity ${
               resourcesDropdownOpen
-                ? "opacity-100 -translate-y-0 pointer-events-auto"
-                : "opacity-0 translate-y-28 pointer-events-none"
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
             }`}
           >
             <div className="flex space-x-4">
-              <ul className="list-none flex flex-col justify-center gap-y-4">
+              <ul className="text-sm flex flex-col justify-center gap-y-4">
                 <li>
                   <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/resources/blog"
+                    className={`hover:text-[#fbc710] transition-colors ${
+                      pathname === "/resources/blog"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
                   >
                     Blog
                   </Link>
                 </li>
-                <hr />
                 <li>
                   <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/resources/tax-guide"
+                    className={`hover:text-[#fbc710] transition-colors ${
+                      pathname === "/resources/tax-guide"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
                   >
-                    Case Studies
+                    Tax Guides
                   </Link>
                 </li>
-                <hr />
                 <li>
                   <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    State Tax Deadlines
-                  </Link>
-                </li>
-                <hr />
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/resources/faq"
+                    className={`hover:text-[#fbc710] transition-colors ${
+                      pathname === "/resources/faq"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
                   >
                     FAQs
                   </Link>
@@ -342,255 +504,479 @@ export default function Navbar() {
         </li>
         <li className="mr-4 lg:mr-10">
           <Link
-            href="/about"
-            className={`flex justify-center items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors ${
-              pathname === "/about" && "text-[#fbc710]"
+            href="/partner-application-form"
+            className={`2xl:text-base text-sm font-semibold hover:text-[#fbc710] transition-colors cursor-pointer uppercase ${
+              pathname === "/partner-application-form"
+                ? "text-[#fbc710]"
+                : "text-black"
             }`}
           >
-            About
+            <span className="2xl:block hidden">Partner Application Form</span>
+            <span className="block 2xl:hidden">PA Form</span>
           </Link>
         </li>
-        <li className="mr-4 lg:mr-10">
-          <Button onClick={() => router.push("contact")} variant="acc">
-            Contact Us
-          </Button>
+        <li
+          className="relative group mr-4 lg:mr-10"
+          onMouseEnter={() => setAboutDropdownOpen(true)}
+          onMouseLeave={() => setAboutDropdownOpen(false)}
+        >
+          <Link
+            href="/about"
+            className={`2xl:text-base text-sm font-semibold hover:text-[#fbc710] transition-colors cursor-pointer uppercase ${
+              pathname === "/about" ? "text-[#fbc710]" : "text-black"
+            }`}
+          >
+            ABOUT
+          </Link>
+          <div
+            className={`absolute z-10 -left-[50px] top-full w-96 p-20 bg-white shadow-lg duration-300 transition-opacity ${
+              aboutDropdownOpen
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
+            }`}
+          >
+            <div className="flex space-x-4">
+              <ul className="text-sm flex flex-col justify-center gap-y-4">
+                <li>
+                  <Link
+                    href="/about"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Our Mission
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Team
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Certifications
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li
+          className="relative group mr-4 lg:mr-10"
+          onMouseEnter={() => setContactDropdownOpen(true)}
+          onMouseLeave={() => setContactDropdownOpen(false)}
+        >
+          <Link
+            href="/contact"
+            className={`2xl:text-base text-sm font-semibold hover:text-[#fbc710] transition-colors cursor-pointer uppercase ${
+              pathname.includes("/contact") ? "text-[#fbc710]" : "text-black"
+            }`}
+          >
+            CONTACT
+          </Link>
+          <div
+            className={`absolute z-10 -left-[50px] top-full w-96 p-20 bg-white shadow-lg duration-300 transition-opacity ${
+              contactDropdownOpen
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
+            }`}
+          >
+            <div className="flex space-x-4">
+              <ul className="text-sm flex flex-col justify-center gap-y-4">
+                <li>
+                  <Link
+                    href="/contact/get-a-consultation"
+                    className={`hover:text-[#fbc710] transition-colors ${
+                      pathname === "/contact/get-a-consultation"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
+                  >
+                    Get a Consultation
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact/support"
+                    className={`hover:text-[#fbc710] transition-colors ${
+                      pathname === "/contact/support"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
+                  >
+                    Support
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Office Locations
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </li>
       </ul>
 
       <ul
-        className={`list-none absolute top-full right-0 z-10 block lg:hidden space-y-2 w-full p-4 bg-white shadow-lg duration-500 transition-transform transform ${
+        className={`absolute text-2xl font-bold top-full right-0 z-40 block h-screen overflow-y-auto xl:hidden space-y-2 p-4 bg-white duration-700 transition-all transform ${
           isOpen
-            ? "flex flex-col pointer-events-auto"
-            : "pointer-events-none hidden"
+            ? "flex flex-col w-full sm:w-1/2 gap-y-2 pointer-events-auto"
+            : "pointer-events-none w-0"
         }`}
       >
+        <li>
+          <Link
+            href="/"
+            className={`px-4 transition-colors ${
+              pathname === "/" ? "text-[#fbc710]" : "text-black"
+            }`}
+          >
+            Home
+          </Link>
+        </li>
         <li className="group" onClick={() => handleDropdownClick("services")}>
-          <div className="flex justify-between px-4 items-center gap-1 hover:text-[#fbc710] transition-colors font-semibold text-black">
-            <span>Services</span>
-            <IoMdArrowDropdown
-              className={`${servicesDropdownOpen && "rotate-180"} duration-300`}
-            />
+          <div className="px-4 hover:text-[#fbc710] transition-colors">
+            Services
           </div>
           <div
-            className={`mt-1 w-full px-4 ${
+            className={`mt-2 w-full px-5 ${
               servicesDropdownOpen
                 ? "block pointer-events-auto"
                 : "hidden pointer-events-none"
             }`}
           >
-            <div className="flex w-full px-6">
-              <ul className="list-none space-y-2 grid grid-cols-1 gap-x-2 md:grid-cols-3 sm:grid-cols-2 w-full text-sm">
+            <div className="flex w-full">
+              <ul className="flex flex-col font-semibold gap-y-4 w-full text-lg">
                 <li>
                   <Link
-                    href="/bookkeeping"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/services/financial-statements"
+                    className="text-black transition-colors"
+                  >
+                    Accounting
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/financial-statements"
+                    className="text-black transition-colors"
+                  >
+                    Financial Statements
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/financial-statements"
+                    className="text-black transition-colors"
+                  >
+                    Ledger Maintenance
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/financial-statements"
+                    className="text-black transition-colors"
+                  >
+                    Payroll Accounting
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/advisory"
+                    className={`transition-colors ${
+                      pathname === "/services/advisory"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
+                  >
+                    Advisory
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/bookkeeping"
+                    className="text-black transition-colors"
                   >
                     Bookkeeping
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/advisory-services"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/services/bookkeeping"
+                    className="text-black transition-colors"
                   >
-                    Advisory Services
+                    Financial Record Keeping
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/business-consulting-solutions"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/services/bookkeeping"
+                    className="text-black transition-colors"
                   >
-                    Business Consulting Solutions
+                    Reconciliation and Reporting
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/services/consulting-for-quickbooks"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/services/bookkeeping"
+                    className="text-black transition-colors"
                   >
-                    Consulting For QuickBooks
+                    Custom Bookkeeping Solutions
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black transition-colors"
+                  >
+                    Tax Planning & Strategies
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black transition-colors"
+                  >
+                    Strategic Tax Optimization
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black transition-colors"
+                  >
+                    Comprehensive Tax Compliance
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black transition-colors"
+                  >
+                    Proactive Tax Advisory
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black transition-colors"
+                  >
+                    Tax Calculation
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/multi-entity-tax-planning"
+                    className={`transition-colors ${
+                      pathname === "/services/multi-entity-tax-planning"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
+                  >
+                    Multi Entity Tax Planning
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-plans-proposals"
+                    className={`transition-colors ${
+                      pathname === "/services/tax-plans-proposals"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
+                  >
+                    Tax Plans & Proposals
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
         </li>
-        <li className="group" onClick={() => handleDropdownClick("tax")}>
-          <div className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors">
-            <Link href="/tax-planning">Tax Planning</Link>
-            <IoMdArrowDropdown
-              className={`${taxDropdownOpen && "rotate-180"} duration-300`}
-            />
+        <li className="group" onClick={() => handleDropdownClick("industries")}>
+          <div className="px-4 hover:text-[#fbc710] transition-colors">
+            Industries
           </div>
-
           <div
-            className={`mt-1 w-full px-4 ${
-              taxDropdownOpen
+            className={`mt-2 w-full px-5 ${
+              industriesDropdownOpen
                 ? "block pointer-events-auto"
                 : "hidden pointer-events-none"
             }`}
           >
-            <div className="flex w-full px-6">
-              <ul className="list-none space-y-2 grid grid-cols-1 gap-x-2 md:grid-cols-3 sm:grid-cols-2 w-full text-sm">
+            <div className="flex w-full">
+              <ul className="flex flex-col font-semibold gap-y-4 w-full text-lg">
                 <li>
                   <Link
-                    href="/tax-planning"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/industries"
+                    className="text-black transition-colors"
                   >
-                    What is Tax Planning
+                    Small Businesses
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/tax-planning"
-                    className="text-black hover:text-[/tax-planningfbc710] transition-colors"
+                    href="/industries"
+                    className="text-black transition-colors"
                   >
-                    Tax Planning Strategies
+                    Corporations
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/bookkeeping"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/industries"
+                    className="text-black transition-colors"
                   >
-                    Bookkeeping
+                    Non-Profits
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/industries"
+                    className="text-black transition-colors"
+                  >
+                    Startups
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
         </li>
-        {/* <li className="group" onClick={() => handleDropdownClick("products")}>
-          <div className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors">
-            <Link href="/products">Products</Link>
-            <IoMdArrowDropdown
-              className={`${productsDropdownOpen && "rotate-180"} duration-300`}
-            />
+        <li className="group" onClick={() => handleDropdownClick("features")}>
+          <div className="px-4 hover:text-[#fbc710] transition-colors">
+            Features
           </div>
           <div
-            className={`mt-1 w-full px-4 ${
-              productsDropdownOpen
+            className={`mt-2 w-full px-5 ${
+              featuresDropdownOpen
                 ? "block pointer-events-auto"
                 : "hidden pointer-events-none"
             }`}
           >
-            <div className="flex w-full px-6">
-              <ul className="list-none space-y-2 grid grid-cols-1 gap-x-2 md:grid-cols-3 sm:grid-cols-2 w-full text-sm">
+            <div className="flex w-full">
+              <ul className="flex flex-col font-semibold gap-y-4 w-full text-lg">
                 <li>
                   <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Tax Planning
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Client Collaboration
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Federal Tax Planning
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    State & Local Planning
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Multi-Entity Tax Planning
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Tax Plans
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/features/smart-questionnaires"
+                    className={`transition-colors ${
+                      pathname === "/features/smart-questionnaires"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
                   >
                     Smart Questionnaires
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/features"
+                    className="text-black transition-colors"
                   >
-                    Client Requests
+                    Tax Compliance Tools
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/features"
+                    className="text-black transition-colors"
+                  >
+                    Multi-Year Tax Scenarios
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
-        </li> */}
-        <li className="group" onClick={() => handleDropdownClick("resources")}>
-          <div className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors">
-            <Link href="/resources">Resources</Link>
-            <IoMdArrowDropdown
-              className={`${
-                resourcesDropdownOpen && "rotate-180"
-              } duration-300`}
-            />
+        </li>
+        <li className="group" onClick={() => handleDropdownClick("insights")}>
+          <div className="px-4 hover:text-[#fbc710] transition-colors">
+            Insights
           </div>
           <div
-            className={`mt-1 w-full px-4 ${
-              resourcesDropdownOpen
+            className={`mt-2 w-full px-5 ${
+              insightsDropdownOpen
                 ? "block pointer-events-auto"
                 : "hidden pointer-events-none"
             }`}
           >
-            <div className="flex w-full px-6">
-              <ul className="list-none space-y-2 grid grid-cols-1 gap-x-2 md:grid-cols-3 sm:grid-cols-2 w-full text-sm">
+            <div className="flex w-full">
+              <ul className="flex flex-col font-semibold gap-y-4 w-full text-lg">
                 <li>
                   <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/insights/case-studies"
+                    className={`transition-colors ${
+                      pathname === "/insights/case-studies"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
                   >
                     Case Studies
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/insights"
+                    className={`transition-colors ${
+                      pathname === "/insights" ? "text-[#fbc710]" : "text-black"
+                    }`}
                   >
-                    State Tax Deadlines
+                    Media Mentions
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li className="group" onClick={() => handleDropdownClick("resources")}>
+          <div className="px-4 hover:text-[#fbc710] transition-colors">
+            Resources
+          </div>
+          <div
+            className={`mt-2 w-full px-5 ${
+              resourcesDropdownOpen
+                ? "block pointer-events-auto"
+                : "hidden pointer-events-none"
+            }`}
+          >
+            <div className="flex w-full">
+              <ul className="flex flex-col font-semibold gap-y-4 w-full text-lg">
+                <li>
+                  <Link
+                    href="/resources/blog"
+                    className={`transition-colors ${
+                      pathname === "/resources/blog"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
+                  >
+                    Blog
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    href="/resources/tax-guide"
+                    className={`transition-colors ${
+                      pathname === "/resources/tax-guide"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
+                  >
+                    Tax Guides
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/resources/faq"
+                    className={`transition-colors ${
+                      pathname === "/resources/faq"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
                   >
                     FAQs
                   </Link>
@@ -601,19 +987,96 @@ export default function Navbar() {
         </li>
         <li>
           <Link
-            href="/about"
-            className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors"
+            href="/partner-application-form"
+            className={`px-4 transition-colors ${
+              pathname === "/partner-application-form"
+                ? "text-[#fbc710]"
+                : "text-black"
+            }`}
           >
-            About
+            Partner Application Form
           </Link>
         </li>
-        <li>
-          <Link
-            href="/contact"
-            className="flex justify-between px-4 items-center gap-1 font-semibold text-black hover:text-[#fbc710] transition-colors"
+        <li className="group" onClick={() => handleDropdownClick("about")}>
+          <div className="px-4 hover:text-[#fbc710] transition-colors">
+            About
+          </div>
+          <div
+            className={`mt-2 w-full px-5 ${
+              aboutDropdownOpen
+                ? "block pointer-events-auto"
+                : "hidden pointer-events-none"
+            }`}
           >
-            Contact Us
-          </Link>
+            <div className="flex w-full">
+              <ul className="flex flex-col font-semibold gap-y-4 w-full text-lg">
+                <li>
+                  <Link href="/about" className="text-black transition-colors">
+                    Our Mission
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about" className="text-black transition-colors">
+                    Team
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about" className="text-black transition-colors">
+                    Certifications
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li className="group" onClick={() => handleDropdownClick("contact")}>
+          <div className="px-4 hover:text-[#fbc710] transition-colors">
+            Contact
+          </div>
+          <div
+            className={`mt-2 w-full px-5 ${
+              contactDropdownOpen
+                ? "block pointer-events-auto"
+                : "hidden pointer-events-none"
+            }`}
+          >
+            <div className="flex w-full">
+              <ul className="flex flex-col font-semibold gap-y-4 w-full text-lg">
+                <li>
+                  <Link
+                    href="/contact/get-a-consultation"
+                    className={`transition-colors ${
+                      pathname === "/contact/get-a-consultation"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
+                  >
+                    Get a Consultation
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact/support"
+                    className={`transition-colors ${
+                      pathname === "/contact/support"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
+                  >
+                    Support
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact"
+                    className="text-black transition-colors"
+                  >
+                    Office Locations
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </li>
       </ul>
     </nav>

@@ -3,46 +3,95 @@ import { motion } from "framer-motion";
 import React from "react";
 import { ImagesSlider } from "./ui/images-slider";
 import { useRouter } from "next/navigation";
+import { ChevronRight } from "lucide-react";
 
 type SliderProps = {
   images: string[];
-  title: string;
+  title?: string;
   description?: string;
+  btnText?: string;
+  btnHref?: string;
 };
 
-export default function Slider({ images, title, description }: SliderProps) {
+export default function Slider({
+  images,
+  title,
+  description,
+  btnText,
+  btnHref,
+}: SliderProps) {
   const router = useRouter();
+  // const [isImageSliderHover, setIsImageSliderHover] = useState(false);
 
   return (
-    <ImagesSlider className="h-[40rem] sm:mt-36" images={images}>
-      <motion.div
-        initial={{
-          opacity: 0,
-          y: -80,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 0.6,
-        }}
-        className="z-50 flex flex-col justify-center items-center"
-      >
-        <motion.p className="font-bold text-2xl md:text-5xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
-          {title} <br />
-          <span className="text-base sm:text-xl font-semibold">
-            {description}
-          </span>
-        </motion.p>
-        <button
-          onClick={() => router.push("get-a-consultation")}
-          className="px-4 py-2 backdrop-blur-sm border hover:scale-110 bg-[#fbc710]/10 border-[#fbc710]/20 text-white mx-auto text-center text-base sm:text-xl font-semibold rounded-full relative duration-300 mt-4"
+    <div
+      className="relative max-w-[1800px] mx-auto h-[calc(100vh-93px)] lg:h-[calc(100vh-110px)] 2xl:max-w-[calc(100vw-120px)]"
+      // onMouseEnter={() => setIsImageSliderHover(true)}
+      // onMouseLeave={() => setIsImageSliderHover(false)}
+    >
+      <ImagesSlider className="sm:mt-[105px]" images={images}>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: -80,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="z-50 flex flex-col py-8 px-12 relative pl-20 before:content-[''] before:absolute before:top-0 before:left-10 before:w-[150px] before:h-full before:border-[4px] before:border-solid before:border-[#fbc710] before:border-r-0"
         >
-          <span>Schedule Your Consultation</span>
-          <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-[#fbc710] to-transparent" />
-        </button>
-      </motion.div>
-    </ImagesSlider>
+          <motion.p className="font-bold text-4xl md:text-7xl flex flex-col gap-2 text-white py-4 mb-20">
+            <span className="text-lg sm:text-xl font-normal uppercase">
+              {title}
+            </span>
+
+            {description}
+          </motion.p>
+
+          {btnText && (
+            <button
+              onClick={() => router.push(`${btnHref}`)}
+              className="text-white flex gap-2 w-36 sm:w-40 text-lg sm:text-xl text-start cursor-pointer"
+            >
+              {btnText}{" "}
+              <ChevronRight className="lg:hover:animate-arrow-hover" />
+            </button>
+          )}
+        </motion.div>
+      </ImagesSlider>
+
+      {/* <div
+        className={`bg-white absolute bottom-0 right-0 grid grid-cols-3 gap-x-32 p-12 transition-opacity duration-500 ${
+          isImageSliderHover ? "opacity-95" : "opacity-0"
+        }`}
+      >
+        <div className="flex items-center gap-8">
+          <span className="font-semibold text-6xl">01</span>
+          <div className="flex flex-col">
+            <span className="font-semibold text-xl">Home In </span>
+            <span className="font-semibold text-xl">Forest</span>
+          </div>
+        </div>
+        <div className="flex items-center gap-8">
+          <span className="font-semibold text-6xl">02</span>
+          <div className="flex flex-col">
+            <span className="font-semibold text-xl">Villa In </span>
+            <span className="font-semibold text-xl">London</span>
+          </div>
+        </div>
+        <div className="flex items-center gap-8">
+          <span className="font-semibold text-6xl">03</span>
+          <div className="flex flex-col">
+            <span className="font-semibold text-xl">Rennovate</span>
+            <span className="font-semibold text-xl">Exterior With</span>
+            <span className="font-semibold text-xl">Garden</span>
+          </div>
+        </div>
+      </div> */}
+    </div>
   );
 }

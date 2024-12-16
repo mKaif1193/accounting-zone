@@ -1,17 +1,16 @@
 import React from "react";
 import Image from "next/image";
-import Statistics from "./Statistics";
 
 export default function WhyUs() {
   return (
     <section className="flex flex-wrap sm:flex-col mx-auto container">
       <h2
-        className="w-full md:w-1/2 flex lg:w-[90%] mx-auto mb-4 md:mb-8 text-lg sm:text-xl lg:text-2xl text-[#fbc710] uppercase"
+        className="w-full md:w-1/2 flex lg:w-[60%] mx-auto mb-4 md:mb-8 text-[#fbc710] uppercase font-semibold tracking-widest text-sm lg:text-base"
         data-aos="fade"
       >
         WHY US
       </h2>
-      <div className="w-full md:w-1/2 flex gap-20 lg:w-[90%] mx-auto mb-8 md:mb-0">
+      <div className="w-full md:w-1/2 flex gap-20 lg:w-[60%] mx-auto mb-8 md:mb-0">
         <div className="mb-6 sm:mb-14 flex flex-col gap-3" data-aos="fade">
           <h3 className="text-2xl sm:text-3xl font-semibold lg:text-4xl">
             Trusted experts with
@@ -45,8 +44,6 @@ export default function WhyUs() {
             data-aos="fade"
           />
         </div>
-
-        <Statistics />
       </div>
     </section>
   );

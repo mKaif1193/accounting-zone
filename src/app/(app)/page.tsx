@@ -1,7 +1,8 @@
-import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
+import AboutSection from "@/components/Home/AboutSection";
+import ServicesSection from "@/components/Home/ServicesSection";
 import Slider from "@/components/Slider";
-import Testimonials from "@/components/Testimonials";
+import Statistics from "@/components/Home/Statistics";
+import TaxCalculation from "@/components/Home/TaxCalculation";
 import WhyUs from "@/components/WhyUs";
 
 const images = [
@@ -14,16 +15,31 @@ const images = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen space-y-16 sm:space-y-24 md:space-y-36 lg:space-y-48">
+    <main className="min-h-screen pb-40 space-y-16 sm:space-y-24 md:space-y-36 lg:space-y-48">
       <Slider
-        title="Unlock your financial potential with expert guidance"
-        description="Comprehensive financial consulting services tailored to your needs"
+        title="Home"
+        description="Unlock your financial potential with expert guidance"
         images={images}
+        btnText="Get Started"
+        btnHref="contact/get-a-consultation"
       />
       <AboutSection />
       <ServicesSection />
+      <TaxCalculation />
+      <Slider
+        description="Building wealth, creating futures."
+        images={["/contact/GettyImages-1440181617-scaled.jpg"]}
+      />
+      <Statistics />
       <WhyUs />
-      <Testimonials />
+      <Slider
+        title="Team"
+        description="Get to know the incredible individuals behind our company"
+        images={["/team/GettyImages-1407840013-scaled.jpg"]}
+        btnText="Our People"
+        btnHref="about"
+      />
+      {/* <ProjectsSection /> */}
     </main>
   );
 }

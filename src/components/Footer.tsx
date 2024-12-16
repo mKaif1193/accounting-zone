@@ -1,200 +1,187 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedin,
-  FaMapMarkerAlt,
-} from "react-icons/fa";
-import { FaPhone, FaXTwitter } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { IoGlobeOutline } from "react-icons/io5";
+import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
-  return (
-    <footer className="bg-white">
-      <div className="relative mx-auto w-[85%] px-4 sm:px-6 lg:px-8 py-8 md:py-16 lg:py-20 xl:py-[150px] before:absolute before:left-[15px] before:top-0 before:w-full before:border-t before:border-[#fbc710]/50">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-2 sm:gap-8 justify-evenly">
-          <div className="mb-4 w-72 sm:mb-0">
-            <Link href="/">
-              <Image
-                src="/logo/logo-black.png"
-                alt="Accountings Zone Logo"
-                width={100}
-                height={100}
-                className="w-[140px] sm:w-52 h-auto"
-              />
-            </Link>
-            <div className="flex mt-12 lg:mt-6 gap-1 flex-col">
-              <h3 className="sm:text-base text-sm font-semibold">
-                Building wealth, creating futures.
-              </h3>
-              <p className="text-xs sm:text-sm">
-                Trusted financial consulting firm providing expert guidance and
-                personalized solutions to help clients unlock their full
-                financial potential.
-              </p>
+  const pathname = usePathname();
 
-              <ul className="flex mt-6 gap-x-4 items-center sm:gap-x-6">
-                <li>
-                  <Link
-                    href="https://www.facebook.com/people/Accountings-Zone/100093148360065/"
-                    target="_blank"
-                    className="text-black hover:text-[#fbc710] duration-300"
-                  >
-                    <FaFacebookF className="size-4 sm:size-5" />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://x.com/accountingszone"
-                    target="_blank"
-                    className="text-black hover:text-[#fbc710] duration-300"
-                  >
-                    <FaXTwitter className="size-4 sm:size-5" />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://www.instagram.com/accountingszone/"
-                    target="_blank"
-                    className="text-black hover:text-[#fbc710] duration-300"
-                  >
-                    <FaInstagram className="size-4 sm:size-5" />
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://www.linkedin.com/company/accountingszone/?viewAsMember=true"
-                    target="_blank"
-                    className="text-black hover:text-[#fbc710] duration-300"
-                  >
-                    <FaLinkedin className="size-4 sm:size-5" />
-                  </Link>
-                </li>
-              </ul>
+  return (
+    <footer className="w-full bg-white">
+      <div className="relative max-w-[1830px] px-4 py-12 md:py-24 lg:py-32 xl:py-40 2xl:max-w-[calc(100vw-90px)]">
+        <div className="absolute left-4 top-0 w-[calc(100%-8px)] border-t border-gray-300"></div>
+        <div className="grid grid-cols-2 sm:justify-items-center md:grid-cols-6 gap-6">
+          <div className="mb-6 md:mb-0 col-span-2 md:col-span-1">
+            <Link href="/" className="block mb-4 md:mb-0">
+              <span className="text-2xl sm:text-3xl font-bold">
+                Accountings
+              </span>
+              <span className="block text-sm sm:text-base text-gray-600">
+                Zone
+              </span>
+            </Link>
+          </div>
+
+          <div className="order-last md:order-none mb-6 md:mb-0">
+            <div className="text-sm sm:text-base text-black">
+              © Accountings Zone. 2024 <br /> All Rights Reserved
             </div>
           </div>
 
-          <div className="mb-4 sm:mb-0">
-            <h3 className="font-semibold sm:text-base text-sm mb-1 sm:mb-3">
-              Services
-            </h3>
-            <ul className="space-y-1 sm:space-y-3 text-xs sm:text-sm">
-              <li>
-                <Link
-                  href="/tax-resolution"
-                  className="text-black transition-colors duration-300 hover:text-[#fbc710]"
-                >
-                  Tax Resolution
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/bookkeeping"
-                  className="text-black transition-colors duration-300 hover:text-[#fbc710]"
-                >
-                  Bookkeeping
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/tax-planning"
-                  className="text-black transition-colors duration-300 hover:text-[#fbc710]"
-                >
-                  Tax Planning
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="mb-4 sm:mb-0">
-            <h3 className="font-semibold sm:text-base text-sm mb-1 sm:mb-3">
-              Legal
-            </h3>
-            <ul className="space-y-1 sm:space-y-3 text-xs sm:text-sm">
+          <div className="space-y-4">
+            <ul className="list-none p-0">
               <li>
                 <Link
                   href="#"
-                  className="text-black transition-colors duration-300 hover:text-[#fbc710]"
+                  className="text-sm sm:text-base text-black hover:text-yellow-500 transition-colors"
                 >
-                  Terms & Conditions
+                  Site Map
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-black transition-colors duration-300 hover:text-[#fbc710]"
+                  href="/terms-and-conditions"
+                  className={`text-sm sm:text-base text-black hover:text-yellow-500 transition-colors ${
+                    pathname === "/terms-and-conditions"
+                      ? "text-yellow-500"
+                      : "text-black"
+                  }`}
+                >
+                  Terms &amp; Conditions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className={`text-sm sm:text-base text-black hover:text-yellow-500 transition-colors ${
+                    pathname === "/privacy-policy"
+                      ? "text-yellow-500"
+                      : "text-black"
+                  }`}
                 >
                   Privacy Policy
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-black transition-colors duration-300 hover:text-[#fbc710]"
+                  href="/contact/support"
+                  className={`text-sm sm:text-base hover:text-yellow-500 transition-colors ${
+                    pathname === "/contact/support"
+                      ? "text-yellow-500"
+                      : "text-black"
+                  }`}
                 >
-                  Sitemap
+                  Support
                 </Link>
               </li>
-              <li>© Accountings Zone. 2024</li>
             </ul>
           </div>
 
-          <div className="mb-4 sm:mb-0">
-            <h3 className="font-semibold sm:text-base text-sm mb-3 sm:mb-4">
-              Contact Us
-            </h3>
-            <ul className="space-y-3 sm:space-y-6 text-xs sm:text-sm">
+          <div className="space-y-4">
+            <ul className="list-none p-0">
               <li>
                 <Link
-                  href="tel:+17606860609"
-                  className="flex items-center gap-2 text-black transition-colors duration-300 hover:text-[#fbc710]"
+                  href="/contact"
+                  className={`text-sm sm:text-base text-black hover:text-yellow-500 transition-colors`}
                 >
-                  <FaPhone className="size-4" /> +1-760-686-0609
+                  Our Location
                 </Link>
               </li>
               <li>
                 <Link
-                  href="mailto:info@accountingszone.com"
-                  className="flex items-center gap-2 text-black transition-colors duration-300 hover:text-[#fbc710]"
+                  href="/about"
+                  className={`text-sm sm:text-base hover:text-yellow-500 transition-colors ${
+                    pathname === "/about" ? "text-[#fbc710]" : "text-black"
+                  }`}
                 >
-                  <MdEmail className="size-4 sm:size-5" />
-                  info@accountingszone.com
+                  About
                 </Link>
               </li>
               <li>
                 <Link
-                  href="https://g.co/kgs/82Pdpx9"
-                  className="flex items-center gap-2 text-black transition-colors duration-300 hover:text-[#fbc710]"
+                  href="/contact"
+                  className={`text-sm sm:text-base hover:text-yellow-500 transition-colors ${
+                    pathname === "/contact" ? "text-[#fbc710]" : "text-black"
+                  }`}
                 >
-                  <FaMapMarkerAlt className="size-4 sm:size-5" /> 124 S Gemstone
-                  Street, Ridgecrest California 93555
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-span-2 md:col-span-1">
+            <ul className="flex gap-4">
+              <li>
+                <Link
+                  href="https://www.facebook.com/people/Accountings-Zone/100093148360065/"
+                  target="_blank"
+                  className="hover:text-yellow-500"
+                >
+                  <FaFacebookF />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://x.com/accountingszone"
+                  target="_blank"
+                  className="hover:text-yellow-500"
+                >
+                  <FaXTwitter />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.instagram.com/accountingszone/"
+                  target="_blank"
+                  className="hover:text-yellow-500"
+                >
+                  <FaInstagram />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.linkedin.com/company/accountingszone/?viewAsMember=true"
+                  target="_blank"
+                  className="hover:text-yellow-500"
+                >
+                  <FaLinkedin />
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-span-2 md:col-span-1 order-none md:order-last">
+            <ul className="flex sm:flex-col gap-2">
+              <li>
+                <Link
+                  href="#"
+                  className="text-sm sm:text-base text-[#fbc710] uppercase font-medium cursor-pointer hover:text-[#fbc710]"
+                >
+                  Eng
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="text-sm sm:text-base text-black uppercase font-medium cursor-pointer hover:text-yellow-500"
+                >
+                  Fra
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#"
+                  className="text-sm sm:text-base text-black uppercase font-medium cursor-pointer hover:text-yellow-500"
+                >
+                  Ger
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-      </div>
-
-      <div className="flex gap-3 items-center w-full text-gray-600 mx-auto justify-center text-center font-semibold text-sm mb-7 sm:mb-14 sm:text-base">
-        <span>Design & Developed by DevEdge Solutions</span>
-        <Link
-          href="mailto:devedge.sol@gmail.com"
-          className="hover:text-[#fbA010] duration-300 flex gap-1 items-center justify-center"
-        >
-          <MdEmail className="size-4 sm:size-5" />
-          Email
-        </Link>
-        <Link
-          href="https://mkaif.vercel.app"
-          className="hover:text-[#fbA010] duration-300 flex gap-1 items-center justify-center"
-        >
-          <IoGlobeOutline className="size-4 sm:size-5" />
-          Website
-        </Link>
       </div>
     </footer>
   );

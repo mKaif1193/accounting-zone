@@ -23,13 +23,13 @@ export default function NotFound() {
         <div className="flex gap-4">
           <button
             onClick={() => router.back()}
-            className="font-semibold text-base sm:text-xl hover:text-white text-black bg-[#fbc710] hover:bg-black px-5 sm:px-7 py-1.5 sm:py-2.5 rounded-3xl duration-500 hover:scale-105 transition-all"
+            className="font-semibold text-base sm:text-xl text-black bg-[#fbc710] hover:bg-[#e2b512] px-5 sm:px-7 py-1.5 sm:py-2.5 rounded-3xl duration-300 transition-colors"
           >
             Go Back
           </button>
           <button
             onClick={() => router.replace("/")}
-            className="font-semibold text-base sm:text-xl hover:text-white text-black bg-[#fbc710] hover:bg-black px-5 sm:px-7 py-1.5 sm:py-2.5 rounded-3xl duration-500 hover:scale-105 transition-all"
+            className="font-semibold text-base sm:text-xl text-black bg-[#fbc710] hover:bg-[#e2b512] px-5 sm:px-7 py-1.5 sm:py-2.5 rounded-3xl duration-300 transition-colors"
           >
             Homepage
           </button>
