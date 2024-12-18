@@ -121,47 +121,49 @@ export default function Navbar() {
             SERVICES
           </div>
           <div
-            className={`absolute z-10 -lesft-[50px] -left-[250px] top-full w-[1000px] w-s96 p-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 -left-[100px] top-full w-[1000px] p-20 bg-white shadow-lg duration-300 transition-opacity ${
               servicesDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
             }`}
           >
             <div className="flex space-x-4">
-              <ul className="grid grid-cols-3 gap-x-20 flexs flex-cols text-sm justify-center gap-y-4 w-full">
-                <li>
-                  <Link
+              <ul className="grid grid-cols-3 gap-x-8 text-sm divide-x-2 justify-center w-full">
+                <div className="space-y-4">
+                  <li className="font-bold text-xs">
+                    {/* <Link
                     href="/services/financial-statements"
                     className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Accounting
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/financial-statements"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Financial Statements
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/financial-statements"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Ledger Maintenance
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/financial-statements"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Payroll Accounting
-                  </Link>
-                </li>
-                <li>
+                  > */}
+                    FINANCIAL - Accounting
+                    {/* </Link> */}
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/financial-statements"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Financial Statements
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/financial-statements"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Ledger Maintenance
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/financial-statements"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Payroll Accounting
+                    </Link>
+                  </li>
+                </div>
+                {/* <li>
                   <Link
                     href="/services/advisory"
                     className={`hover:text-[#fbc710] transition-colors ${
@@ -172,79 +174,83 @@ export default function Navbar() {
                   >
                     Advisory
                   </Link>
-                </li>
-                <li>
-                  <Link
+                </li> */}
+                <div className="space-y-4 px-14">
+                  <li className="font-bold text-xs">
+                    {/* <Link
                     href="/services/bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Bookkeeping
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/bookkeeping"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Financial Record Keeping
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/bookkeeping"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Reconciliation and Reporting
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/bookkeeping"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Custom Bookkeeping Solutions
-                  </Link>
-                </li>
-                <li>
-                  <Link
+                  > */}
+                    RECORDS - Bookkeeping
+                    {/* </Link> */}
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/bookkeeping"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Financial Record Keeping
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/bookkeeping"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Reconciliation and Reporting
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/bookkeeping"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Custom Bookkeeping Solutions
+                    </Link>
+                  </li>
+                </div>
+                <div className="space-y-4 px-14">
+                  <li className="font-bold text-xs">
+                    {/* <Link
                     href="/services/tax-planning"
                     className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Tax Planning & Strategies
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/tax-planning"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Strategic Tax Optimization
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/tax-planning"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Comprehensive Tax Compliance
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/services/tax-planning"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Proactive Tax Advisory
-                  </Link>
-                </li>
-                <li>
+                  > */}
+                    TAX - Tax planning
+                    {/* </Link> */}
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/tax-planning"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Strategic Tax Optimization
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/tax-planning"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Comprehensive Tax Compliance
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/services/tax-planning"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Proactive Tax Advisory
+                    </Link>
+                  </li>
+                </div>
+                {/* <li>
                   <Link
                     href="/services/tax-planning"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Tax Calculation
                   </Link>
-                </li>
+                </li> */}
                 {/* <li>
                   <Link
                     href="/services/tax-planning"
@@ -253,7 +259,7 @@ export default function Navbar() {
                     Entity & Compensation Optimization
                   </Link>
                 </li> */}
-                <li>
+                {/* <li>
                   <Link
                     href="/services/multi-entity-tax-planning"
                     className={`hover:text-[#fbc710] transition-colors ${
@@ -264,8 +270,8 @@ export default function Navbar() {
                   >
                     Multi Entity Tax Planning
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link
                     href="/services/tax-plans-proposals"
                     className={`hover:text-[#fbc710] transition-colors ${
@@ -276,7 +282,7 @@ export default function Navbar() {
                   >
                     Tax Plans & Proposals
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
@@ -295,7 +301,7 @@ export default function Navbar() {
             INDUSTRIES
           </Link>
           <div
-            className={`absolute z-10 -left-[50px] top-full w-96 p-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 -left-[50px] top-full w-[500px] p-20 bg-white shadow-lg duration-300 transition-opacity ${
               industriesDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -353,7 +359,7 @@ export default function Navbar() {
             FEATURES
           </Link>
           <div
-            className={`absolute z-10 -left-[50px] top-full w-96 p-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 -left-[50px] top-full w-[500px] p-20 bg-white shadow-lg duration-300 transition-opacity ${
               featuresDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -361,7 +367,7 @@ export default function Navbar() {
           >
             <div className="flex space-x-4">
               <ul className="flex flex-col text-sm justify-center gap-y-4 w-full">
-                <li>
+                {/* <li>
                   <Link
                     href="/features/smart-questionnaires"
                     className={`hover:text-[#fbc710] transition-colors ${
@@ -372,13 +378,17 @@ export default function Navbar() {
                   >
                     Smart Questionnaires
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     href="/features"
-                    className="text-black hover:text-[#fbc710] transition-colors"
+                    className={`hover:text-[#fbc710] transition-colors ${
+                      pathname === "/features/smart-questionnaires"
+                        ? "text-[#fbc710]"
+                        : "text-black"
+                    }`}
                   >
-                    Tax Compliance Tools
+                    Calculate Taxes Owed
                   </Link>
                 </li>
                 <li>
@@ -386,7 +396,23 @@ export default function Navbar() {
                     href="/features"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Multi-Year Tax Scenarios
+                    Analyze Any Tax Scenario
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/features"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Apply Tax Planning Strategies
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/features"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Create a Tax Plan
                   </Link>
                 </li>
               </ul>
@@ -407,7 +433,7 @@ export default function Navbar() {
             INSIGHTS
           </Link>
           <div
-            className={`absolute z-10 -left-[50px] top-full w-96 p-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 -left-[50px] top-full w-[500px] p-20 bg-white shadow-lg duration-300 transition-opacity ${
               insightsDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -454,15 +480,15 @@ export default function Navbar() {
             RESOURCES
           </div>
           <div
-            className={`absolute z-10 -left-[50px] top-full w-96 p-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 -left-[50px] top-full w-[500px] p-20 bg-white shadow-lg duration-300 transition-opacity ${
               resourcesDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
             }`}
           >
             <div className="flex space-x-4">
-              <ul className="text-sm flex flex-col justify-center gap-y-4">
-                <li>
+              <ul className="grid grid-cols-2 gap-x-8 text-sm divide-x-2 justify-center w-full">
+                {/* <li>
                   <Link
                     href="/resources/blog"
                     className={`hover:text-[#fbc710] transition-colors ${
@@ -473,31 +499,83 @@ export default function Navbar() {
                   >
                     Blog
                   </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/resources/tax-guide"
-                    className={`hover:text-[#fbc710] transition-colors ${
-                      pathname === "/resources/tax-guide"
-                        ? "text-[#fbc710]"
-                        : "text-black"
-                    }`}
-                  >
-                    Tax Guides
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/resources/faq"
-                    className={`hover:text-[#fbc710] transition-colors ${
-                      pathname === "/resources/faq"
-                        ? "text-[#fbc710]"
-                        : "text-black"
-                    }`}
-                  >
-                    FAQs
-                  </Link>
-                </li>
+                </li> */}
+                <div className="space-y-4">
+                  <li>
+                    <Link
+                      href="/resources"
+                      className={`hover:text-[#fbc710] transition-colors ${
+                        pathname === "/resources/blog"
+                          ? "text-[#fbc710]"
+                          : "text-black"
+                      }`}
+                    >
+                      Glossary
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className={`hover:text-[#fbc710] transition-colors ${
+                        pathname === "/resources/faq"
+                          ? "text-[#fbc710]"
+                          : "text-black"
+                      }`}
+                    >
+                      State Tax Deadlines
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className={`hover:text-[#fbc710] transition-colors ${
+                        pathname === "/resources"
+                          ? "text-[#fbc710]"
+                          : "text-black"
+                      }`}
+                    >
+                      Federal Tax Deadlines
+                    </Link>
+                  </li>
+                </div>
+                <div className="px-16 space-y-4">
+                  <li>
+                    <Link
+                      href="/contact/support"
+                      className={`hover:text-[#fbc710] transition-colors ${
+                        pathname === "/resources/tax-guide"
+                          ? "text-[#fbc710]"
+                          : "text-black"
+                      }`}
+                    >
+                      Support
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources/faq"
+                      className={`hover:text-[#fbc710] transition-colors ${
+                        pathname === "/resources/faq"
+                          ? "text-[#fbc710]"
+                          : "text-black"
+                      }`}
+                    >
+                      FAQs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className={`hover:text-[#fbc710] transition-colors ${
+                        pathname === "/resources/faq"
+                          ? "text-[#fbc710]"
+                          : "text-black"
+                      }`}
+                    >
+                      Security
+                    </Link>
+                  </li>
+                </div>
               </ul>
             </div>
           </div>
@@ -528,8 +606,8 @@ export default function Navbar() {
           >
             ABOUT
           </Link>
-          <div
-            className={`absolute z-10 -left-[50px] top-full w-96 p-20 bg-white shadow-lg duration-300 transition-opacity ${
+          {/* <div
+            className={`absolute z-10 -left-[50px] top-full w-[500px] p-20 bg-white shadow-lg duration-300 transition-opacity ${
               aboutDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -563,7 +641,7 @@ export default function Navbar() {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </li>
         <li
           className="relative group mr-4 lg:mr-10"
@@ -579,7 +657,7 @@ export default function Navbar() {
             CONTACT
           </Link>
           <div
-            className={`absolute z-10 -left-[50px] top-full w-96 p-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 -left-[50px] top-full w-[500px] p-20 bg-white shadow-lg duration-300 transition-opacity ${
               contactDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -597,26 +675,6 @@ export default function Navbar() {
                     }`}
                   >
                     Get a Consultation
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact/support"
-                    className={`hover:text-[#fbc710] transition-colors ${
-                      pathname === "/contact/support"
-                        ? "text-[#fbc710]"
-                        : "text-black"
-                    }`}
-                  >
-                    Support
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Office Locations
                   </Link>
                 </li>
               </ul>

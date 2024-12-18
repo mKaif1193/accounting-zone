@@ -45,7 +45,7 @@ export default function Slider({
           className="z-50 flex flex-col py-8 px-12 relative pl-20 before:content-[''] before:absolute before:top-0 before:left-10 before:w-[150px] before:h-full before:border-[4px] before:border-solid before:border-[#fbc710] before:border-r-0"
         >
           <motion.p className="font-bold text-4xl md:text-7xl flex flex-col gap-2 text-white py-4 mb-20">
-            <span className="text-lg sm:text-xl font-normal uppercase">
+            <span className="text-lg sm:text-xl text-[#fbc710] font-normal uppercase">
               {title}
             </span>
 
