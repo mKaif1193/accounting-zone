@@ -43,7 +43,6 @@ export default function Login() {
         identifier: data.identifier,
         password: data.password,
       });
-      console.log("result : ", result);
 
       if (result?.error) {
         toast({
@@ -54,10 +53,10 @@ export default function Login() {
       }
 
       if (result?.url) {
-        router.replace("/dashboard");
+        router.replace("/");
       }
     } catch (error) {
-      console.log("Internal server error while login!! : ", error);
+      console.log("Internal server error while login! : ", error);
       toast({
         title: "Login Failed",
         description: "Internal server error while login",
