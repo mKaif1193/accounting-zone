@@ -14,7 +14,7 @@ type FAQSectionProps = {
 
 export default function FAQSection({ id, title, faqs }: FAQSectionProps) {
   return (
-    <>
+    <section>
       <h3
         id={id}
         className="text-2xl lg:text-3xl font-bold pt-48 sm:pt-80 text-center lg:pt-40 mb-[18px] lg:mb-[43px]"
@@ -34,6 +34,6 @@ export default function FAQSection({ id, title, faqs }: FAQSectionProps) {
           ))}
         </Accordion>
       </div>
-    </>
+    </section>
   );
 }

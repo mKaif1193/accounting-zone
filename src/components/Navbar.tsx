@@ -15,6 +15,7 @@ export default function Navbar() {
   const [featuresDropdownOpen, setFeaturesDropdownOpen] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
+  const [ptaDropdownOpen, setPtaDropdownOpen] = useState(false);
 
   const handleDropdownClick = (dropdownName: string) => {
     switch (dropdownName) {
@@ -121,170 +122,360 @@ export default function Navbar() {
             SERVICES
           </div>
           <div
-            className={`absolute z-10 -left-[100px] top-full w-[1000px] p-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 -left-[380px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
               servicesDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
             }`}
           >
-            <div className="flex space-x-4">
-              <ul className="grid grid-cols-3 gap-x-8 text-sm divide-x-2 justify-center w-full">
-                <div className="space-y-4">
-                  <li className="font-bold text-xs">
-                    {/* <Link
+            <ul className="grid grid-cols-5 text-sm divide-x divide-[#fbc710] justify-center w-full">
+              <div className="space-y-4 px-8">
+                <li className="font-bold text-xs text-[#fbc710]">
+                  FINANCIAL - Accounting
+                </li>
+                <li>
+                  <Link
                     href="/services/financial-statements"
                     className="text-black hover:text-[#fbc710] transition-colors"
-                  > */}
-                    FINANCIAL - Accounting
-                    {/* </Link> */}
-                  </li>
-                  <li>
-                    <Link
-                      href="/services/financial-statements"
-                      className="text-black hover:text-[#fbc710] transition-colors"
-                    >
-                      Financial Statements
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/services/financial-statements"
-                      className="text-black hover:text-[#fbc710] transition-colors"
-                    >
-                      Ledger Maintenance
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/services/financial-statements"
-                      className="text-black hover:text-[#fbc710] transition-colors"
-                    >
-                      Payroll Accounting
-                    </Link>
-                  </li>
-                </div>
-                {/* <li>
-                  <Link
-                    href="/services/advisory"
-                    className={`hover:text-[#fbc710] transition-colors ${
-                      pathname === "/services/advisory"
-                        ? "text-[#fbc710]"
-                        : "text-black"
-                    }`}
                   >
-                    Advisory
+                    Budget Planning and Forecasting
                   </Link>
-                </li> */}
-                <div className="space-y-4 px-14">
-                  <li className="font-bold text-xs">
-                    {/* <Link
+                </li>
+                <li>
+                  <Link
+                    href="/services/financial-statements"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Cash Flow Management
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/financial-statements"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Audit Preparation Assistance
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/financial-statements"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Financial Analysis and Strategy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/financial-statements"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Cost Accounting Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/financial-statements"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Financial Risk Assessment
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/financial-statements"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Accounts Receivable and Payable Management
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/financial-statements"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Inventory Accounting
+                  </Link>
+                </li>
+              </div>
+              <div className="space-y-4 px-8">
+                <li className="font-bold text-xs text-[#fbc710]">
+                  RECORDS - Bookkeeping
+                </li>
+                <li>
+                  <Link
                     href="/services/bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
-                  > */}
-                    RECORDS - Bookkeeping
-                    {/* </Link> */}
-                  </li>
-                  <li>
-                    <Link
-                      href="/services/bookkeeping"
-                      className="text-black hover:text-[#fbc710] transition-colors"
-                    >
-                      Financial Record Keeping
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/services/bookkeeping"
-                      className="text-black hover:text-[#fbc710] transition-colors"
-                    >
-                      Reconciliation and Reporting
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/services/bookkeeping"
-                      className="text-black hover:text-[#fbc710] transition-colors"
-                    >
-                      Custom Bookkeeping Solutions
-                    </Link>
-                  </li>
-                </div>
-                <div className="space-y-4 px-14">
-                  <li className="font-bold text-xs">
-                    {/* <Link
-                    href="/services/tax-planning"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  > */}
-                    TAX - Tax planning
-                    {/* </Link> */}
-                  </li>
-                  <li>
-                    <Link
-                      href="/services/tax-planning"
-                      className="text-black hover:text-[#fbc710] transition-colors"
-                    >
-                      Strategic Tax Optimization
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/services/tax-planning"
-                      className="text-black hover:text-[#fbc710] transition-colors"
-                    >
-                      Comprehensive Tax Compliance
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/services/tax-planning"
-                      className="text-black hover:text-[#fbc710] transition-colors"
-                    >
-                      Proactive Tax Advisory
-                    </Link>
-                  </li>
-                </div>
-                {/* <li>
+                  >
+                    Accounts Payable/Receivable Reconciliation
+                  </Link>
+                </li>
+                <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Tax Calculation
+                    Cloud-Based Bookkeeping Solutions
                   </Link>
-                </li> */}
-                {/* <li>
+                </li>
+                <li>
+                  <Link
+                    href="/services/bookkeeping"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Real-Time Financial Reporting
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/bookkeeping"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Expense Tracking and Management
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/bookkeeping"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Fixed Asset Management
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/bookkeeping"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Audit-Ready Documentation
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/bookkeeping"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Integration with Accounting Software (e.g., QuickBooks,
+                    Xero)
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/bookkeeping"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Historical Bookkeeping Cleanup
+                  </Link>
+                </li>
+              </div>
+              <div className="space-y-4 px-8">
+                <li className="font-bold text-xs text-[#fbc710]">
+                  TAX - Tax planning
+                </li>
+                <li>
                   <Link
                     href="/services/tax-planning"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Entity & Compensation Optimization
+                    VAT/GST Filing and Compliance
                   </Link>
-                </li> */}
-                {/* <li>
+                </li>
+                <li>
                   <Link
-                    href="/services/multi-entity-tax-planning"
-                    className={`hover:text-[#fbc710] transition-colors ${
-                      pathname === "/services/multi-entity-tax-planning"
-                        ? "text-[#fbc710]"
-                        : "text-black"
-                    }`}
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Multi Entity Tax Planning
+                    Capital Gains Tax Planning
                   </Link>
-                </li> */}
-                {/* <li>
+                </li>
+                <li>
                   <Link
-                    href="/services/tax-plans-proposals"
-                    className={`hover:text-[#fbc710] transition-colors ${
-                      pathname === "/services/tax-plans-proposals"
-                        ? "text-[#fbc710]"
-                        : "text-black"
-                    }`}
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Tax Plans & Proposals
+                    Tax Saving Strategies for Startups
                   </Link>
-                </li> */}
-              </ul>
-            </div>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Charitable Contributions Tax Optimization
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Cryptocurrency Tax Reporting
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Payroll Tax Calculation and Filing
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Quarterly Tax Estimates and Payments
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Post-Tax Season Consultation and Review
+                  </Link>
+                </li>
+              </div>
+              <div className="space-y-4 px-8">
+                <li className="font-bold text-xs text-[#fbc710]">
+                  ADVISORY – Business Consulting
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Financial Strategy Development
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Business Performance Optimization
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Risk Management Consulting
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Business Valuation Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Mergers and Acquisitions Support
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Cash Flow Optimization Strategies
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Start-Up Financial Planning
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Cost Reduction and Efficiency Planning
+                  </Link>
+                </li>
+              </div>
+              <div className="space-y-4 px-8">
+                <li className="font-bold text-xs text-[#fbc710]">
+                  COMPLIANCE – Regulatory Services
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Statutory Reporting and Compliance
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Corporate Governance Advisory
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Industry-Specific Regulatory Filings
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Anti-Money Laundering (AML) Compliance
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Internal Controls and Auditing
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Employment and Labor Law Compliance
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Corporate Secretarial Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services/tax-planning"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Environmental, Social, and Governance (ESG) Compliance
+                  </Link>
+                </li>
+              </div>
+            </ul>
           </div>
         </li>
         <li
@@ -301,48 +492,254 @@ export default function Navbar() {
             INDUSTRIES
           </Link>
           <div
-            className={`absolute z-10 -left-[50px] top-full w-[500px] p-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 -left-[480px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
               industriesDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
             }`}
           >
-            <div className="flex space-x-4">
-              <ul className="flex flex-col text-sm justify-center gap-y-4 w-full">
-                <li>
-                  <Link
-                    href="/industries"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Small Businesses
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/industries"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Corporations
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/industries"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Non-Profits
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/industries"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Startups
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            <ul className="grid grid-cols-4 text-sm divide-x divide-[#fbc710] justify-center w-full">
+              <div className="space-y-8 px-8">
+                <div className="space-y-4">
+                  <li className="font-bold text-xs text-[#fbc710]">
+                    Financial and Legal Services
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Banking and Financial Services Insurance
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Asset Management and Hedge Funds Legal Firms
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Venture Capital and Private Equity Firms
+                    </Link>
+                  </li>
+                </div>
+                <div className="space-y-4">
+                  <li className="font-bold text-xs text-[#fbc710]">
+                    Retail, Hospitality, and Consumer Services
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Retail and Wholesale
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Hospitality
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      E-commerce and Online Retailers
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Subscription Services
+                    </Link>
+                  </li>
+                </div>
+              </div>
+              <div className="space-y-8 px-8">
+                <div className="space-y-4">
+                  <li className="font-bold text-xs text-[#fbc710]">
+                    Government and Public Sector
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Government Agencies
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Public Enterprises
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Publicly Listed Companies
+                    </Link>
+                  </li>
+                </div>
+                <div className="space-y-4">
+                  <li className="font-bold text-xs text-[#fbc710]">
+                    Technology and Start-Ups
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Technology and Start-Ups
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Engineering and IT Consulting
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Cryptocurrency and Blockchain Companies
+                    </Link>
+                  </li>
+                </div>
+              </div>
+              <div className="space-y-8 px-8">
+                <div className="space-y-4">
+                  <li className="font-bold text-xs text-[#fbc710]">
+                    Non-Profit and Philanthropic Organizations
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Non-Profit Organizations
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Charities and Philanthropic Entities
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Religious Institutions
+                    </Link>
+                  </li>
+                </div>
+                <div className="space-y-4">
+                  <li className="font-bold text-xs text-[#fbc710]">
+                    Healthcare, Education, and Professional Services
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Healthcare
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Education
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Professional Services
+                    </Link>
+                  </li>
+                </div>
+              </div>
+              <div className="space-y-8 px-8">
+                <div className="space-y-4">
+                  <li className="font-bold text-xs text-[#fbc710]">
+                    Manufacturing, Construction, and Real Estate
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Manufacturing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Construction
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Real Estate
+                    </Link>
+                  </li>
+                </div>
+                <div className="space-y-4">
+                  <li className="font-bold text-xs text-[#fbc710]">
+                    Energy, Environment, and Sustainability
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Energy Sector
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/industries"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Environmental and Sustainable Organizations
+                    </Link>
+                  </li>
+                </div>
+              </div>
+            </ul>
           </div>
         </li>
         <li
@@ -359,26 +756,14 @@ export default function Navbar() {
             FEATURES
           </Link>
           <div
-            className={`absolute z-10 -left-[50px] top-full w-[500px] p-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 -left-[620px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
               featuresDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
             }`}
           >
-            <div className="flex space-x-4">
-              <ul className="flex flex-col text-sm justify-center gap-y-4 w-full">
-                {/* <li>
-                  <Link
-                    href="/features/smart-questionnaires"
-                    className={`hover:text-[#fbc710] transition-colors ${
-                      pathname === "/features/smart-questionnaires"
-                        ? "text-[#fbc710]"
-                        : "text-black"
-                    }`}
-                  >
-                    Smart Questionnaires
-                  </Link>
-                </li> */}
+            <ul className="grid grid-cols-4 text-sm divide-x divide-[#fbc710] justify-center w-full">
+              <div className="space-y-4 px-8">
                 <li>
                   <Link
                     href="/features"
@@ -388,35 +773,153 @@ export default function Navbar() {
                         : "text-black"
                     }`}
                   >
-                    Calculate Taxes Owed
+                    Tax Preparation Software
                   </Link>
+                  <p className="text-xs text-gray-500">
+                    Automates tax calculations and ensures compliance (e.g.,
+                    TurboTax, H&R Block).
+                  </p>
                 </li>
                 <li>
                   <Link
                     href="/features"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Analyze Any Tax Scenario
+                    Scenario Modeling Software
                   </Link>
+                  <p className="text-xs text-gray-500">
+                    Simulates &quot;what-if&quot; scenarios to evaluate
+                    potential tax outcomes (e.g., Fathom).
+                  </p>
                 </li>
                 <li>
                   <Link
                     href="/features"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Apply Tax Planning Strategies
+                    Tax Optimization Software
                   </Link>
+                  <p className="text-xs text-gray-500">
+                    Helps identify deductions, credits, and savings
+                    opportunities (e.g., Bloomberg Tax).
+                  </p>
+                </li>
+              </div>
+              <div className="space-y-4 px-8">
+                <li>
+                  <Link
+                    href="/features"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Withholding Tax Calculators
+                  </Link>
+                  <p className="text-xs text-gray-500">
+                    Assists businesses and individuals in calculating accurate
+                    tax withholdings.
+                  </p>
                 </li>
                 <li>
                   <Link
                     href="/features"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Create a Tax Plan
+                    Document Management Software
                   </Link>
+                  <p className="text-xs text-gray-500">
+                    Securely stores, organizes, and retrieves tax-related files
+                    (e.g., DocuSign, Xero Tax).
+                  </p>
                 </li>
-              </ul>
-            </div>
+                <li>
+                  <Link
+                    href="/features"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Cross-Border Tax Compliance Tools
+                  </Link>
+                  <p className="text-xs text-gray-500">
+                    Handles VAT, GST, and international tax filings (e.g.,
+                    Avalara, Taxback International).
+                  </p>
+                </li>
+              </div>
+              <div className="space-y-4 px-8">
+                <li>
+                  <Link
+                    href="/features"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Tax Dashboards
+                  </Link>
+                  <p className="text-xs text-gray-500">
+                    Provides real-time insights into tax liabilities and filing
+                    status (e.g., Tableau, Power BI).
+                  </p>
+                </li>
+                <li>
+                  <Link
+                    href="/features"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Audit Trail Tools
+                  </Link>
+                  <p className="text-xs text-gray-500">
+                    Tracks and logs financial transactions for audit and
+                    compliance (e.g., AuditFile).
+                  </p>
+                </li>
+                <li>
+                  <Link
+                    href="/features"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Client Portal Solutions
+                  </Link>
+                  <p className="text-xs text-gray-500">
+                    Secure platforms for document sharing and communication with
+                    clients (e.g., ShareFile).
+                  </p>
+                </li>
+              </div>
+              <div className="space-y-4 px-8">
+                <li>
+                  <Link
+                    href="/features"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Payroll Tax Management Software
+                  </Link>
+                  <p className="text-xs text-gray-500">
+                    Simplifies payroll tax calculations, filings, and compliance
+                    (e.g., QuickBooks Payroll).
+                  </p>
+                </li>
+                <li>
+                  <Link
+                    href="/features"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Industry-Specific Tax Solutions
+                  </Link>
+                  <p className="text-xs text-gray-500">
+                    Tools tailored to manage taxes in specialized industries
+                    like real estate, healthcare, and manufacturing.
+                  </p>
+                </li>
+                <li>
+                  <Link
+                    href="/features"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Tax Filing and Payment Platforms
+                  </Link>
+                  <p className="text-xs text-gray-500">
+                    Enables seamless electronic filing and tax payment
+                    submissions (e.g., IRS e-File).
+                  </p>
+                </li>
+              </div>
+            </ul>
           </div>
         </li>
         <li
@@ -424,34 +927,24 @@ export default function Navbar() {
           onMouseEnter={() => setInsightsDropdownOpen(true)}
           onMouseLeave={() => setInsightsDropdownOpen(false)}
         >
-          <Link
-            href="/insights"
+          <div
             className={`font-semibold 2xl:text-base text-sm hover:text-[#fbc710] transition-colors uppercase ${
               pathname.includes("/insights") ? "text-[#fbc710]" : "text-black"
             }`}
           >
             INSIGHTS
-          </Link>
+          </div>
           <div
-            className={`absolute z-10 -left-[50px] top-full w-[500px] p-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 -left-[730px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
               insightsDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
             }`}
           >
-            <div className="flex space-x-4">
-              <ul className="text-sm flex flex-col justify-center gap-y-4 w-full">
-                <li>
-                  <Link
-                    href="/insights/case-studies"
-                    className={`hover:text-[#fbc710] transition-colors ${
-                      pathname === "/insights/case-studies"
-                        ? "text-[#fbc710]"
-                        : "text-black"
-                    }`}
-                  >
-                    Case Studies
-                  </Link>
+            <ul className="grid grid-cols-3 text-sm divide-x divide-[#fbc710] justify-center w-full">
+              <div className="space-y-4 px-8">
+                <li className="font-bold text-xs text-[#fbc710]">
+                  Tax Insights
                 </li>
                 <li>
                   <Link
@@ -460,11 +953,200 @@ export default function Navbar() {
                       pathname === "/insights" ? "text-[#fbc710]" : "text-black"
                     }`}
                   >
-                    Media Mentions
+                    <span>Compliance</span>
+                    <p className="text-xs text-gray-500">
+                      Ensuring adherence to local, national, and international
+                      tax regulations is critical for avoiding penalties and
+                      fostering trust with stakeholders.
+                    </p>
                   </Link>
                 </li>
-              </ul>
-            </div>
+                <li>
+                  <Link
+                    href="/insights"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Strategic Planning
+                    <p className="text-xs text-gray-500">
+                      Tax planning helps optimize financial performance through
+                      credits, deductions, and deferrals.
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/insights"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Impact on Cash Flow
+                    <p className="text-xs text-gray-500">
+                      Timely filing and tax optimization directly influence a
+                      business&apos;s liquidity and operational health.
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/insights"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Industry-Specific Nuances
+                    <p className="text-xs text-gray-500">
+                      Different sectors (e.g., healthcare, real estate,
+                      manufacturing) face unique tax regulations and
+                      opportunities.
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/insights"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Globalization
+                    <p className="text-xs text-gray-500">
+                      Cross-border taxation and regulatory requirements (e.g.,
+                      VAT, GST, and digital service taxes) are increasingly
+                      relevant for businesses operating globally.
+                    </p>
+                  </Link>
+                </li>
+              </div>
+              <div className="space-y-4 px-8">
+                <li className="font-bold text-xs text-[#fbc710]">
+                  Accounting Insights
+                </li>
+                <li>
+                  <Link
+                    href="/insights"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Holistic Financial View
+                    <p className="text-xs text-gray-500">
+                      Accounting provides an overarching view of an
+                      organization&apos;s financial health, aiding stakeholders
+                      in making informed decisions.
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/insights"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Strategic Financial Management
+                    <p className="text-xs text-gray-500">
+                      By interpreting financial data, accounting supports
+                      budgeting, forecasting, and long-term planning.
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/insights"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Regulatory Adherence
+                    <p className="text-xs text-gray-500">
+                      Accurate accounting ensures compliance with financial
+                      reporting standards like GAAP or IFRS.
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/insights"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Technology Integration
+                    <p className="text-xs text-gray-500">
+                      Cloud accounting platforms and ERP systems have
+                      revolutionized financial reporting, making data accessible
+                      in real time.
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/insights"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Decision Support
+                    <p className="text-xs text-gray-500">
+                      Beyond numbers, accounting insights drive strategies like
+                      cost optimization, revenue diversification, and investment
+                      analysis.
+                    </p>
+                  </Link>
+                </li>
+              </div>
+              <div className="space-y-4 px-8">
+                <li className="font-bold text-xs text-[#fbc710]">
+                  Bookkeeping Insights
+                </li>
+                <li>
+                  <Link
+                    href="/insights"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Foundational for Accounting
+                    <p className="text-xs text-gray-500">
+                      Proper bookkeeping ensures accurate data entry, forming
+                      the base for financial analysis.
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/insights"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Real-Time Tracking
+                    <p className="text-xs text-gray-500">
+                      Timely bookkeeping provides immediate insights into cash
+                      flow, expenses, and receivables.
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/insights"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Automation Trends
+                    <p className="text-xs text-gray-500">
+                      Automated bookkeeping tools (e.g., QuickBooks, Xero)
+                      reduce human error and save time.
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/insights"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    SME Benefits
+                    <p className="text-xs text-gray-500">
+                      Small and medium enterprises rely heavily on precise
+                      bookkeeping for expense tracking and financial
+                      organization.
+                    </p>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/insights"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Scalability
+                    <p className="text-xs text-gray-500">
+                      Efficient bookkeeping practices enable businesses to scale
+                      by keeping financial records structured and audit-ready.
+                    </p>
+                  </Link>
+                </li>
+              </div>
+            </ul>
           </div>
         </li>
         <li
@@ -480,35 +1162,22 @@ export default function Navbar() {
             RESOURCES
           </div>
           <div
-            className={`absolute z-10 -left-[50px] top-full w-[500px] p-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 -left-[830px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
               resourcesDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
             }`}
           >
-            <div className="flex space-x-4">
-              <ul className="grid grid-cols-2 gap-x-8 text-sm divide-x-2 justify-center w-full">
-                {/* <li>
-                  <Link
-                    href="/resources/blog"
-                    className={`hover:text-[#fbc710] transition-colors ${
-                      pathname === "/resources/blog"
-                        ? "text-[#fbc710]"
-                        : "text-black"
-                    }`}
-                  >
-                    Blog
-                  </Link>
-                </li> */}
-                <div className="space-y-4">
+            <ul className="grid grid-cols-3 text-sm divide-x divide-[#fbc710] justify-center w-full">
+              <div className="space-y-6 px-8">
+                <div className="space-y-2">
+                  <li className="font-bold text-xs text-[#fbc710]">
+                    Information and Reference
+                  </li>
                   <li>
                     <Link
                       href="/resources"
-                      className={`hover:text-[#fbc710] transition-colors ${
-                        pathname === "/resources/blog"
-                          ? "text-[#fbc710]"
-                          : "text-black"
-                      }`}
+                      className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Glossary
                     </Link>
@@ -516,11 +1185,7 @@ export default function Navbar() {
                   <li>
                     <Link
                       href="/resources"
-                      className={`hover:text-[#fbc710] transition-colors ${
-                        pathname === "/resources/faq"
-                          ? "text-[#fbc710]"
-                          : "text-black"
-                      }`}
+                      className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       State Tax Deadlines
                     </Link>
@@ -528,37 +1193,52 @@ export default function Navbar() {
                   <li>
                     <Link
                       href="/resources"
-                      className={`hover:text-[#fbc710] transition-colors ${
-                        pathname === "/resources"
-                          ? "text-[#fbc710]"
-                          : "text-black"
-                      }`}
+                      className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Federal Tax Deadlines
                     </Link>
                   </li>
-                </div>
-                <div className="px-16 space-y-4">
                   <li>
                     <Link
-                      href="/contact/support"
-                      className={`hover:text-[#fbc710] transition-colors ${
-                        pathname === "/resources/tax-guide"
-                          ? "text-[#fbc710]"
-                          : "text-black"
-                      }`}
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Tax Law Updates
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Knowledge Base
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Regulatory FAQs
+                    </Link>
+                  </li>
+                </div>
+                <div className="space-y-2">
+                  <li className="font-bold text-xs text-[#fbc710]">
+                    Support and Community
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Support
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/resources/faq"
-                      className={`hover:text-[#fbc710] transition-colors ${
-                        pathname === "/resources/faq"
-                          ? "text-[#fbc710]"
-                          : "text-black"
-                      }`}
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       FAQs
                     </Link>
@@ -566,21 +1246,261 @@ export default function Navbar() {
                   <li>
                     <Link
                       href="/resources"
-                      className={`hover:text-[#fbc710] transition-colors ${
-                        pathname === "/resources/faq"
-                          ? "text-[#fbc710]"
-                          : "text-black"
-                      }`}
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Community Forum
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Chat or Email Support
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Troubleshooting Guides
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Customer Feedback Portal
+                    </Link>
+                  </li>
+                </div>
+              </div>
+              <div className="space-y-6 px-8">
+                <div className="space-y-2">
+                  <li className="font-bold text-xs text-[#fbc710]">
+                    Tools and Templates
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Tax Calculator Tools
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Compliance Checklists
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Templates and Forms
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Tax Filing Assistance Tools
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Budgeting and Planning Templates
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Real-Time Reporting Tools
+                    </Link>
+                  </li>
+                </div>
+                <div className="space-y-2">
+                  <li className="font-bold text-xs text-[#fbc710]">
+                    Technology and Integration
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
                     >
                       Security
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Mobile App Integration
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Cloud-Based Document Storage
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Software Integration Guides
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Automation Tools for Bookkeeping
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Multi-Device Syncing
+                    </Link>
+                  </li>
                 </div>
-              </ul>
-            </div>
+              </div>
+              <div className="space-y-6 px-8">
+                <div className="space-y-2">
+                  <li className="font-bold text-xs text-[#fbc710]">
+                    Education and Learning
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Educational Webinars
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Interactive Guides
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Case Studies
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Online Courses on Tax and Accounting
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      E-books on Financial Management
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Tutorials for Software Use
+                    </Link>
+                  </li>
+                </div>
+                <div className="space-y-2">
+                  <li className="font-bold text-xs text-[#fbc710]">
+                    Industry-Specific Resources
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Resources for Real Estate
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Resources for Healthcare
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Resources for E-commerce
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Resources for Manufacturing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Resources for Non-Profit Organizations
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/resources"
+                      className="text-black hover:text-[#fbc710] transition-colors"
+                    >
+                      Resources for Startups
+                    </Link>
+                  </li>
+                </div>
+              </div>
+            </ul>
           </div>
         </li>
-        <li className="mr-4 lg:mr-10">
+        <li
+          className="relative group mr-4 lg:mr-10"
+          onMouseEnter={() => setPtaDropdownOpen(true)}
+          onMouseLeave={() => setPtaDropdownOpen(false)}
+        >
           <Link
             href="/partner-application-form"
             className={`2xl:text-base text-sm font-semibold hover:text-[#fbc710] transition-colors cursor-pointer uppercase ${
@@ -592,6 +1512,37 @@ export default function Navbar() {
             <span className="2xl:block hidden">Partner Application Form</span>
             <span className="block 2xl:hidden">PA Form</span>
           </Link>
+          <div
+            className={`absolute z-10 -left-[100px] top-full w-[500px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
+              ptaDropdownOpen
+                ? "opacity-100 pointer-events-auto"
+                : "opacity-0 pointer-events-none"
+            }`}
+          >
+            <ul className="grid grid-cols-1 text-sm divide-x divide-[#fbc710] justify-center w-full">
+              <div className="space-y-6 px-8">
+                <li>
+                  <Link
+                    href="/client-information-form"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    <span className="2xl:block hidden">
+                      Client Information Form
+                    </span>
+                    <span className="block 2xl:hidden">CI Form</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tax-filing-form"
+                    className="text-black hover:text-[#fbc710] transition-colors"
+                  >
+                    Tax Filing Form
+                  </Link>
+                </li>
+              </div>
+            </ul>
+          </div>
         </li>
         <li
           className="relative group mr-4 lg:mr-10"
@@ -606,42 +1557,6 @@ export default function Navbar() {
           >
             ABOUT
           </Link>
-          {/* <div
-            className={`absolute z-10 -left-[50px] top-full w-[500px] p-20 bg-white shadow-lg duration-300 transition-opacity ${
-              aboutDropdownOpen
-                ? "opacity-100 pointer-events-auto"
-                : "opacity-0 pointer-events-none"
-            }`}
-          >
-            <div className="flex space-x-4">
-              <ul className="text-sm flex flex-col justify-center gap-y-4">
-                <li>
-                  <Link
-                    href="/about"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Our Mission
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/about"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Team
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/about"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Certifications
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div> */}
         </li>
         <li
           className="relative group mr-4 lg:mr-10"
@@ -656,30 +1571,6 @@ export default function Navbar() {
           >
             CONTACT
           </Link>
-          <div
-            className={`absolute z-10 -left-[50px] top-full w-[500px] p-20 bg-white shadow-lg duration-300 transition-opacity ${
-              contactDropdownOpen
-                ? "opacity-100 pointer-events-auto"
-                : "opacity-0 pointer-events-none"
-            }`}
-          >
-            <div className="flex space-x-4">
-              <ul className="text-sm flex flex-col justify-center gap-y-4">
-                <li>
-                  <Link
-                    href="/contact/get-a-consultation"
-                    className={`hover:text-[#fbc710] transition-colors ${
-                      pathname === "/contact/get-a-consultation"
-                        ? "text-[#fbc710]"
-                        : "text-black"
-                    }`}
-                  >
-                    Get a Consultation
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
         </li>
       </ul>
 

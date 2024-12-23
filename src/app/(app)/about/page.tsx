@@ -1,34 +1,67 @@
 import React from "react";
-import Image from "next/image";
 import FSCard from "@/components/services/FSCard";
+import ServicesFooter from "@/components/services/ServicesFooter";
 
 const taxPlanningCards = [
   {
-    title: "Insight to light",
+    title: "Financial Accounting",
     description:
-      "by challenging traditional thinking and ways of operating and bringing new perspectives to the toughest problems.",
+      "Crafting accurate financial statements, maintaining ledgers, and offering payroll services.",
   },
   {
-    title: "Drive inspired impact",
+    title: "Bookkeeping Services",
     description:
-      "by looking beyond the next deadline to the next decade and by collaborating closely with our clients to enable and energize their organizations.",
+      "Ensuring seamless reconciliation, real-time reporting, and cloud-based bookkeeping solutions.",
   },
   {
-    title: "Conquer complexity",
+    title: "Tax Planning",
     description:
-      "by discovering unique sources of competitive advantage and hidden truths in dynamic, complex systems.",
+      "Optimizing taxes with strategic planning, compliance, and advisory tailored to your needs.",
   },
   {
-    title: "Lead with integrity",
+    title: "Business Advisory",
     description:
-      "by confronting the hard issues, staying true to our values, and stating our views candidly and directly.",
+      "Providing expert guidance in financial strategy, risk management, and performance optimization.",
   },
   {
-    title: "Grow by growing others",
+    title: "Regulatory Compliance",
     description:
-      "enabling our clients, colleagues, and the broader community to build success and achieve their full potential.",
+      "Helping businesses navigate complex legal requirements with ease.",
   },
 ];
+
+const ourClientsCard=[
+  {
+    title: "Small and Medium Enterprises (SMEs)",
+  },
+  {
+    title: "Startups",
+  },
+  {
+    title: "Corporations",
+  },
+  {
+    title: "Non-Profit Organizations",
+  },
+  {
+    title: "Individual Professionals",
+  },
+]
+
+const ourCommitmentsCard=[
+  {
+    title:
+      "Delivering exceptional service with integrity and professionalism.",
+  },
+  {
+    title:
+      "Continuously innovating to meet the dynamic needs of the financial landscape.",
+  },
+  {
+    title:
+      "Empowering our clients to make sound financial decisions.",
+  },
+]
 
 export default function About() {
   return (
@@ -37,27 +70,21 @@ export default function About() {
         <header className="my-[50px]">
           <div className="container mx-auto">
             <h1 className="m-0 text-3xl font-bold sm:text-5xl xl:text-6xl">
-              Building Bridges for
-              <br />
-              <span className="text-[#fbc710]">Sustainable</span> and
-              <span className="text-[#fbc710]"> Inclusive Growth</span>
+              About Us
             </h1>
 
-            <p className="text-lg sm:text-xl mt-20">
-              At Accountings Zone, we are a renowned global consulting firm
-              committed to collaborating with business and societal leaders in
-              overcoming their most critical challenges and seizing their
-              greatest opportunities.
-            </p>
-            <p className="text-lg sm:text-xl mt-8">
-              Our achievements are rooted in fostering deep collaboration and
-              cultivating a global community of diverse individuals who are
-              dedicated to making positive contributions to the world and to one
-              another on a daily basis.
+            <p className="text-lg text-gray-500 sm:text-xl mt-20">
+              Welcome to Accountings Zone, your trusted partner in financial
+              management, bookkeeping, tax planning, and business advisory
+              services. Established with the goal of simplifying complex
+              financial processes, we pride ourselves on delivering customized
+              solutions that empower businesses and individuals to achieve their
+              financial goals.
             </p>
           </div>
         </header>
-        <div className="mb-[40px] sm:mb-[60px] md:mb-[100px] lg:mb-[160px] xl:mb-[210px] xl:mt-[100px] xl:max-w-[1830px] 2xl:max-w-[calc(100vw-120px)]">
+
+        {/* <div className="mb-[40px] sm:mb-[60px] md:mb-[100px] lg:mb-[160px] xl:mb-[210px] xl:mt-[100px] xl:max-w-[1830px] 2xl:max-w-[calc(100vw-120px)]">
           <Image
             src="/about/about1.jpg"
             width="1800"
@@ -65,43 +92,27 @@ export default function About() {
             alt="About Us Image"
             className="w-full h-auto"
           />
-        </div>
+        </div> */}
 
-        <section className="mb-[80px] container mx-auto md:mb-[120px] lg:mb-[160px] xl:mb-[210px]">
-          <h2 className="md:text-lg mb-8 text-base font-semibold sm:text-xl xl:text-2xl">
-            Our expertise
-          </h2>
-          <div className="relative pt-[90px] gap-x-4 2xl:pt-0 before:content-['01.'] before:absolute before:top-0 before:left-[15px] before:font-gilroy before:text-[72px] before:leading-none before:text-[#f2f2f2] before:font-bold xl:pt-0 xl:before:text-[300px] xl:before:top-[50px] xl:before:left-[-23.95vw] container mx-auto flex">
+        <section className="my-[80px] container mx-auto md:my-[120px] lg:mt-[160px] xl:mt-[210px]">
+          <div className="relative pt-[90px] gap-x-4 xl:pt-0 container mx-auto flex">
             <header
               className="mb-[50px] lg:mb-[100px] xl:max-w-[220px] xl:mr-[64px] xl:mb-0 xl:flex-shrink-0"
               data-aos="fade"
             >
-              <h2 className="relative m-0 md:text-2xl before:absolute before:left-[-90px] before:top-[14px] before:w-[45px] before:border-t-2 before:border-[#fbc710] before:transform-translate-x-full sm:before:w-[70px] xl:before:left-[-100px] text-xl font-bold sm:text-3xl xl:text-4xl">
-                Personal connection at global scale
+              <h2 className="relative m-0 md:text-2xl before:absolute before:left-[-90px] before:top-[14px] before:w-[45px] before:border-t-2 before:border-[#fbc710] before:transform-translate-x-full sm:before:w-[70px] xl:before:left-[-100px] text-lg font-bold sm:text-xl xl:text-3xl">
+                Our Mission
               </h2>
             </header>
             <div>
               <div
-                className="mb-[40px] text-gray-500 text-[18px] leading-[1.6] sm:mb-[80px] sm:text-[25px]"
+                className="mb-[40px] text-gray-500 text-base leading-[1.6] sm:mb-[80px] sm:text-xl"
                 data-aos="fade"
               >
                 <p className="m-0">
-                  Across 45 global markets, Accountings Zone operates with a
-                  unique level of autonomy, allowing us to swiftly adapt and
-                  prioritize what best serves our clients. This distinctive
-                  approach sets us apart from traditional consulting firms,
-                  making us more personalized and agile. Our unwavering
-                  commitment lies in assisting you in overcoming your most
-                  significant challenges and transforming your vision into a
-                  tangible reality.
-                </p>
-                <p className="mt-[1.5em]">
-                  At Accountings Zone, our dedication extends far beyond the
-                  immediate project. We place great emphasis on establishing
-                  trust and fostering your long-term success. We meet you at
-                  your current stage, seamlessly integrating our talented
-                  professionals with your team, and actively sharing our
-                  expertise throughout the entire journey.
+                  To provide accurate, reliable, and innovative financial
+                  services that help our clients make informed decisions and
+                  drive sustainable growth.
                 </p>
               </div>
 
@@ -114,69 +125,45 @@ export default function About() {
               </blockquote> */}
             </div>
           </div>
-        </section>
-
-        <section className="mb-[80px] container mx-auto md:mb-[120px] lg:mb-[160px] xl:mb-[210px]">
-          <h2 className="md:text-lg mb-8 text-base font-semibold sm:text-xl xl:text-2xl">
-            What we believe
-          </h2>
-
-          <div className="relative pt-[90px] gap-x-4 2xl:pt-0 before:content-['02.'] before:absolute before:top-0 before:left-[15px] before:font-gilroy before:text-[72px] before:leading-none before:text-[#f2f2f2] before:font-bold xl:pt-0 xl:before:text-[300px] xl:before:top-[50px] xl:before:left-[-23.95vw] container mx-auto flex">
+          <div className="relative pt-[90px] gap-x-4 xl:pt-0 container mx-auto flex">
             <header
               className="mb-[50px] lg:mb-[100px] xl:max-w-[220px] xl:mr-[64px] xl:mb-0 xl:flex-shrink-0"
               data-aos="fade"
             >
-              <h3 className="relative m-0 md:text-2xl before:absolute before:left-[-90px] before:top-[14px] before:w-[45px] before:border-t-2 before:border-[#fbc710] before:transform-translate-x-full sm:before:w-[70px] xl:before:left-[-100px] text-xl font-bold sm:text-3xl xl:text-4xl">
-                Do what is right, always
-              </h3>
+              <h2 className="relative m-0 md:text-2xl before:absolute before:left-[-90px] before:top-[14px] before:w-[45px] before:border-t-2 before:border-[#fbc710] before:transform-translate-x-full sm:before:w-[70px] xl:before:left-[-100px] text-lg font-bold sm:text-xl xl:text-3xl">
+                Our Vision
+              </h2>
             </header>
             <div>
               <div
-                className="mb-[40px] text-gray-500 text-[18px] leading-[1.6] sm:mb-[80px] sm:text-[25px]"
+                className="mb-[40px] text-gray-500 text-base leading-[1.6] sm:mb-[80px] sm:text-xl"
                 data-aos="fade"
               >
                 <p className="m-0">
-                  We embarked on our journey with a distinct approach. Instead
-                  of adhering to a demanding, all-or-nothing career path, we
-                  prioritized balance and well-being. We provided an opportunity
-                  to find fulfillment in both your professional and personal
-                  life, placing importance on family and engaging in impactful
-                  projects alongside companies within your community.
-                </p>
-                <p className="mt-[1.5em]">
-                  Our core principle was to invest in people, communities, and
-                  the success of our clients. Consistently recognized as a top
-                  workplace, Accountings Zone has garnered a reputation for
-                  creating an environment where individuals thrive. We proudly
-                  serve more than half of the Fortune 100 companies and a third
-                  of the Fortune 500, while also collaborating with startups,
-                  not-for-profit organizations, and a myriad of innovative
-                  entities.
+                  To be recognized as a leading accountings and financial
+                  advisory firm, fostering trust and excellence in every client
+                  interaction.
                 </p>
               </div>
-
-              {/* <blockquote
-                className="relative text-gray-500 m-0 pl-[64px] lg:pl-0 before:absolute before:top-1/4 before:-left-20 before:w-[42px] before:h-[32px] before:transform-translate-y-1/2 before:bg-no-repeat before:bg-auto before:bg-[url('/quote.svg')]"
-                data-aos="fade"
-              >
-                I knew everything…been there, done that. She was in the moment,
-                <br />I was in the past. She was mindful. I was mindless.
-              </blockquote> */}
             </div>
           </div>
         </section>
 
-        <section className="mb-[80px] container mx-auto md:mb-[120px] lg:mb-[160px] xl:mb-[210px]">
-          <div className="relative pt-[90px] 2xl:pt-0 before:content-['03.'] before:absolute before:top-0 before:left-[15px] before:font-gilroy before:text-[72px] before:leading-none before:text-[#f2f2f2] before:font-bold xl:pt-0 xl:before:text-[300px] xl:before:top-[50px] xl:before:left-[-23.95vw] container">
+        <section className="my-[80px] container mx-auto md:my-[120px] lg:mt-[160px] xl:mt-[210px]">
+          <div className="relative pt-[90px] xl:pt-0 container">
             <header
               className="mb-[50px] lg:mb-[100px] xl:max-w-[220px] xl:mr-[64px] xl:mb-0 xl:flex-shrink-0"
               data-aos="fade"
             >
-              <h3 className="relative m-0 md:text-2xl before:absolute before:left-[-90px] before:top-[14px] before:w-[45px] before:border-t-2 before:border-[#fbc710] before:transform-translate-x-full sm:before:w-[70px] xl:before:left-[-100px] text-xl font-bold sm:text-3xl xl:text-4xl">
-                Our purpose
-              </h3>
+              <h2 className="relative m-0 md:text-2xl before:absolute before:left-[-90px] before:top-[14px] before:w-[45px] before:border-t-2 before:border-[#fbc710] before:transform-translate-x-full sm:before:w-[70px] xl:before:left-[-100px] text-lg font-bold sm:text-xl xl:text-3xl">
+                What We Do
+              </h2>
             </header>
-            <div className="container mx-auto">
+            <div className="container mx-auto" data-aos="fade">
+              <p className="mt-[30px] text-gray-500 text-base leading-[1.6] sm:mb-[80px] sm:text-xl">
+                At Accountings Zone, we specialize in:
+              </p>
+
               <ul className="mt-[30px] mb-0 xl:pt-[50px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-5 gap-8">
                 {taxPlanningCards.map((item, index) => (
                   <li key={index}>
@@ -188,43 +175,38 @@ export default function About() {
           </div>
         </section>
 
-        <section className="mb-[80px] container mx-auto md:mb-[120px] lg:mb-[160px] xl:mb-[210px]">
-          <div className="relative pt-[90px] 2xl:pt-0 before:content-['04.'] before:absolute before:top-0 before:left-[15px] before:font-gilroy before:text-[72px] before:leading-none before:text-[#f2f2f2] before:font-bold xl:pt-0 xl:before:text-[300px] xl:before:top-[50px] xl:before:left-[-23.95vw] container">
+        <section className="my-[80px] container mx-auto md:my-[120px] lg:mt-[160px] xl:mt-[210px]">
+          <div className="relative pt-[90px] xl:pt-0 container">
             <header
-              className="mb-[50px] lg:mb-[100px] xl:max-w-[220px] xl:mr-[64px] xl:mb-0 xl:flex-shrink-0"
+              className="mb-[50px] lg:mb-[100px] xl:max-w-[250px] xl:mr-[64px] xl:mb-0 xl:flex-shrink-0"
               data-aos="fade"
             >
-              <h2 className="relative m-0 md:text-2xl before:absolute before:left-[-90px] before:top-[14px] before:w-[45px] before:border-t-2 before:border-[#fbc710] before:transform-translate-x-full sm:before:w-[70px] xl:before:left-[-100px] text-xl font-bold sm:text-3xl xl:text-4xl">
-                How we work
+              <h2 className="relative m-0 md:text-2xl before:absolute before:left-[-90px] before:top-[14px] before:w-[45px] before:border-t-2 before:border-[#fbc710] before:transform-translate-x-full sm:before:w-[70px] xl:before:left-[-100px] text-lg font-bold sm:text-xl xl:text-3xl">
+                Why Choose Us?
               </h2>
             </header>
             <div className="container mx-auto">
-              <p className="text-base sm:text-xl mt-20 mb-8">
-                Transforming organizations sustainably. Unlocking performance
-                excellence. Nurturing thriving workforces for generations.
-                Partner with us for success.
-              </p>
               <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-y-8">
                 {[
                   {
-                    title: "Innovation & Technology",
+                    title: "Expert Team",
                     description:
-                      "In a rapidly changing world, continuous progress is imperative to meet evolving demands.",
+                      "Our team comprises seasoned professionals with in-depth knowledge of accounting, tax laws, and financial strategy.",
                   },
                   {
-                    title: "Client Capabilities Network",
+                    title: "Tailored Solutions",
                     description:
-                      "With our expertise and cutting-edge competencies, we drive impactful and enduring change.",
+                      "We understand that every client is unique. Our services are customized to meet specific needs and goals.",
                   },
                   {
-                    title: "Save Money",
+                    title: "Technology-Driven",
                     description:
-                      "Choose quality from the start. Save time and money by getting it right with us.",
+                      "Leveraging the latest tools and software, we ensure accuracy, efficiency, and security in all our processes.",
                   },
                   {
-                    title: "Ongoing Support",
+                    title: "Client-Centric Approach",
                     description:
-                      "We don't just plan, we execute. Our talented team supports your implementation, as part of your founding team or on project basis.",
+                      "Your success is our priority. We build lasting relationships based on trust, transparency, and excellence.",
                   },
                 ].map((service, index) => (
                   <div
@@ -245,6 +227,74 @@ export default function About() {
             </div>
           </div>
         </section>
+
+        <section className="my-[80px] container mx-auto md:my-[120px] lg:mt-[160px] xl:mt-[210px]">
+          <div className="relative pt-[90px] xl:pt-0 container">
+            <header
+              className="mb-[50px] lg:mb-[100px] xl:max-w-[250px] xl:mr-[64px] xl:mb-0 xl:flex-shrink-0"
+              data-aos="fade"
+            >
+              <h2 className="relative m-0 md:text-2xl before:absolute before:left-[-90px] before:top-[14px] before:w-[45px] before:border-t-2 before:border-[#fbc710] before:transform-translate-x-full sm:before:w-[70px] xl:before:left-[-100px] text-lg font-bold sm:text-xl xl:text-3xl">
+                Our Clients
+              </h2>
+            </header>
+            <div className="container mx-auto">
+              <p className="mt-[30px] text-gray-500 text-base leading-[1.6] sm:mb-[60px] sm:text-xl">
+                We serve a diverse clientele, including:
+              </p>
+              <ul className="space-y-[30px]">
+                {ourClientsCard.map((service, index) => (
+                  <li
+                    key={index}
+                    className="text-gray-500 list-disc my-12 last:mb-0 sm:mb-0 text-lg"
+                    data-aos="fade"
+                    data-aos-delay={index * 200}
+                  >
+                    {service.title}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="my-[80px] container mx-auto md:my-[120px] lg:mt-[160px] xl:mt-[210px]">
+          <div className="relative pt-[90px] xl:pt-0 container">
+            <header
+              className="mb-[50px] lg:mb-[100px] xl:max-w-[250px] xl:mr-[64px] xl:mb-0 xl:flex-shrink-0"
+              data-aos="fade"
+            >
+              <h2 className="relative m-0 md:text-2xl before:absolute before:left-[-90px] before:top-[14px] before:w-[45px] before:border-t-2 before:border-[#fbc710] before:transform-translate-x-full sm:before:w-[70px] xl:before:left-[-100px] text-lg font-bold sm:text-xl xl:text-3xl">
+                Our Commitment
+              </h2>
+            </header>
+            <div className="container mx-auto">
+              <p className="mt-[30px] text-gray-500 text-base leading-[1.6] sm:mb-[60px] sm:text-xl">
+                At Accountings Zone, we are committed to:
+              </p>
+              <ul className="text-gray-500 space-y-[30px]">
+                {ourCommitmentsCard.map((service, index) => (
+                  <li
+                    key={index}
+                    className="list-disc my-12 last:mb-0 sm:mb-0 text-lg"
+                    data-aos="fade"
+                    data-aos-delay={index * 200}
+                  >
+                    {service.title}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <p className="mt-[60px] text-gray-500 text-base leading-[1.6] sm:mb-[60px] sm:text-xl">
+              Join us on the journey to financial clarity and growth. Whether
+              you&apos;re an entrepreneur, an established business, or an
+              individual seeking financial guidance, Accountings Zone is here to
+              support you every step of the way.
+            </p>
+          </div>
+        </section>
+
+        <ServicesFooter text="Contact us today to learn more about how we can help you achieve your financial goals." />
       </article>
     </main>
   );

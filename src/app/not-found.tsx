@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 
 export default function NotFound() {
@@ -17,22 +18,25 @@ export default function NotFound() {
           Oops! Page Not Found
         </div>
         <div className="text-gray-500 text-base sm:text-xl leading-6 mb-10">
-          It seems we can&apos;t find what you&apos;re looking for. Perhaps
-          searching can help or go back to
+          It seems we can&apos;t find what you&apos;re looking for.
         </div>
-        <div className="flex gap-4">
-          <button
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Button
             onClick={() => router.back()}
-            className="font-semibold text-base sm:text-xl text-black bg-[#fbc710] hover:bg-[#e2b512] px-5 sm:px-7 py-1.5 sm:py-2.5 rounded-3xl duration-300 transition-colors"
+            data-aos="fade"
+            size="lg"
+            className="text-lg rounded-none bg-[#fbc710] hover:bg-[#e2b512] duration-300 text-black font-normal uppercase"
           >
-            Go Back
-          </button>
-          <button
+            GO BACK
+          </Button>
+          <Button
             onClick={() => router.replace("/")}
-            className="font-semibold text-base sm:text-xl text-black bg-[#fbc710] hover:bg-[#e2b512] px-5 sm:px-7 py-1.5 sm:py-2.5 rounded-3xl duration-300 transition-colors"
+            data-aos="fade"
+            size="lg"
+            className="text-lg rounded-none bg-[#fbc710] hover:bg-[#e2b512] duration-300 text-black font-normal uppercase"
           >
-            Homepage
-          </button>
+            HOMEPAGE
+          </Button>
         </div>
       </article>
     </main>

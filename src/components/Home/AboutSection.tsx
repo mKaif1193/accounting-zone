@@ -27,12 +27,8 @@ export default function AboutSection() {
           className="mb-6 sm:mb-14 text-2xl tracking-[0.02em] font-bold sm:text-3xl lg:text-4xl"
           data-aos="fade"
         >
-          Guided by
-          <span className="text-[#fbc710]"> integrity </span>,
-          <span className="text-[#fbc710]"> trust </span>, and
-          <span className="text-[#fbc710]"> client-centricity </span>,
-          <span className="text-[#fbc710]"> our values </span> drive everything
-          we do.
+          Guided by integrity, trust, and client-centricity our values drive
+          everything we do.
         </h3>
 
         <div className="mb-6 max-w-[700px] sm:mb-14" data-aos="fade">

@@ -39,7 +39,6 @@ export default function Home() {
         btnText="Our People"
         btnHref="about"
       />
-      {/* <ProjectsSection /> */}
     </main>
   );
 }

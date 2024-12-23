@@ -95,10 +95,10 @@ export default function SignUp() {
       <div className="w-full max-w-2xl p-8 space-y-8 bg-white rounded-lg shadow-md">
         <div className="text-center">
           <h1 className="text-4xl font-extrabold text-[#fbc710] tracking-tight lg:text-5xl mb-6">
-            Join Mystery Message
+            Join Accountings Zone
           </h1>
           <p className="mb-4 text-base md:text-lg">
-            Sign Up to start your anonymous adventure
+            Sign Up to create an account
           </p>
         </div>
 

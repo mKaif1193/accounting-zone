@@ -18,41 +18,58 @@ import {
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { partnerApplicationFormSchema } from "@/schemas/partnerApplicationFormSchema";
 import { Checkbox } from "@/components/ui/checkbox";
+import { clientInformationFormSchema } from "@/schemas/clientInformationFormSchema";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+} from "@/components/ui/select";
 
-export default function PartnerApplicationForm() {
+export default function ClientInformationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const form = useForm<z.infer<typeof partnerApplicationFormSchema>>({
-    resolver: zodResolver(partnerApplicationFormSchema),
+  const services = [
+    "Bookkeeping",
+    "Tax Planning",
+    "Financial Analysis",
+    "Payroll",
+    "Other",
+  ] as const;
+
+  const form = useForm<z.infer<typeof clientInformationFormSchema>>({
+    resolver: zodResolver(clientInformationFormSchema),
     defaultValues: {
+      fullName: "",
       businessName: "",
-      contactPerson: "",
-      businessAddress: "",
       phoneNumber: "",
       email: "",
-      website: "",
+      address: "",
+      preferredContactMethod: "Email",
 
-      typeOfBusiness: "",
+      businessType: "Other",
       industryCategory: "",
-
-      businessRegistrationNumber: "",
       taxIdentificationNumber: "",
+      businessRegistrationNumber: "",
+      annualRevenueRange: "",
+      numberOfEmployees: 0,
 
-      reasonForPartnership: "",
-      servicesOrProductsOffered: "",
-      geographicalCoverage: "",
-      preferredCollaborationType: "",
-      previousPartnerships: "",
+      servicesRequired: [],
+      frequencyOfService: "Monthly",
+      specificGoalsOrNeeds: "",
+      currentAccountingSoftware: "",
+      preferredCommunicationSchedule: "",
 
-      businessLicensesOrPermits: "",
-      insuranceCoverage: "",
+      bankAccountDetails: "",
+      creditLimit: "",
+      billingAddress: "",
 
       businessRegistrationCertificate: "",
       taxIdentificationCertificate: "",
-      portfolioOrReferences: "",
+      financialStatements: "",
+      governmentIssuedID: "",
 
       declaration: false,
       consent: false,
@@ -62,7 +79,7 @@ export default function PartnerApplicationForm() {
   });
 
   const onSubmit = async (
-    data: z.infer<typeof partnerApplicationFormSchema>
+    data: z.infer<typeof clientInformationFormSchema>
   ) => {
     setIsSubmitting(true);
 
@@ -94,12 +111,12 @@ export default function PartnerApplicationForm() {
       <div className="overflow-hidden md:my-[100px] py-10 md:py-15 lg:py-28">
         <header className="container mx-auto w-[90%] lg:w-[73%] mt-[60px]">
           <h1 className="text-3xl font-bold sm:text-5xl xl:text-6xl">
-            Partner Application Form
+            Client Information Form
           </h1>
         </header>
 
         <section
-          id="partner-application-form"
+          id="client-information-form"
           className="container max-w-[1300px] my-[150px] px-8 mx-auto flex flex-col gap-16 sm:gap-20"
         >
           <div className="sm:mb-6 md:mb-14">
@@ -111,61 +128,41 @@ export default function PartnerApplicationForm() {
                 <div className="space-y-8">
                   <h3 className="text-2xl font-bold" data-aos="fade">
                     Section 1:
-                    <span className="text-[#fbc710]"> General Information</span>
+                    <span className="text-[#fbc710]"> Client Details</span>
                   </h3>
                   <div
                     className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center justify-center"
                     data-aos="fade"
                   >
                     <FormField
+                      name="fullName"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Full Name *</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="text"
+                              placeholder="Enter full name"
+                              required
+                              className="rounded-none hover:border-black duration-300 px-4 py-6"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
                       name="businessName"
                       control={form.control}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Business Name *</FormLabel>
+                          <FormLabel>Business Name (if applicable)</FormLabel>
                           <FormControl>
                             <Input
                               type="text"
                               placeholder="Enter business name"
-                              required
-                              className="rounded-none hover:border-black duration-300 px-4 py-6"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      name="contactPerson"
-                      control={form.control}
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Contact Person *</FormLabel>
-                          <FormControl>
-                            <Input
-                              type="text"
-                              placeholder="Enter contact person"
-                              required
-                              className="rounded-none hover:border-black duration-300 px-4 py-6"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      name="businessAddress"
-                      control={form.control}
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Business Address *</FormLabel>
-                          <FormControl>
-                            <Input
-                              type="text"
-                              placeholder="Enter business address"
-                              required
                               className="rounded-none hover:border-black duration-300 px-4 py-6"
                               {...field}
                             />
@@ -213,19 +210,45 @@ export default function PartnerApplicationForm() {
                       )}
                     />
                     <FormField
-                      name="website"
+                      name="address"
                       control={form.control}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Website *</FormLabel>
+                          <FormLabel>Address *</FormLabel>
                           <FormControl>
                             <Input
-                              type="url"
-                              placeholder="Enter website url"
+                              type="text"
+                              placeholder="Enter address"
                               required
                               className="rounded-none hover:border-black duration-300 px-4 py-6"
                               {...field}
                             />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      name="preferredContactMethod"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>
+                            Preferred Contact Method: [Phone / Email / Other] *
+                          </FormLabel>
+                          <FormControl>
+                            <Select
+                              onValueChange={field.onChange}
+                              defaultValue={field.value}
+                              required
+                            >
+                              <SelectTrigger>{field.value}</SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="Phone">Phone</SelectItem>
+                                <SelectItem value="Email">Email</SelectItem>
+                                <SelectItem value="Other">Other</SelectItem>
+                              </SelectContent>
+                            </Select>
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -237,26 +260,44 @@ export default function PartnerApplicationForm() {
                 <div className="space-y-8">
                   <h3 className="text-2xl font-bold" data-aos="fade">
                     Section 2:
-                    <span className="text-[#fbc710]"> Business Details</span>
+                    <span className="text-[#fbc710]">
+                      {" "}
+                      Business Information (if applicable)
+                    </span>
                   </h3>
                   <div
                     className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center justify-center"
                     data-aos="fade"
                   >
                     <FormField
-                      name="typeOfBusiness"
+                      name="businessType"
                       control={form.control}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Type of Business *</FormLabel>
+                          <FormLabel>
+                            Business Type: [Sole Proprietor / Partnership /
+                            Corporation / LLC / Other]
+                          </FormLabel>
                           <FormControl>
-                            <Input
-                              type="text"
-                              placeholder="Enter type of business"
-                              required
-                              className="rounded-none hover:border-black duration-300 px-4 py-6"
-                              {...field}
-                            />
+                            <Select
+                              onValueChange={field.onChange}
+                              defaultValue={field.value}
+                            >
+                              <SelectTrigger>{field.value}</SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="Sole Proprietor">
+                                  Sole Proprietor
+                                </SelectItem>
+                                <SelectItem value="Partnership">
+                                  Partnership
+                                </SelectItem>
+                                <SelectItem value="Corporation">
+                                  Corporation
+                                </SelectItem>
+                                <SelectItem value="LLC">LLC</SelectItem>
+                                <SelectItem value="Other">Other</SelectItem>
+                              </SelectContent>
+                            </Select>
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -267,50 +308,11 @@ export default function PartnerApplicationForm() {
                       control={form.control}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Industry/Category *</FormLabel>
+                          <FormLabel>Industry/Category</FormLabel>
                           <FormControl>
                             <Input
                               type="text"
                               placeholder="Enter Industry/Category"
-                              required
-                              className="rounded-none hover:border-black duration-300 px-4 py-6"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      name="yearsInOperation"
-                      control={form.control}
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Years in Operation *</FormLabel>
-                          <FormControl>
-                            <Input
-                              type="number"
-                              placeholder="Enter years in operation"
-                              required
-                              className="rounded-none hover:border-black duration-300 px-4 py-6"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      name="businessRegistrationNumber"
-                      control={form.control}
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Business Registration Number *</FormLabel>
-                          <FormControl>
-                            <Input
-                              type="text"
-                              placeholder="Enter business registration number"
-                              required
                               className="rounded-none hover:border-black duration-300 px-4 py-6"
                               {...field}
                             />
@@ -324,14 +326,65 @@ export default function PartnerApplicationForm() {
                       control={form.control}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>
-                            Tax Identification Number (TIN) *
-                          </FormLabel>
+                          <FormLabel>Tax Identification Number (TIN)</FormLabel>
                           <FormControl>
                             <Input
                               type="text"
                               placeholder="Enter tax identification number (TIN)"
-                              required
+                              className="rounded-none hover:border-black duration-300 px-4 py-6"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      name="businessRegistrationNumber"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Business Registration Number</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="text"
+                              placeholder="Enter business registration number"
+                              className="rounded-none hover:border-black duration-300 px-4 py-6"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      name="annualRevenueRange"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Annual Revenue Range</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="number"
+                              placeholder="Enter annual revenue range"
+                              className="rounded-none hover:border-black duration-300 px-4 py-6"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      name="numberOfEmployees"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Number of Employees</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="number"
+                              placeholder="Enter number of employees"
                               className="rounded-none hover:border-black duration-300 px-4 py-6"
                               {...field}
                             />
@@ -348,7 +401,7 @@ export default function PartnerApplicationForm() {
                     Section 3:
                     <span className="text-[#fbc710]">
                       {" "}
-                      Service/Partnership Details
+                      Service Requirements
                     </span>
                   </h3>
                   <div
@@ -356,15 +409,86 @@ export default function PartnerApplicationForm() {
                     data-aos="fade"
                   >
                     <FormField
-                      name="reasonForPartnership"
+                      name="servicesRequired"
                       control={form.control}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Reason for Partnership *</FormLabel>
+                          <FormLabel>Services Required *</FormLabel>
+                          <FormControl>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+                              {services.map((service, index) => (
+                                <div
+                                  key={index}
+                                  className="flex items-center gap-x-2"
+                                >
+                                  <Checkbox
+                                    id={service}
+                                    checked={field.value.includes(service)}
+                                    onCheckedChange={(checked) => {
+                                      const newValue = checked
+                                        ? [...field.value, service]
+                                        : field.value.filter(
+                                            (item) => item !== service
+                                          );
+                                      field.onChange(newValue);
+                                    }}
+                                  />
+                                  <label
+                                    htmlFor={service}
+                                    className="text-sm font-medium text-gray-700"
+                                  >
+                                    {service}
+                                  </label>
+                                </div>
+                              ))}
+                            </div>
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      name="frequencyOfService"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>
+                            Frequency of Service: [Weekly / Monthly / Quarterly
+                            / Annually] *
+                          </FormLabel>
+                          <FormControl>
+                            <Select
+                              onValueChange={field.onChange}
+                              defaultValue={field.value}
+                              required
+                            >
+                              <SelectTrigger>{field.value}</SelectTrigger>
+                              <SelectContent>
+                                <SelectItem value="Weekly">Weekly</SelectItem>
+                                <SelectItem value="Monthly">Monthly</SelectItem>
+                                <SelectItem value="Quarterly">
+                                  Quarterly
+                                </SelectItem>
+                                <SelectItem value="Annually">
+                                  Annually
+                                </SelectItem>
+                              </SelectContent>
+                            </Select>
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      name="specificGoalsOrNeeds"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Specific Goals or Needs *</FormLabel>
                           <FormControl>
                             <Input
                               type="text"
-                              placeholder="Enter reason for partnership"
+                              placeholder="Enter specific goals or needs"
                               required
                               className="rounded-none hover:border-black duration-300 px-4 py-6"
                               {...field}
@@ -375,16 +499,17 @@ export default function PartnerApplicationForm() {
                       )}
                     />
                     <FormField
-                      name="servicesOrProductsOffered"
+                      name="currentAccountingSoftware"
                       control={form.control}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Services or Products Offered *</FormLabel>
+                          <FormLabel>
+                            Current Accounting Software (if any)
+                          </FormLabel>
                           <FormControl>
                             <Input
                               type="text"
-                              placeholder="Enter services or products offered"
-                              required
+                              placeholder="Enter current accounting software"
                               className="rounded-none hover:border-black duration-300 px-4 py-6"
                               {...field}
                             />
@@ -394,53 +519,18 @@ export default function PartnerApplicationForm() {
                       )}
                     />
                     <FormField
-                      name="geographicalCoverage"
+                      name="preferredCommunicationSchedule"
                       control={form.control}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Geographical Coverage *</FormLabel>
+                          <FormLabel>
+                            Preferred Communication Schedule *
+                          </FormLabel>
                           <FormControl>
                             <Input
                               type="text"
-                              placeholder="Enter geographical coverage"
+                              placeholder="Enter preferred communication schedule"
                               required
-                              className="rounded-none hover:border-black duration-300 px-4 py-6"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      name="preferredCollaborationType"
-                      control={form.control}
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Preferred Collaboration Type *</FormLabel>
-                          <FormControl>
-                            <Input
-                              type="text"
-                              placeholder="Enter preferred collaboration type"
-                              required
-                              className="rounded-none hover:border-black duration-300 px-4 py-6"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      name="previousPartnerships"
-                      control={form.control}
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Previous Partnerships (if any)</FormLabel>
-                          <FormControl>
-                            <Input
-                              type="text"
-                              placeholder="Enter previous partnerships"
                               className="rounded-none hover:border-black duration-300 px-4 py-6"
                               {...field}
                             />
@@ -457,7 +547,7 @@ export default function PartnerApplicationForm() {
                     Section 4:
                     <span className="text-[#fbc710]">
                       {" "}
-                      Financial and Legal Information
+                      Financial Information
                     </span>
                   </h3>
                   <div
@@ -465,15 +555,15 @@ export default function PartnerApplicationForm() {
                     data-aos="fade"
                   >
                     <FormField
-                      name="annualRevenue"
+                      name="bankAccountDetails"
                       control={form.control}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Annual Revenue (Optional)</FormLabel>
+                          <FormLabel>Bank Account Details (Optional)</FormLabel>
                           <FormControl>
                             <Input
-                              type="number"
-                              placeholder="Enter annual revenue"
+                              type="text"
+                              placeholder="Enter bank account details"
                               className="rounded-none hover:border-black duration-300 px-4 py-6"
                               {...field}
                             />
@@ -483,16 +573,15 @@ export default function PartnerApplicationForm() {
                       )}
                     />
                     <FormField
-                      name="businessLicensesOrPermits"
+                      name="creditLimit"
                       control={form.control}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Business Licenses or Permits *</FormLabel>
+                          <FormLabel>Credit Limit (if applicable)</FormLabel>
                           <FormControl>
                             <Input
                               type="text"
-                              placeholder="Enter business licenses or permits"
-                              required
+                              placeholder="Enter credit limit"
                               className="rounded-none hover:border-black duration-300 px-4 py-6"
                               {...field}
                             />
@@ -502,16 +591,17 @@ export default function PartnerApplicationForm() {
                       )}
                     />
                     <FormField
-                      name="insuranceCoverage"
+                      name="billingAddress"
                       control={form.control}
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Insurance Coverage *</FormLabel>
+                          <FormLabel>
+                            Billing Address (if different from primary address)
+                          </FormLabel>
                           <FormControl>
                             <Input
                               type="text"
-                              placeholder="Enter insurance coverage"
-                              required
+                              placeholder="Enter billing address"
                               className="rounded-none hover:border-black duration-300 px-4 py-6"
                               {...field}
                             />
@@ -541,13 +631,13 @@ export default function PartnerApplicationForm() {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>
-                            Upload Business Registration Certificate *
+                            Upload Business Registration Certificate (if
+                            applicable)
                           </FormLabel>
                           <FormControl>
                             <Input
                               type="file"
                               placeholder="Upload business registration certificate"
-                              required
                               className="rounded-none hover:border-black duration-300 px-4 pt-[14px] pb-[34px]"
                               {...field}
                             />
@@ -562,13 +652,13 @@ export default function PartnerApplicationForm() {
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>
-                            Upload Tax Identification Certificate (if
-                            applicable)
+                            Upload Tax Identification Certificate *
                           </FormLabel>
                           <FormControl>
                             <Input
                               type="file"
                               placeholder="Upload tax identification certificate"
+                              required
                               className="rounded-none hover:border-black duration-300 px-4 pt-[14px] pb-[34px]"
                               {...field}
                             />
@@ -578,17 +668,36 @@ export default function PartnerApplicationForm() {
                       )}
                     />
                     <FormField
-                      name="portfolioOrReferences"
+                      name="financialStatements"
                       control={form.control}
                       render={({ field }) => (
                         <FormItem>
                           <FormLabel>
-                            Upload Portfolio/References (Optional)
+                            Upload Financial Statements (Optional)
                           </FormLabel>
                           <FormControl>
                             <Input
                               type="file"
-                              placeholder="Upload portfolio/references"
+                              placeholder="Upload financial statements"
+                              className="rounded-none hover:border-black duration-300 px-4 pt-[14px] pb-[34px]"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      name="governmentIssuedID"
+                      control={form.control}
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Upload Government-Issued ID</FormLabel>
+                          <FormControl>
+                            <Input
+                              type="file"
+                              placeholder="Upload government-issued ID"
+                              required
                               className="rounded-none hover:border-black duration-300 px-4 pt-[14px] pb-[34px]"
                               {...field}
                             />
@@ -605,7 +714,7 @@ export default function PartnerApplicationForm() {
                     Section 6:
                     <span className="text-[#fbc710]">
                       {" "}
-                      Declaration and Agreement
+                      Declaration and Consent
                     </span>
                   </h3>
                   <div
@@ -654,8 +763,8 @@ export default function PartnerApplicationForm() {
                               Consent *
                             </FormLabel>
                             <FormDescription className="px-8">
-                              I consent to the use of this information for
-                              partnership evaluation purposes.
+                              I consent to the use of this information for the
+                              purpose of providing accounting services.
                             </FormDescription>
                             <FormMessage />
                           </FormItem>
