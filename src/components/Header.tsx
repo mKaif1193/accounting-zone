@@ -17,11 +17,18 @@ export default function Header() {
         <Navbar />
 
         <Link
+          href="/login"
+          className="justify-self-end 2xl:text-base text-sm mr-4 lg:mr-10 font-bold border rounded-3xl lg:px-6 px-4 py-1.5 md:py-2 bg-[#fbc710] hover:bg-[#e2b512] transition-colors cursor-pointer uppercase"
+        >
+          LOGIN
+        </Link>
+
+        {/* <Link
           href="tel:17606860609"
           className="hidden xl:block font-bold justify-self-end hover:text-[#fbc710] transition-colors"
         >
           +1 (760) 686 06-09
-        </Link>
+        </Link>  */}
       </div>
     </header>
   );

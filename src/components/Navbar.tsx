@@ -122,7 +122,7 @@ export default function Navbar() {
             SERVICES
           </div>
           <div
-            className={`absolute z-10 -left-[380px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute text-[15px] z-10 -left-[380px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
               servicesDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -130,7 +130,7 @@ export default function Navbar() {
           >
             <ul className="grid grid-cols-5 text-sm divide-x divide-[#fbc710] justify-center w-full">
               <div className="space-y-4 px-8">
-                <li className="font-bold text-xs text-[#fbc710]">
+                <li className="font-bold text-sm text-[#fbc710]">
                   FINANCIAL - Accounting
                 </li>
                 <li>
@@ -199,7 +199,7 @@ export default function Navbar() {
                 </li>
               </div>
               <div className="space-y-4 px-8">
-                <li className="font-bold text-xs text-[#fbc710]">
+                <li className="font-bold text-sm text-[#fbc710]">
                   RECORDS - Bookkeeping
                 </li>
                 <li>
@@ -269,16 +269,8 @@ export default function Navbar() {
                 </li>
               </div>
               <div className="space-y-4 px-8">
-                <li className="font-bold text-xs text-[#fbc710]">
+                <li className="font-bold text-sm text-[#fbc710]">
                   TAX - Tax planning
-                </li>
-                <li>
-                  <Link
-                    href="/services/tax-planning"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    VAT/GST Filing and Compliance
-                  </Link>
                 </li>
                 <li>
                   <Link
@@ -338,7 +330,7 @@ export default function Navbar() {
                 </li>
               </div>
               <div className="space-y-4 px-8">
-                <li className="font-bold text-xs text-[#fbc710]">
+                <li className="font-bold text-sm text-[#fbc710]">
                   ADVISORY – Business Consulting
                 </li>
                 <li>
@@ -407,7 +399,7 @@ export default function Navbar() {
                 </li>
               </div>
               <div className="space-y-4 px-8">
-                <li className="font-bold text-xs text-[#fbc710]">
+                <li className="font-bold text-sm text-[#fbc710]">
                   COMPLIANCE – Regulatory Services
                 </li>
                 <li>
@@ -492,7 +484,7 @@ export default function Navbar() {
             INDUSTRIES
           </Link>
           <div
-            className={`absolute z-10 -left-[480px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 -left-[480px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity text-[15px] ${
               industriesDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -501,7 +493,7 @@ export default function Navbar() {
             <ul className="grid grid-cols-4 text-sm divide-x divide-[#fbc710] justify-center w-full">
               <div className="space-y-8 px-8">
                 <div className="space-y-4">
-                  <li className="font-bold text-xs text-[#fbc710]">
+                  <li className="font-bold text-sm text-[#fbc710]">
                     Financial and Legal Services
                   </li>
                   <li>
@@ -530,7 +522,7 @@ export default function Navbar() {
                   </li>
                 </div>
                 <div className="space-y-4">
-                  <li className="font-bold text-xs text-[#fbc710]">
+                  <li className="font-bold text-sm text-[#fbc710]">
                     Retail, Hospitality, and Consumer Services
                   </li>
                   <li>
@@ -557,19 +549,11 @@ export default function Navbar() {
                       E-commerce and Online Retailers
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      href="/industries"
-                      className="text-black hover:text-[#fbc710] transition-colors"
-                    >
-                      Subscription Services
-                    </Link>
-                  </li>
                 </div>
               </div>
               <div className="space-y-8 px-8">
                 <div className="space-y-4">
-                  <li className="font-bold text-xs text-[#fbc710]">
+                  <li className="font-bold text-sm text-[#fbc710]">
                     Government and Public Sector
                   </li>
                   <li>
@@ -598,7 +582,7 @@ export default function Navbar() {
                   </li>
                 </div>
                 <div className="space-y-4">
-                  <li className="font-bold text-xs text-[#fbc710]">
+                  <li className="font-bold text-sm text-[#fbc710]">
                     Technology and Start-Ups
                   </li>
                   <li>
@@ -629,7 +613,7 @@ export default function Navbar() {
               </div>
               <div className="space-y-8 px-8">
                 <div className="space-y-4">
-                  <li className="font-bold text-xs text-[#fbc710]">
+                  <li className="font-bold text-sm text-[#fbc710]">
                     Non-Profit and Philanthropic Organizations
                   </li>
                   <li>
@@ -658,7 +642,7 @@ export default function Navbar() {
                   </li>
                 </div>
                 <div className="space-y-4">
-                  <li className="font-bold text-xs text-[#fbc710]">
+                  <li className="font-bold text-sm text-[#fbc710]">
                     Healthcare, Education, and Professional Services
                   </li>
                   <li>
@@ -689,7 +673,7 @@ export default function Navbar() {
               </div>
               <div className="space-y-8 px-8">
                 <div className="space-y-4">
-                  <li className="font-bold text-xs text-[#fbc710]">
+                  <li className="font-bold text-sm text-[#fbc710]">
                     Manufacturing, Construction, and Real Estate
                   </li>
                   <li>
@@ -718,7 +702,7 @@ export default function Navbar() {
                   </li>
                 </div>
                 <div className="space-y-4">
-                  <li className="font-bold text-xs text-[#fbc710]">
+                  <li className="font-bold text-sm text-[#fbc710]">
                     Energy, Environment, and Sustainability
                   </li>
                   <li>
@@ -756,7 +740,7 @@ export default function Navbar() {
             FEATURES
           </Link>
           <div
-            className={`absolute z-10 -left-[620px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 text-[15px] -left-[620px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
               featuresDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -935,7 +919,7 @@ export default function Navbar() {
             INSIGHTS
           </div>
           <div
-            className={`absolute z-10 -left-[730px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 text-[15px] -left-[730px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
               insightsDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -943,7 +927,7 @@ export default function Navbar() {
           >
             <ul className="grid grid-cols-3 text-sm divide-x divide-[#fbc710] justify-center w-full">
               <div className="space-y-4 px-8">
-                <li className="font-bold text-xs text-[#fbc710]">
+                <li className="font-bold text-sm text-[#fbc710]">
                   Tax Insights
                 </li>
                 <li>
@@ -1013,7 +997,7 @@ export default function Navbar() {
                 </li>
               </div>
               <div className="space-y-4 px-8">
-                <li className="font-bold text-xs text-[#fbc710]">
+                <li className="font-bold text-sm text-[#fbc710]">
                   Accounting Insights
                 </li>
                 <li>
@@ -1081,7 +1065,7 @@ export default function Navbar() {
                 </li>
               </div>
               <div className="space-y-4 px-8">
-                <li className="font-bold text-xs text-[#fbc710]">
+                <li className="font-bold text-sm text-[#fbc710]">
                   Bookkeeping Insights
                 </li>
                 <li>
@@ -1162,7 +1146,7 @@ export default function Navbar() {
             RESOURCES
           </div>
           <div
-            className={`absolute z-10 -left-[830px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 text-[15px] -left-[830px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
               resourcesDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -1171,7 +1155,7 @@ export default function Navbar() {
             <ul className="grid grid-cols-3 text-sm divide-x divide-[#fbc710] justify-center w-full">
               <div className="space-y-6 px-8">
                 <div className="space-y-2">
-                  <li className="font-bold text-xs text-[#fbc710]">
+                  <li className="font-bold text-sm text-[#fbc710]">
                     Information and Reference
                   </li>
                   <li>
@@ -1224,7 +1208,7 @@ export default function Navbar() {
                   </li>
                 </div>
                 <div className="space-y-2">
-                  <li className="font-bold text-xs text-[#fbc710]">
+                  <li className="font-bold text-sm text-[#fbc710]">
                     Support and Community
                   </li>
                   <li>
@@ -1279,7 +1263,7 @@ export default function Navbar() {
               </div>
               <div className="space-y-6 px-8">
                 <div className="space-y-2">
-                  <li className="font-bold text-xs text-[#fbc710]">
+                  <li className="font-bold text-sm text-[#fbc710]">
                     Tools and Templates
                   </li>
                   <li>
@@ -1332,7 +1316,7 @@ export default function Navbar() {
                   </li>
                 </div>
                 <div className="space-y-2">
-                  <li className="font-bold text-xs text-[#fbc710]">
+                  <li className="font-bold text-sm text-[#fbc710]">
                     Technology and Integration
                   </li>
                   <li>
@@ -1387,7 +1371,7 @@ export default function Navbar() {
               </div>
               <div className="space-y-6 px-8">
                 <div className="space-y-2">
-                  <li className="font-bold text-xs text-[#fbc710]">
+                  <li className="font-bold text-sm text-[#fbc710]">
                     Education and Learning
                   </li>
                   <li>
@@ -1440,7 +1424,7 @@ export default function Navbar() {
                   </li>
                 </div>
                 <div className="space-y-2">
-                  <li className="font-bold text-xs text-[#fbc710]">
+                  <li className="font-bold text-sm text-[#fbc710]">
                     Industry-Specific Resources
                   </li>
                   <li>
@@ -1513,7 +1497,7 @@ export default function Navbar() {
             <span className="block 2xl:hidden">PA Form</span>
           </Link>
           <div
-            className={`absolute z-10 -left-[100px] top-full w-[500px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 text-[15px] -left-[100px] top-full w-[500px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
               ptaDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
