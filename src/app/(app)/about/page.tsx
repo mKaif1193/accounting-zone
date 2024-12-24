@@ -1,6 +1,7 @@
 import React from "react";
 import FSCard from "@/components/services/FSCard";
 import ServicesFooter from "@/components/services/ServicesFooter";
+import AboutSection from "@/components/Home/AboutSection";
 
 const taxPlanningCards = [
   {
@@ -30,7 +31,7 @@ const taxPlanningCards = [
   },
 ];
 
-const ourClientsCard=[
+const ourClientsCard = [
   {
     title: "Small and Medium Enterprises (SMEs)",
   },
@@ -46,22 +47,20 @@ const ourClientsCard=[
   {
     title: "Individual Professionals",
   },
-]
+];
 
-const ourCommitmentsCard=[
+const ourCommitmentsCard = [
   {
-    title:
-      "Delivering exceptional service with integrity and professionalism.",
+    title: "Delivering exceptional service with integrity and professionalism.",
   },
   {
     title:
       "Continuously innovating to meet the dynamic needs of the financial landscape.",
   },
   {
-    title:
-      "Empowering our clients to make sound financial decisions.",
+    title: "Empowering our clients to make sound financial decisions.",
   },
-]
+];
 
 export default function About() {
   return (
@@ -93,6 +92,8 @@ export default function About() {
             className="w-full h-auto"
           />
         </div> */}
+
+        <AboutSection />
 
         <section className="my-[80px] container mx-auto md:my-[120px] lg:mt-[160px] xl:mt-[210px]">
           <div className="relative pt-[90px] gap-x-4 xl:pt-0 container mx-auto flex">

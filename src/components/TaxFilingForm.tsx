@@ -132,8 +132,8 @@ export default function TaxFilingForm() {
   };
 
   return (
-    <div className="overflow-hidden md:my-[100px] py-10 md:py-15 lg:py-28">
-      <header className="container mx-auto w-[90%] lg:w-[73%] mt-[60px]">
+    <div className="overflow-hidden md:mb-20 py-6 md:py-8 lg:py-16">
+      <header className="container mx-auto w-[90%] lg:w-[79%] mt-[40px]">
         <h1 className="text-3xl font-bold sm:text-5xl xl:text-6xl">
           Tax Filing Form – With Andleeb Dhar
         </h1>

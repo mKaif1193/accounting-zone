@@ -15,7 +15,7 @@ export default function AboutSection() {
   const router = useRouter();
 
   return (
-    <section className="flex flex-wrap px-8 container lg:w-2/3 mx-auto flex-col items-center md:flex-row">
+    <section className="flex flex-wrap px-8 container lg:ws-2/3 mx-auto flex-col items-center md:flex-row">
       <div className="mb-14 w-full ml-auto md:w-1/2">
         <h2
           className="mb-4 md:mb-8 font-semibold tracking-widest text-sm lg:text-base text-[#fbc710] uppercase"

@@ -1,17 +1,23 @@
 import React from "react";
 import Link from "next/link";
 import Navbar from "./Navbar";
+import Image from "next/image";
 
 export default function Header() {
   return (
     <header className="relative w-full z-40">
-      <div className="flex fixed top-0 left-0 bg-white items-center justify-between w-full mx-auto py-4 px-1 sm:p-4 md:py-6 sm:px-10   ">
+      <div className="flex fixed top-0 left-0 bg-white items-center justify-between w-full mx-auto py-4 px-1 sm:p-4 md:py-6 sm:px-10">
         <Link
           href="/"
-          className="flex flex-col px-4 py-1.5 justify-center relative pl-[16px] before:content-[''] before:absolute before:top-0 before:left-0 before:w-[40px] before:h-full before:border-[2px] before:border-solid before:border-[#fbc710] before:border-r-0"
+          className="relative pl-[16px] before:content-[''] before:absolute before:top-0 before:left-0 before:w-[50px] before:h-full before:border-[2px] before:border-solid before:border-[#fbc710] before:border-r-0 overflow-hidden max-w-[150px]"
         >
-          <span className="text-xl sm:text-3xl font-bold">Accountings</span>
-          <span className="text-[10px] sm:text-sm text-gray-700">Zone</span>
+          <Image
+            src="/logo/Accounting Zone (4).png"
+            alt="Accounting Zone Logo"
+            width={100}
+            height={100}
+            className="w-full h-auto"
+          />
         </Link>
 
         <Navbar />

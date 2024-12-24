@@ -15,7 +15,6 @@ export default function Navbar() {
   const [featuresDropdownOpen, setFeaturesDropdownOpen] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
   const [resourcesDropdownOpen, setResourcesDropdownOpen] = useState(false);
-  const [ptaDropdownOpen, setPtaDropdownOpen] = useState(false);
 
   const handleDropdownClick = (dropdownName: string) => {
     switch (dropdownName) {
@@ -128,7 +127,7 @@ export default function Navbar() {
                 : "opacity-0 pointer-events-none"
             }`}
           >
-            <ul className="grid grid-cols-5 text-sm divide-x divide-[#fbc710] justify-center w-full">
+            <ul className="grid grid-cols-5 text-xs divide-x divide-[#fbc710] justify-center w-full">
               <div className="space-y-4 px-8">
                 <li className="font-bold text-sm text-[#fbc710]">
                   FINANCIAL - Accounting
@@ -255,8 +254,7 @@ export default function Navbar() {
                     href="/services/bookkeeping"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Integration with Accounting Software (e.g., QuickBooks,
-                    Xero)
+                    Integration with Accounting Software
                   </Link>
                 </li>
                 <li>
@@ -463,7 +461,7 @@ export default function Navbar() {
                     href="/services/tax-planning"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
-                    Environmental, Social, and Governance (ESG) Compliance
+                    Environmental, Social, and Governance (ESG)
                   </Link>
                 </li>
               </div>
@@ -490,7 +488,7 @@ export default function Navbar() {
                 : "opacity-0 pointer-events-none"
             }`}
           >
-            <ul className="grid grid-cols-4 text-sm divide-x divide-[#fbc710] justify-center w-full">
+            <ul className="grid grid-cols-4 text-xs divide-x divide-[#fbc710] justify-center w-full">
               <div className="space-y-8 px-8">
                 <div className="space-y-4">
                   <li className="font-bold text-sm text-[#fbc710]">
@@ -746,7 +744,7 @@ export default function Navbar() {
                 : "opacity-0 pointer-events-none"
             }`}
           >
-            <ul className="grid grid-cols-4 text-sm divide-x divide-[#fbc710] justify-center w-full">
+            <ul className="grid grid-cols-4 text-xs divide-x divide-[#fbc710] justify-center w-full">
               <div className="space-y-4 px-8">
                 <li>
                   <Link
@@ -925,7 +923,7 @@ export default function Navbar() {
                 : "opacity-0 pointer-events-none"
             }`}
           >
-            <ul className="grid grid-cols-3 text-sm divide-x divide-[#fbc710] justify-center w-full">
+            <ul className="grid grid-cols-3 text-xs divide-x divide-[#fbc710] justify-center w-full">
               <div className="space-y-4 px-8">
                 <li className="font-bold text-sm text-[#fbc710]">
                   Tax Insights
@@ -1139,7 +1137,7 @@ export default function Navbar() {
           onMouseLeave={() => setResourcesDropdownOpen(false)}
         >
           <div
-            className={`2xl:text-base text-sm font-semibold hover:text-[#fbc710] transition-colors cursor-pointer uppercase ${
+            className={`2xl:text-base text-xs font-semibold hover:text-[#fbc710] transition-colors cursor-pointer uppercase ${
               pathname.includes("/resources") ? "text-[#fbc710]" : "text-black"
             }`}
           >
@@ -1480,11 +1478,7 @@ export default function Navbar() {
             </ul>
           </div>
         </li>
-        <li
-          className="relative group mr-4 lg:mr-10"
-          onMouseEnter={() => setPtaDropdownOpen(true)}
-          onMouseLeave={() => setPtaDropdownOpen(false)}
-        >
+        <li className="mr-4 lg:mr-10">
           <Link
             href="/partner-application-form"
             className={`2xl:text-base text-sm font-semibold hover:text-[#fbc710] transition-colors cursor-pointer uppercase ${
@@ -1496,37 +1490,6 @@ export default function Navbar() {
             <span className="2xl:block hidden">Partner Application Form</span>
             <span className="block 2xl:hidden">PA Form</span>
           </Link>
-          <div
-            className={`absolute z-10 text-[15px] -left-[100px] top-full w-[500px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
-              ptaDropdownOpen
-                ? "opacity-100 pointer-events-auto"
-                : "opacity-0 pointer-events-none"
-            }`}
-          >
-            <ul className="grid grid-cols-1 text-sm divide-x divide-[#fbc710] justify-center w-full">
-              <div className="space-y-6 px-8">
-                <li>
-                  <Link
-                    href="/client-information-form"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    <span className="2xl:block hidden">
-                      Client Information Form
-                    </span>
-                    <span className="block 2xl:hidden">CI Form</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/tax-filing-form"
-                    className="text-black hover:text-[#fbc710] transition-colors"
-                  >
-                    Tax Filing Form
-                  </Link>
-                </li>
-              </div>
-            </ul>
-          </div>
         </li>
         <li
           className="relative group mr-4 lg:mr-10"

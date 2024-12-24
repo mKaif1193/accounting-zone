@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -13,14 +14,21 @@ export default function Footer() {
       <div className="relative max-w-[1830px] px-4 py-12 md:py-24 lg:py-32 xl:py-40 2xl:max-w-[calc(100vw-90px)]">
         <div className="absolute left-4 top-0 w-[calc(100%-8px)] border-t border-gray-300"></div>
         <div className="grid grid-cols-2 sm:justify-items-center md:grid-cols-6 gap-6">
-          <div className="mb-6 md:mb-0 col-span-2 md:col-span-1">
-            <Link href="/" className="block mb-4 md:mb-0">
-              <span className="text-2xl sm:text-3xl font-bold">
+          <div className="mb-6 md:mb-0 overflow-hidden col-span-2 md:col-span-1">
+            <Link href="/" className="block max-w-[300px] mb-4 md:mb-0">
+              {/* <span className="text-2xl sm:text-3xl font-bold">
                 Accountings
               </span>
               <span className="block text-sm sm:text-base text-gray-600">
                 Zone
-              </span>
+              </span> */}
+              <Image
+                src="/logo/Accounting Zone (4).png"
+                alt="Accounting Zone Logo"
+                width={200}
+                height={200}
+                className="w-full h-auto"
+              />
             </Link>
           </div>
 
