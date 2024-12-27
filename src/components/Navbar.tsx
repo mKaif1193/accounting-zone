@@ -121,7 +121,7 @@ export default function Navbar() {
             SERVICES
           </div>
           <div
-            className={`absolute text-[15px] z-10 -left-[380px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute text-[15px] z-10 -left-[340px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
               servicesDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -333,7 +333,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/advisory"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Financial Strategy Development
@@ -341,7 +341,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/advisory"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Business Performance Optimization
@@ -349,7 +349,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/advisory"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Risk Management Consulting
@@ -357,7 +357,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/advisory"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Business Valuation Services
@@ -365,7 +365,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/advisory"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Mergers and Acquisitions Support
@@ -373,7 +373,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/advisory"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Cash Flow Optimization Strategies
@@ -381,7 +381,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/advisory"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Start-Up Financial Planning
@@ -389,7 +389,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/advisory"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Cost Reduction and Efficiency Planning
@@ -402,7 +402,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/compliance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Statutory Reporting and Compliance
@@ -410,7 +410,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/compliance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Corporate Governance Advisory
@@ -418,7 +418,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/compliance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Industry-Specific Regulatory Filings
@@ -426,7 +426,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/compliance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Anti-Money Laundering (AML) Compliance
@@ -434,7 +434,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/compliance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Internal Controls and Auditing
@@ -442,7 +442,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/compliance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Employment and Labor Law Compliance
@@ -450,7 +450,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/compliance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Corporate Secretarial Services
@@ -458,7 +458,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/tax-planning"
+                    href="/services/compliance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Environmental, Social, and Governance (ESG)
@@ -482,7 +482,7 @@ export default function Navbar() {
             INDUSTRIES
           </Link>
           <div
-            className={`absolute z-10 -left-[480px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity text-[15px] ${
+            className={`absolute z-10 -left-[450px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity text-[15px] ${
               industriesDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -738,7 +738,7 @@ export default function Navbar() {
             FEATURES
           </Link>
           <div
-            className={`absolute z-10 text-[15px] -left-[620px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 text-[15px] -left-[580px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
               featuresDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -917,7 +917,7 @@ export default function Navbar() {
             INSIGHTS
           </div>
           <div
-            className={`absolute z-10 text-[15px] -left-[730px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 text-[15px] -left-[690px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
               insightsDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"
@@ -1144,7 +1144,7 @@ export default function Navbar() {
             RESOURCES
           </div>
           <div
-            className={`absolute z-10 text-[15px] -left-[830px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
+            className={`absolute z-10 text-[15px] -left-[800px] top-full w-[1650px] py-20 bg-white shadow-lg duration-300 transition-opacity ${
               resourcesDropdownOpen
                 ? "opacity-100 pointer-events-auto"
                 : "opacity-0 pointer-events-none"

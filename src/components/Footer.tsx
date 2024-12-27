@@ -16,12 +16,6 @@ export default function Footer() {
         <div className="grid grid-cols-2 sm:justify-items-center md:grid-cols-6 gap-6">
           <div className="mb-6 md:mb-0 overflow-hidden col-span-2 md:col-span-1">
             <Link href="/" className="block max-w-[300px] mb-4 md:mb-0">
-              {/* <span className="text-2xl sm:text-3xl font-bold">
-                Accountings
-              </span>
-              <span className="block text-sm sm:text-base text-gray-600">
-                Zone
-              </span> */}
               <Image
                 src="/logo/Accounting Zone (4).png"
                 alt="Accounting Zone Logo"

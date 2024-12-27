@@ -29,7 +29,7 @@ export default function Slider({
       // onMouseEnter={() => setIsImageSliderHover(true)}
       // onMouseLeave={() => setIsImageSliderHover(false)}
     >
-      <ImagesSlider className="sm:mt-[105px]" images={images}>
+      <ImagesSlider className="sm:mt-[175px]" images={images}>
         <motion.div
           initial={{
             opacity: 0,
@@ -48,7 +48,6 @@ export default function Slider({
             <span className="text-lg sm:text-xl text-[#fbc710] font-normal uppercase">
               {title}
             </span>
-
             {description}
           </motion.p>
 

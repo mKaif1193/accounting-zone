@@ -1,10 +1,10 @@
 "use client";
+import React from "react";
+import { useParams, useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
 import { verifySchema } from "@/schemas/verifySchema";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useParams, useRouter } from "next/navigation";
-import React from "react";
 import { useForm } from "react-hook-form";
 import axios, { AxiosError } from "axios";
 import { ApiResponse } from "@/types/ApiResponse";
@@ -24,7 +24,6 @@ function VerifyAccountPage() {
   const params = useParams<{ username: string }>();
   const { toast } = useToast();
 
-  // Zod implementation
   const form = useForm<z.infer<typeof verifySchema>>({
     resolver: zodResolver(verifySchema),
   });
