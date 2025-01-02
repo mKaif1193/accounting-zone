@@ -85,16 +85,6 @@ export default function About() {
           </div>
         </header>
 
-        {/* <div className="mb-[40px] sm:mb-[60px] md:mb-[100px] lg:mb-[160px] xl:mb-[210px] xl:mt-[100px] xl:max-w-[1830px] 2xl:max-w-[calc(100vw-120px)]">
-          <Image
-            src="/about/about1.jpg"
-            width="1800"
-            height="768"
-            alt="About Us Image"
-            className="w-full h-auto"
-          />
-        </div> */}
-
         <AboutSection />
 
         <section className="my-[80px] container mx-auto md:my-[120px] lg:mt-[160px] xl:mt-[210px]">
