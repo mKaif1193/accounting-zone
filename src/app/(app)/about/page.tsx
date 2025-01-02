@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import FSCard from "@/components/services/FSCard";
 import ServicesFooter from "@/components/services/ServicesFooter";
