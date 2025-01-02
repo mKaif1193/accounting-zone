@@ -6,93 +6,118 @@ import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
   {
-    title: "",
-    description: "",
+    title: "Maximized Tax Deductions",
+    description:
+      "Ensures that charitable contributions are fully optimized for tax savings by helping individuals and businesses claim the maximum allowable deductions on their tax returns.",
   },
   {
-    title: "",
-    description: "",
+    title: "Enhanced Giving Strategy",
+    description:
+      "Guides on how to structure charitable donations in ways that provide the most significant tax benefits while supporting causes that align with personal or business values.",
   },
   {
-    title: "",
-    description: "",
+    title: "Increased Cash Flow",
+    description:
+      "By reducing taxable income, charitable contributions lower tax liability, freeing up additional cash that can be reinvested in other business initiatives or personal financial goals.",
   },
   {
-    title: "",
-    description: "",
+    title: "Long-Term Financial Planning",
+    description:
+      "Helps incorporate charitable giving into long-term tax and financial planning strategies, providing a consistent and tax-efficient way of supporting charitable organizations.",
   },
   {
-    title: "",
-    description: "",
+    title: "Compliance with IRS Guidelines",
+    description:
+      "Ensures that charitable donations comply with IRS regulations, including record-keeping requirements, eligible charity qualifications, and limitations on deductions, to avoid penalties or disallowed deductions.",
   },
   {
-    title: "",
-    description: "",
+    title: "Improved Reputation and Branding",
+    description:
+      "By reducing taxable income, charitable contributions lower tax liability, freeing up additional cash that can be reinvested in other business initiatives or personal financial goals.",
   },
 ];
 
 const CoreComponentsCards = [
   {
-    title: "",
-    description: "",
+    title: "Tax-Effective Donation Planning",
+    description:
+      "Identifies and implements strategies to maximize tax deductions, such as timing donations, using appreciated assets, or donating through tax-advantaged accounts like donor-advised funds.",
   },
   {
-    title: "",
-    description: "",
+    title: "Donor-Advised Funds (DAFs)",
+    description:
+      "By reducing taxable income, charitable contributions lower tax liability, freeing up additional cash that can be reinvested in other business initiatives or personal financial goals.",
   },
   {
-    title: "",
-    description: "",
+    title: "Appreciated Asset Donations",
+    description:
+      "Encourages the donation of appreciated assets (stocks, real estate, etc.) instead of cash, which can result in both a charitable deduction and the avoidance of capital gains tax.",
   },
   {
-    title: "",
-    description: "",
+    title: "Corporate Giving Programs",
+    description:
+      "Assists businesses in establishing formal corporate giving programs that align with business goals and offer tax benefits, such as matching employee donations or sponsoring charitable events.",
   },
   {
-    title: "",
-    description: "",
+    title: "Charitable Remainder Trusts (CRTs)",
+    description:
+      "For larger gifts, helps individuals use charitable remainder trusts, which allow for tax savings, income generation, and a final charitable donation upon the trust’s termination.",
   },
   {
-    title: "",
-    description: "",
+    title: "Documentation and Recordkeeping",
+    description:
+      "Ensures that all charitable contributions are properly documented with receipts, acknowledgment letters, and other necessary records to meet IRS requirements and ensure maximum deductions.",
   },
 ];
 
 const WhyYouNeedCards = [
   {
-    title: "",
-    description: "",
+    title: "Maximized Tax Benefits",
+    description:
+      "Helps you leverage charitable donations to reduce taxable income and maximize tax deductions, ultimately lowering your overall tax burden.",
   },
   {
-    title: "",
-    description: "",
+    title: "Effective Philanthropy",
+    description:
+      "Optimizes your charitable contributions strategy, ensuring that you give in a way that provides the most benefit to both the recipient and your financial situation.",
   },
   {
-    title: "",
-    description: "",
+    title: "Increased Savings and Liquidity",
+    description:
+      "Reducing taxable income can increase available funds for personal or business use, enhancing cash flow and supporting other financial goals.",
   },
   {
-    title: "",
-    description: "",
+    title: "Compliance and Peace of Mind",
+    description:
+      "Ensures all donations are compliant with IRS rules and regulations, protecting you from potential audits, fines, and other tax-related penalties.",
+  },
+  {
+    title: "Strategic Financial Integration",
+    description:
+      "Charitable contributions can be integrated into your broader tax strategy, providing long-term financial benefits and aligning with your personal or business goals.",
   },
 ];
 
 const OurApproachCards = [
   {
-    question: "",
-    answer: "",
+    question: "Custom Charitable Giving Strategy",
+    answer:
+      "We assess your financial situation and philanthropic goals to develop a tailored giving strategy that optimizes your tax benefits, aligns with your objectives, and supports the causes you care about.",
   },
   {
-    question: "",
-    answer: "",
+    question: "Tax-Efficient Donation Planning",
+    answer:
+      "We help you structure charitable donations using tax-advantaged methods, such as donor-advised funds, appreciated asset gifts, and charitable remainder trusts, to maximize tax deductions.",
   },
   {
-    question: "",
-    answer: "",
+    question: "Ongoing Monitoring and Adjustments",
+    answer:
+      "As your financial situation evolves, we provide ongoing guidance to adjust your charitable giving strategy, ensuring that your donations remain tax-efficient and aligned with your long-term financial plans.",
   },
   {
-    question: "",
-    answer: "",
+    question: "Full Documentation and Reporting",
+    answer:
+      "We assist with gathering and organizing all required documentation for charitable contributions, ensuring accuracy and that you are fully prepared for tax filing and IRS reporting requirements.",
   },
 ];
 
