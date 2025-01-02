@@ -12,22 +12,24 @@ const taxPlanningCards = [
   {
     title: "Bookkeeping Services",
     description:
-      "Ensuring seamless reconciliation, real-time reporting, and cloud-based bookkeeping solutions.",
+      "Ensuring seamless reconciliation, real-time reporting, cloud based bookkeeping solutions.",
   },
   {
-    title: "Tax Planning",
+    title: "Tax",
+    title2: "Planning",
     description:
       "Optimizing taxes with strategic planning, compliance, and advisory tailored to your needs.",
   },
   {
-    title: "Business Advisory",
+    title: "Business",
+    title2: "Advisory",
     description:
-      "Providing expert guidance in financial strategy, risk management, and performance optimization.",
+      "Providing expert guidance in financial strategy, risk mgt, and performance optimization.",
   },
   {
     title: "Regulatory Compliance",
     description:
-      "Helping businesses navigate complex legal requirements with ease.",
+      "Helping businesses navigate complex legal requirements with ease and efficiency.",
   },
 ];
 
@@ -69,7 +71,7 @@ export default function About() {
         <header className="my-[50px]">
           <div className="container mx-auto">
             <h1 className="m-0 text-3xl font-bold sm:text-5xl xl:text-6xl">
-              About Us
+              About Accountings Zone
             </h1>
 
             <p className="text-lg text-gray-500 sm:text-xl mt-20">
@@ -168,7 +170,11 @@ export default function About() {
               <ul className="mt-[30px] mb-0 xl:pt-[50px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-5 gap-8">
                 {taxPlanningCards.map((item, index) => (
                   <li key={index}>
-                    <FSCard title={item.title} description={item.description} />
+                    <FSCard
+                      title={item.title}
+                      title2={item.title2}
+                      description={item.description}
+                    />
                   </li>
                 ))}
               </ul>
@@ -243,7 +249,7 @@ export default function About() {
               <p className="mt-[30px] text-gray-500 text-base leading-[1.6] sm:mb-[60px] sm:text-xl">
                 We serve a diverse clientele, including:
               </p>
-              <ul className="space-y-[30px]">
+              <ul className="space-y-[30px] px-4">
                 {ourClientsCard.map((service, index) => (
                   <li
                     key={index}
@@ -273,7 +279,7 @@ export default function About() {
               <p className="mt-[30px] text-gray-500 text-base leading-[1.6] sm:mb-[60px] sm:text-xl">
                 At Accountings Zone, we are committed to:
               </p>
-              <ul className="text-gray-500 space-y-[30px]">
+              <ul className="text-gray-500 space-y-[30px] px-4">
                 {ourCommitmentsCard.map((service, index) => (
                   <li
                     key={index}

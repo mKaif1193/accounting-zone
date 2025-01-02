@@ -21,14 +21,8 @@ export default function Slider({
   btnHref,
 }: SliderProps) {
   const router = useRouter();
-  // const [isImageSliderHover, setIsImageSliderHover] = useState(false);
-
   return (
-    <div
-      className="relative max-w-[1800px] mx-auto h-[calc(100vh-93px)] lg:h-[calc(100vh-110px)] 2xl:max-w-[calc(100vw-120px)]"
-      // onMouseEnter={() => setIsImageSliderHover(true)}
-      // onMouseLeave={() => setIsImageSliderHover(false)}
-    >
+    <div className="relative max-w-[1800px] mx-auto h-[calc(100vh-93px)] lg:h-[calc(100vh-110px)] 2xl:max-w-[calc(100vw-120px)]">
       <ImagesSlider className="sm:mt-[175px]" images={images}>
         <motion.div
           initial={{
@@ -62,35 +56,6 @@ export default function Slider({
           )}
         </motion.div>
       </ImagesSlider>
-
-      {/* <div
-        className={`bg-white absolute bottom-0 right-0 grid grid-cols-3 gap-x-32 p-12 transition-opacity duration-500 ${
-          isImageSliderHover ? "opacity-95" : "opacity-0"
-        }`}
-      >
-        <div className="flex items-center gap-8">
-          <span className="font-semibold text-6xl">01</span>
-          <div className="flex flex-col">
-            <span className="font-semibold text-xl">Home In </span>
-            <span className="font-semibold text-xl">Forest</span>
-          </div>
-        </div>
-        <div className="flex items-center gap-8">
-          <span className="font-semibold text-6xl">02</span>
-          <div className="flex flex-col">
-            <span className="font-semibold text-xl">Villa In </span>
-            <span className="font-semibold text-xl">London</span>
-          </div>
-        </div>
-        <div className="flex items-center gap-8">
-          <span className="font-semibold text-6xl">03</span>
-          <div className="flex flex-col">
-            <span className="font-semibold text-xl">Rennovate</span>
-            <span className="font-semibold text-xl">Exterior With</span>
-            <span className="font-semibold text-xl">Garden</span>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }

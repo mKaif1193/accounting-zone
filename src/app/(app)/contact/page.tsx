@@ -72,7 +72,7 @@ export default function Contact() {
       <div className="overflow-hidden md:my-[100px] py-10 md:py-15 lg:py-28">
         <header className="container mx-auto w-[90%] lg:w-[65%] my-[60px]">
           <h1 className="text-3xl font-bold sm:text-5xl xl:text-6xl">
-            Contact
+            Contact Accountings Zone
           </h1>
         </header>
         <div className="xl:my-[100px] relative max-w-[1830px] mx-auto px-[15px] 2xl:max-w-[calc(100vw-120px)]">

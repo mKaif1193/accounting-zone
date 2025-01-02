@@ -3,7 +3,7 @@ import NewsMasonry1 from "@/components/news/NewsMasonry1";
 import NewsMasonry2 from "@/components/news/NewsMasonry2";
 import NewsMasonry3 from "@/components/news/NewsMasonry3";
 
-export default function Insights() {
+export default function TaxInsights() {
   return (
     <main>
       <article className="overflow-hidden w-full my-[80px] md:my-[120px] lg:mb-[160px] xl:mb-[210px] pt-[40px] pb-0 px-[60px] sm:pt-[60px] sm:pb-0 sm:px-[80px] lg:pt-[100px] lg:pb-0 lg:px-[120px] xl:pt-[150px] xl:pb-0 xl:px-[200px]">

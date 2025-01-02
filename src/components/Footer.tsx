@@ -154,35 +154,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          <div className="col-span-2 md:col-span-1 order-none md:order-last">
-            <ul className="flex sm:flex-col gap-2">
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm sm:text-base text-[#fbc710] uppercase font-medium cursor-pointer hover:text-[#fbc710]"
-                >
-                  Eng
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm sm:text-base text-black uppercase font-medium cursor-pointer hover:text-yellow-500"
-                >
-                  Fra
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-sm sm:text-base text-black uppercase font-medium cursor-pointer hover:text-yellow-500"
-                >
-                  Ger
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </footer>

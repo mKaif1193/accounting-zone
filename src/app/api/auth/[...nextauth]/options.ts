@@ -18,31 +18,27 @@ export const authOptions: NextAuthOptions = {
       async authorize(credentials: any): Promise<any> {
         // await dbConnect();
         try {
-        //   const user = await User.findOne({
-        //     $or: [
-        //       { email: credentials.identifier },
-        //       { username: credentials.identifier },
-        //     ],
-        //   });
-
-        //   if (!user) {
-        //     throw new Error("User not found with this email!!");
-        //   }
-
-        //   if (!user.isVerified) {
-        //     throw new Error("Please verify your account before login!!");
-        //   }
-
-        //   const isPasswordCorrect = await bcrypt.compare(
-        //     credentials.password,
-        //     user.password
-        //   );
-
-        //   if (isPasswordCorrect) {
-        //     return user;
-        //   } else {
-        //     throw new Error("Invalid email or password!!");
-        //   }
+          //   const user = await User.findOne({
+          //     $or: [
+          //       { email: credentials.identifier },
+          //       { username: credentials.identifier },
+          //     ],
+          //   });
+          //   if (!user) {
+          //     throw new Error("User not found with this email!!");
+          //   }
+          //   if (!user.isVerified) {
+          //     throw new Error("Please verify your account before login!!");
+          //   }
+          //   const isPasswordCorrect = await bcrypt.compare(
+          //     credentials.password,
+          //     user.password
+          //   );
+          //   if (isPasswordCorrect) {
+          //     return user;
+          //   } else {
+          //     throw new Error("Invalid email or password!!");
+          //   }
         } catch (error: any) {
           throw new Error(error.message);
         }

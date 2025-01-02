@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import FSCard from "@/components/services/FSCard";
 import ServicesFooter from "@/components/services/ServicesFooter";
+import Slider from "@/components/Slider";
 
 const advisoryCards = [
   {
@@ -44,6 +45,12 @@ const advisoryCards = [
 export default function Advisory() {
   return (
     <main>
+      <Slider
+        images={["/consultation/consultation1.jpg"]}
+        title="Tailored Business Support"
+        description="Custom Financial Solutions for Every Business Need."
+      />
+
       <article className="overflow-hidden my-[80px] md:my-[120px] lg:mb-[160px] xl:mb-[210px] mx-8 sm:mx-20 lg:mx-auto p-[40px_0_60px] md:p-[60px_0_80px] lg:p-[100px_0_120px] xl:p-[150px_0_200px]">
         <header className="container mx-auto w-[90%] lg:w-[65%] my-[60px]">
           <div className="container">
