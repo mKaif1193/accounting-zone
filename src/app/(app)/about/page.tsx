@@ -1,6 +1,11 @@
+"use client";
 import FSCard from "@/components/services/FSCard";
 import ServicesFooter from "@/components/services/ServicesFooter";
 import AboutSection from "@/components/Home/AboutSection";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const taxPlanningCards = [
   {
@@ -63,7 +68,11 @@ const ourCommitmentsCard = [
   },
 ];
 
-const About = () => {
+export default function About() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <main>
       <article className="overflow-hidden w-full my-[80px] md:my-[120px] lg:mb-[160px] xl:mb-[210px] pt-[40px] pb-0 px-[60px] sm:pt-[60px] sm:pb-0 sm:px-[80px] lg:pt-[100px] lg:pb-0 lg:px-[120px] xl:pt-[150px] xl:pb-0 xl:px-[200px]">
@@ -294,6 +303,4 @@ const About = () => {
       </article>
     </main>
   );
-};
-
-export default About;
+}
