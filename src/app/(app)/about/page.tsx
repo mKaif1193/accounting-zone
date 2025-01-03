@@ -1,4 +1,3 @@
-import React from "react";
 import FSCard from "@/components/services/FSCard";
 import ServicesFooter from "@/components/services/ServicesFooter";
 import AboutSection from "@/components/Home/AboutSection";
