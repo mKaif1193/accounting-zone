@@ -33,7 +33,7 @@ const KeyBenefitsCards = [
   {
     title: "Reduced Audit Risk",
     description:
-      "Properly managing and submitting estimated quarterly payments ensures that all tax obligations are met, reducing the risk of IRS audits related to underpayment or non-payment.",
+      "Managing and submitting estimated quarterly payments ensures tax obligations are met, reducing the risk of IRS audits for underpayment or non-payment.",
   },
 ];
 
@@ -61,12 +61,12 @@ const CoreComponentsCards = [
   {
     title: "Payment Reminders and Tracking",
     description:
-      "We send reminders and track your quarterly payments, ensuring that they are submitted on time and are properly recorded.",
+      "We send timely reminders and accurately track your quarterly payments, ensuring they are submitted before deadlines and properly recorded to avoid any issues.",
   },
   {
     title: "End-of-Year Tax Reconciliation",
     description:
-      "At the end of the year, we reconcile your total estimated payments with your actual tax liability to ensure that your tax filings are accurate and any overpayment is refunded or applied to future taxes.",
+      "At year-end, we reconcile your estimated payments with actual tax liability, ensuring accurate filings and that any overpayment is refunded or applied to future taxes.",
   },
 ];
 
@@ -74,7 +74,7 @@ const WhyYouNeedCards = [
   {
     title: "Avoid Penalties",
     description:
-      "Quarterly payments help you avoid the IRS's penalties for underpayment or late payments, which can add up quickly.",
+      "Making quarterly payments helps you stay compliant and avoid the IRS's penalties for underpayment or late payments, which accumulate quickly.",
   },
   {
     title: "Smooth Cash Flow",

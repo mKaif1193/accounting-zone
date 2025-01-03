@@ -6,93 +6,123 @@ import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
   {
-    title: "",
-    description: "",
+    title: "Tax Filing Accuracy Review",
+    description:
+      "Ensures that tax returns were filed accurately, identifying any potential errors or missed opportunities that could affect your tax liability or refund.",
   },
   {
-    title: "",
-    description: "",
+    title: "Identification of Missed Deductions/Credits",
+    description:
+      "Uncovers deductions, credits, or tax-saving strategies overlooked during filing, ensuring you receive the maximum refund or minimize tax liability.",
   },
   {
-    title: "",
-    description: "",
+    title: "Tax Planning for the Future",
+    description:
+      "Provides recommendations to optimize tax planning for the upcoming year, including advice on adjusting withholding, estimated payments, or changes in business structures.",
   },
   {
-    title: "",
-    description: "",
+    title: "Audit Risk Assessment and Preparation",
+    description:
+      "Assesses the risk of an audit and provides guidance on how to handle potential audit situations, helping you be prepared in case the IRS contacts you.",
   },
   {
-    title: "",
-    description: "",
+    title: "Tax Strategy Optimization",
+    description:
+      "Reviews your overall tax strategy to ensure that it aligns with your long-term financial goals, recommending adjustments that can improve tax efficiency and reduce liability.",
   },
   {
-    title: "",
-    description: "",
+    title: "Financial and Tax Education",
+    description:
+      "Offers valuable insights into tax law changes, new deductions, and credits that may impact your situation, empowering you with the knowledge to make informed decisions.",
   },
 ];
 
 const CoreComponentsCards = [
   {
-    title: "",
-    description: "",
+    title: "Tax Filing Review",
+    description:
+      "A thorough examination of your tax return to ensure that all information is accurate, all applicable deductions and credits are claimed, and any errors are addressed.",
   },
   {
-    title: "",
-    description: "",
+    title: "Tax Strategy Assessment",
+    description:
+      "A review of your current tax strategy to determine if adjustments are needed, such as changes in withholding, payments, or investments.",
   },
   {
-    title: "",
-    description: "",
+    title: "Audit Risk Evaluation",
+    description:
+      "An assessment of any red flags or areas of concern that could increase the likelihood of an IRS audit, with advice on how to mitigate this risk moving forward.",
   },
   {
-    title: "",
-    description: "",
+    title: "Tax Savings Opportunities",
+    description:
+      "Identifying tax-saving opportunities, including business expense optimization, retirement contributions, and tax-loss harvesting for investment portfolios.",
   },
   {
-    title: "",
-    description: "",
+    title: "Tax Planning Consultation",
+    description:
+      "Tailored advice on adjusting your tax planning strategies to reduce liability, manage cash flow, and maximize deductions for the next tax season.",
   },
   {
-    title: "",
-    description: "",
+    title: "Review of Changes in Tax Law",
+    description:
+      "Keeping you informed about any recent changes in tax laws, such as new tax credits or deductions, which could impact your future filings and strategies.",
   },
 ];
 
 const WhyYouNeedCards = [
   {
-    title: "",
-    description: "",
+    title: "Accuracy and Compliance",
+    description:
+      "Ensures that your tax filings are accurate and compliant with all regulations, reducing the likelihood of issues with the IRS.",
   },
   {
-    title: "",
-    description: "",
+    title: "Optimization of Tax Strategy",
+    description:
+      "Helps identify missed opportunities and provides strategic advice to optimize your tax situation in the future.",
   },
   {
-    title: "",
-    description: "",
+    title: "Audit Preparation and Risk Mitigation",
+    description:
+      "Provides valuable guidance on how to reduce your audit risk and prepares you to handle any potential audits with confidence.",
   },
   {
-    title: "",
-    description: "",
+    title: "Informed Tax Planning",
+    description:
+      "Offers tailored recommendations to improve your financial strategies and minimize tax liabilities in future years.",
+  },
+  {
+    title: "Proactive Financial Management",
+    description:
+      "Assists in planning ahead for upcoming tax years, making adjustments where necessary to align your financial and tax goals.",
   },
 ];
 
 const OurApproachCards = [
   {
-    question: "",
-    answer: "",
+    question: "Thorough Post-Filing Review",
+    answer:
+      "We conduct a detailed review of your tax return, addressing any issues, errors, or missed opportunities to ensure you’re in the best possible position moving forward.",
   },
   {
-    question: "",
-    answer: "",
+    question: "Customized Tax Strategy Recommendations",
+    answer:
+      "Based on the review, we provide personalized recommendations for tax-saving strategies, retirement planning, and investment decisions that align with your future goals.",
   },
   {
-    question: "",
-    answer: "",
+    question: "Audit Risk and Compliance Consultation",
+    answer:
+      "We assess any potential audit risks and provide expert guidance on how to reduce your audit likelihood and manage any future audit situations.",
   },
   {
-    question: "",
-    answer: "",
+    question: "Ongoing Support and Education",
+    answer:
+      "We keep you informed about changes in tax laws, deductions, and credits, ensuring that you stay up-to-date and are always ready for the next tax season.",
+  },
+  {
+    question: "Future Tax Planning Assistance",
+    answer:
+      "We offer continuous support and strategic advice to help you plan effectively for future tax seasons, reducing your overall tax liability and optimizing your financial health.",
   },
 ];
 
@@ -111,10 +141,23 @@ export default function PostTaxSeasonConsultationAndReview() {
             <div className="lg:max-w-[1100px] mx-auto container">
               <div className="flex flex-col lg:flex-row">
                 <div className="w-full order-1 mx-auto lg:order-none">
-                  <h2 className="text-2xl lg:text-3xl lg:mst-12 mb-[35px] lg:mb-[66px] font-bold text-black"></h2>
+                  <h2 className="text-2xl lg:text-3xl lg:mst-12 mb-[35px] lg:mb-[66px] font-bold text-black">
+                    Post-Tax Season Consultation and Review
+                  </h2>
 
                   <div className="text-sm text-gray-500 lg:text-base">
-                    <p className="mt-[15px] lg:mt-[26px]"></p>
+                    <p className="mt-[15px] lg:mt-[26px]">
+                      Post-Tax Season Consultation and Review is a service
+                      designed to help businesses and individuals evaluate their
+                      tax filings after the tax season has ended. This service
+                      provides an in-depth review of the tax return, identifies
+                      opportunities for improvement, and offers strategic advice
+                      to optimize future tax filings. It also helps clients
+                      address any issues that may arise, such as audits, missed
+                      deductions, or unexpected tax liabilities. Post-tax season
+                      reviews ensure that clients are fully informed and
+                      well-prepared for the upcoming tax year.
+                    </p>
                   </div>
 
                   <ServicesGrid
@@ -128,7 +171,7 @@ export default function PostTaxSeasonConsultationAndReview() {
                   />
 
                   <ServicesGrid
-                    title="Why You Need "
+                    title="Why You Need Post-Tax Season Consultation and Review"
                     gridCards={WhyYouNeedCards}
                   />
 

@@ -1,3 +1,5 @@
+"use client";
+import React, { useEffect, useState } from "react";
 import AboutSection from "@/components/Home/AboutSection";
 import ServicesSection from "@/components/Home/ServicesSection";
 import Slider from "@/components/Slider";
@@ -14,7 +16,13 @@ const images = [
 ];
 
 export default function Home() {
-  return (
+  const [isBrowser, setIsBrowser] = useState(false);
+
+  useEffect(() => {
+    setIsBrowser(typeof window !== "undefined");
+  }, []);
+
+  return isBrowser ? (
     <main className="min-h-screen pb-40 space-y-16 sm:space-y-24 md:space-y-36 lg:space-y-48">
       <Slider
         title="Home"
@@ -40,5 +48,5 @@ export default function Home() {
         btnHref="about"
       />
     </main>
-  );
+  ) : null;
 }
