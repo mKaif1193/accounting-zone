@@ -1,5 +1,4 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import FSCard from "@/components/services/FSCard";
 import ServicesFooter from "@/components/services/ServicesFooter";
 import AboutSection from "@/components/Home/AboutSection";
@@ -66,13 +65,7 @@ const ourCommitmentsCard = [
 ];
 
 export default function About() {
-  const [isBrowser, setIsBrowser] = useState(false);
-
-  useEffect(() => {
-    setIsBrowser(typeof window !== "undefined");
-  }, []);
-
-  return isBrowser ? (
+  return (
     <main>
       <article className="overflow-hidden w-full my-[80px] md:my-[120px] lg:mb-[160px] xl:mb-[210px] pt-[40px] pb-0 px-[60px] sm:pt-[60px] sm:pb-0 sm:px-[80px] lg:pt-[100px] lg:pb-0 lg:px-[120px] xl:pt-[150px] xl:pb-0 xl:px-[200px]">
         <header className="my-[50px]">
@@ -301,5 +294,5 @@ export default function About() {
         <ServicesFooter text="Contact us today to learn more about how we can help you achieve your financial goals." />
       </article>
     </main>
-  ) : null;
+  );
 }
