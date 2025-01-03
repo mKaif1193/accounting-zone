@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -95,23 +95,23 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Comprehensive Documentation Systems",
-    answer:
+    heading: "Comprehensive Documentation Systems",
+    description:
       "We implement a tailored system to organize your financial records, ensuring that all necessary documents are categorized, stored, and easy to retrieve.",
   },
   {
-    question: "Ongoing Monitoring and Updates",
-    answer:
+    heading: "Ongoing Monitoring and Updates",
+    description:
       "We regularly review and update your documentation to ensure it remains accurate and up to date, so your business is always prepared for an audit.",
   },
   {
-    question: "Audit Preparation Support",
-    answer:
+    heading: "Audit Preparation Support",
+    description:
       "We assist in preparing for the audit by helping to compile and review all necessary documents, addressing any issues before the auditors arrive.",
   },
   {
-    question: "Training and Education",
-    answer:
+    heading: "Training and Education",
+    description:
       "We provide training to your team to ensure they understand how to keep audit-ready documentation in place, making future audits smoother and faster.",
   },
 ];
@@ -164,7 +164,10 @@ export default function AuditReadyDocumentation() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter
                     href="/services/tax-planning"

@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -95,18 +95,18 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Comprehensive Analysis",
-    answer:
+    heading: "Comprehensive Analysis",
+    description:
       "Offers clarity into the business's cost structure, helping stakeholders understand spending patterns and optimize overall costs effectively.",
   },
   {
-    question: "Custom Solutions",
-    answer:
+    heading: "Custom Solutions",
+    description:
       "We tailor cost accounting solutions to your specific business needs, helping you implement strategies for cost reduction and profitability enhancement.",
   },
   {
-    question: "Ongoing Monitoring",
-    answer:
+    heading: "Ongoing Monitoring",
+    description:
       "We continuously track and review costs, providing ongoing support to ensure that cost controls and strategies remain effective.",
   },
 ];
@@ -159,7 +159,10 @@ export default function CostAccountingServices() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter
                     href="/services/bookkeeping"

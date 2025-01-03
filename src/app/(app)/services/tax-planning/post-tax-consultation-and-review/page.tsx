@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -100,28 +100,28 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Thorough Post-Filing Review",
-    answer:
+    heading: "Thorough Post-Filing Review",
+    description:
       "We conduct a detailed review of your tax return, addressing any issues, errors, or missed opportunities to ensure you’re in the best possible position moving forward.",
   },
   {
-    question: "Customized Tax Strategy Recommendations",
-    answer:
+    heading: "Customized Tax Strategy Recommendations",
+    description:
       "Based on the review, we provide personalized recommendations for tax-saving strategies, retirement planning, and investment decisions that align with your future goals.",
   },
   {
-    question: "Audit Risk and Compliance Consultation",
-    answer:
+    heading: "Audit Risk and Compliance Consultation",
+    description:
       "We assess any potential audit risks and provide expert guidance on how to reduce your audit likelihood and manage any future audit situations.",
   },
   {
-    question: "Ongoing Support and Education",
-    answer:
+    heading: "Ongoing Support and Education",
+    description:
       "We keep you informed about changes in tax laws, deductions, and credits, ensuring that you stay up-to-date and are always ready for the next tax season.",
   },
   {
-    question: "Future Tax Planning Assistance",
-    answer:
+    heading: "Future Tax Planning Assistance",
+    description:
       "We offer continuous support and strategic advice to help you plan effectively for future tax seasons, reducing your overall tax liability and optimizing your financial health.",
   },
 ];
@@ -175,7 +175,10 @@ export default function PostTaxSeasonConsultationAndReview() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter text="We are here to address any questions you may have as you implement your plan. Additionally, for clients seeking an ongoing partnership." />
                 </div>

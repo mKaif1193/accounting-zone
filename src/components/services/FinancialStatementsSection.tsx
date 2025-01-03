@@ -4,7 +4,7 @@ import Image from "next/image";
 // import { FaXTwitter } from "react-icons/fa6";
 import FSCard from "./FSCard";
 import ServicesFooter from "./ServicesFooter";
-import FAQs from "./FAQs";
+import FAQs from "./OurApproach";
 import ServicesGrid from "./ServicesGrid";
 
 const financialStatementsCards = [
@@ -85,23 +85,23 @@ const gridCards = [
 
 const faqs = [
   {
-    question: "We offer support to businesses of all types",
-    answer:
+    heading: "We offer support to businesses of all types",
+    description:
       "A limited company needs to oversee its accounts and announce VAT/Tax and charge on an progressing premise. When the year is over, you require to draw up an yearly report that is sent to the country Companies Enrolment Office. Restricted companies are regularly a great shape of company for you who have a marginally bigger trade and need to keep your private accounts partitioned from the company's.",
   },
   {
-    question: "Sole Proprietorship Structure",
-    answer:
+    heading: "Sole Proprietorship Structure",
+    description:
       "A sole proprietorship is not its own legal entity. However, the bookkeeping still needs to be managed. It is important to distinguish between the company's finances and your own as a private person when you book your sole proprietorship. We recommend that you have a separate business account with the bank. In this way, it becomes easier to ensure that everything that should be recorded is recorded.",
   },
   {
-    question: "Trading Companies and Limited Partnerships",
-    answer:
+    heading: "Trading Companies and Limited Partnerships",
+    description:
       "Trading company is its own legal entity that can be run and owned by two or more partners. Since you are personally responsible in a trading company, it is of great importance that your bookkeeping is correct. Therefore, not only the financial parts are important, but also the legal ones (so that the owners can be secure in their business).",
   },
   {
-    question: "Non-profit and Economic Association",
-    answer:
+    heading: "Non-profit and Economic Association",
+    description:
       "If you run a financial association, you must always draw up an annual report and have an auditor. An annual report must be drawn up no later than 7 months from the end of the financial year, and according to the Annual Accounts Act (ÅRL) must contain a balance sheet, income statement and an administration report.",
   },
 ];

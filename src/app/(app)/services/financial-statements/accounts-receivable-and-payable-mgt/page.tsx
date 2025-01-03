@@ -1,8 +1,8 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
 import Slider from "@/components/Slider";
+import OurApproach from "@/components/services/OurApproach";
 
 const KeyBenefitsCards = [
   {
@@ -95,18 +95,18 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Comprehensive Assessment",
-    answer:
+    heading: "Comprehensive Assessment",
+    description:
       "We assess your current receivables and payables management practices, identifying areas for improvement.",
   },
   {
-    question: "Custom Solutions",
-    answer:
+    heading: "Custom Solutions",
+    description:
       "We develop a tailored strategy for managing your accounts, ensuring it aligns with your cash flow needs and business goals.",
   },
   {
-    question: "Ongoing Support",
-    answer:
+    heading: "Ongoing Support",
+    description:
       "We provide continuous monitoring, ensuring your receivables and payables are efficiently managed in line with financial objectives.",
   },
 ];
@@ -159,7 +159,10 @@ export default function AccountsReceivableAndPayableMgt() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter
                     href="/services/bookkeeping"

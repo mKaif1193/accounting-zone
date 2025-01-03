@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -105,28 +105,28 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Comprehensive Estate Review",
-    answer:
+    heading: "Comprehensive Estate Review",
+    description:
       "We begin by thoroughly reviewing your assets, liabilities, and goals to create a customized estate plan that minimizes taxes, protects wealth, and ensures smooth asset distribution.",
   },
   {
-    question: "Personalized Tax Strategies",
-    answer:
+    heading: "Personalized Tax Strategies",
+    description:
       "Based on your financial situation, we develop personalized tax-saving strategies, including gifting, trusts, and charitable contributions, to optimize the transfer of wealth.",
   },
   {
-    question: "Trust and Will Preparation",
-    answer:
+    heading: "Trust and Will Preparation",
+    description:
       "We help create legally binding wills and trusts that reflect your desires, ensuring the proper management and distribution of your assets according to your instructions.",
   },
   {
-    question: "Regular Monitoring and Updates",
-    answer:
+    heading: "Regular Monitoring and Updates",
+    description:
       "We provide ongoing monitoring and adjustments to your estate plan, ensuring it remains aligned with your goals, as tax laws and family circumstances change.",
   },
   {
-    question: "Education and Guidance",
-    answer:
+    heading: "Education and Guidance",
+    description:
       "We offer guidance on how to navigate the complexities of estate and inheritance tax planning, empowering you to make informed decisions and secure your legacy.",
   },
 ];
@@ -181,7 +181,10 @@ export default function EstateAndInheritanceTaxPlanning() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter text="We are here to address any questions you may have as you implement your plan. Additionally, for clients seeking an ongoing partnership." />
                 </div>

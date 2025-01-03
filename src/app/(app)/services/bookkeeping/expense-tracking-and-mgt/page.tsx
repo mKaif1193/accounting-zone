@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -95,23 +95,23 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Customized Expense Tracking System",
-    answer:
+    heading: "Customized Expense Tracking System",
+    description:
       "We implement an expense tracking system that fits your business's needs, ensuring all costs are properly recorded and monitored.",
   },
   {
-    question: "Regular Monitoring and Alerts",
-    answer:
+    heading: "Regular Monitoring and Alerts",
+    description:
       "We provide ongoing monitoring of your expenses, sending alerts when you approach budget limits or when irregular spending is detected.",
   },
   {
-    question: "Detailed Reporting and Analysis",
-    answer:
+    heading: "Detailed Reporting and Analysis",
+    description:
       "We offer regular reports on spending patterns, helping you track how money is being spent and where cost-cutting measures can be applied.",
   },
   {
-    question: "Training and Support",
-    answer:
+    heading: "Training and Support",
+    description:
       "We provide training for your team to ensure they are fully equipped to manage and approve expenses efficiently, with ongoing support for any questions or concerns.",
   },
 ];
@@ -164,7 +164,10 @@ export default function ExpenseTrackingAndManagement() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter
                     href="/services/tax-planning"

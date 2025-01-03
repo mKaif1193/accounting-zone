@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -100,23 +100,23 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Tailored Reporting Systems",
-    answer:
+    heading: "Tailored Reporting Systems",
+    description:
       "We implement real-time financial reporting systems customized to your business's needs, integrating with your existing accounting tools to deliver accurate and instant insights.",
   },
   {
-    question: "Continuous Monitoring and Adjustments",
-    answer:
+    heading: "Continuous Monitoring and Adjustments",
+    description:
       "We continuously monitor financial performance and adjust reports as needed, ensuring the data reflects current business conditions.",
   },
   {
-    question: "Comprehensive Support and Training",
-    answer:
+    heading: "Comprehensive Support and Training",
+    description:
       "We provide training to your team, ensuring they can fully utilize the reporting system and interpret the data to make informed decisions.",
   },
   {
-    question: "Real-Time Dashboards",
-    answer:
+    heading: "Real-Time Dashboards",
+    description:
       "We set up real-time dashboards that consolidate key metrics, providing an accessible view of your business's financial performance at any time.",
   },
 ];
@@ -168,7 +168,10 @@ export default function RealTimeFinancialReporting() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter
                     href="/services/tax-planning"

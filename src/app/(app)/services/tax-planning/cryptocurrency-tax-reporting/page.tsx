@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -100,28 +100,28 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Comprehensive Crypto Transaction Review",
-    answer:
+    heading: "Comprehensive Crypto Transaction Review",
+    description:
       "We review and organize all your cryptocurrency transactions, ensuring that each trade, sale, and exchange is properly tracked and accounted for in your tax records.",
   },
   {
-    question: "Customized Reporting Strategy",
-    answer:
+    heading: "Customized Reporting Strategy",
+    description:
       "Based on your unique crypto portfolio, we develop a tailored reporting strategy that maximizes tax benefits and ensures compliance with all relevant tax regulations.",
   },
   {
-    question: "Integration with Crypto Platforms",
-    answer:
+    heading: "Integration with Crypto Platforms",
+    description:
       "We integrate your cryptocurrency wallets and exchanges with our reporting systems, ensuring that all transactions are automatically imported and accurately reported.",
   },
   {
-    question: "Ongoing Monitoring and Updates",
-    answer:
+    heading: "Ongoing Monitoring and Updates",
+    description:
       "We provide continuous monitoring of your cryptocurrency holdings and tax obligations, adjusting your reporting strategy to keep you compliant with changing tax laws.",
   },
   {
-    question: "Tax Filing and Compliance Support",
-    answer:
+    heading: "Tax Filing and Compliance Support",
+    description:
       "We assist with preparing and filing your tax forms, ensuring that all necessary documentation is completed accurately and on time.",
   },
 ];
@@ -175,7 +175,10 @@ export default function CryptocurrencyTaxReporting() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter text="We are here to address any questions you may have as you implement your plan. Additionally, for clients seeking an ongoing partnership." />
                 </div>

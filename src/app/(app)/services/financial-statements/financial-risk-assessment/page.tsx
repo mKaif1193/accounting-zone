@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -95,18 +95,18 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Comprehensive Risk Identification",
-    answer:
+    heading: "Comprehensive Risk Identification",
+    description:
       "We analyze your business's internal and external environment to identify potential financial risks that could affect profitability.",
   },
   {
-    question: "Tailored Risk Mitigation Plans",
-    answer:
+    heading: "Tailored Risk Mitigation Plans",
+    description:
       "Based on the risk assessment, we develop specific strategies and action plans to manage or mitigate each identified risk.",
   },
   {
-    question: "Ongoing Monitoring and Support",
-    answer:
+    heading: "Ongoing Monitoring and Support",
+    description:
       "We offer continuous risk monitoring, adjusting strategies as needed to keep your business resilient to emerging financial risks.",
   },
 ];
@@ -159,7 +159,10 @@ export default function FinancialRiskAssessment() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter
                     href="/services/bookkeeping"

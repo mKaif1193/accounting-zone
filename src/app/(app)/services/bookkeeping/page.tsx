@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import FSCard from "@/components/services/FSCard";
 import ServicesFooter from "@/components/services/ServicesFooter";
 import ServicesGrid from "@/components/services/ServicesGrid";
@@ -93,24 +93,24 @@ const gridCards = [
 
 const faqs = [
   {
-    question: "What Is Bookkeeping?",
-    answer:
+    heading: "What Is Bookkeeping?",
+    description:
       "Bookkeeping is the meticulous recording, organization, and management of financial transactions provided by Accountings Zone, a global leader in outsourced accounting services.",
   },
   {
     question:
       "What are the main objectives of bookkeeping at Accountings Zone?",
-    answer:
+    description:
       "The bookkeeping goals of Shrink Consulting include recording client transactions, categorizing transactions into appropriate accounts, aggregating data to create detailed financial statements, and analyzing financial metrics to improve client financial health and strategies.",
   },
   {
-    question: "What bookkeeping methods does Accountigns Zone use?",
-    answer:
+    heading: "What bookkeeping methods does Accountigns Zone use?",
+    description:
       "When it comes to financial management, shrink Consulting uses sophisticated bookkeeping techniques, including single entry and double entry systems, designed to meet the needs of our global clients, ensuring accuracy and efficiency.",
   },
   {
-    question: "Customer satisfaction guarantee",
-    answer:
+    heading: "Customer satisfaction guarantee",
+    description:
       "For us, nothing matters more than our clients’ satisfaction. We have an average customer satisfaction rating of 9/10*, therefore we are certain that you will be happy working with us as your financial partner as well.",
   },
 ];

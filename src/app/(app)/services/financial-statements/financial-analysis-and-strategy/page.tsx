@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -95,18 +95,18 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Comprehensive Analysis",
-    answer:
+    heading: "Comprehensive Analysis",
+    description:
       "We conduct an in-depth review of your financial statements, KPIs, and operational data to identify areas for improvement and growth.",
   },
   {
-    question: "Customized Strategies",
-    answer:
+    heading: "Customized Strategies",
+    description:
       "Based on a comprehensive analysis, we develop tailored financial strategies that align with your unique business objectives, ensuring long-term success and growth.",
   },
   {
-    question: "Ongoing Support",
-    answer:
+    heading: "Ongoing Support",
+    description:
       "We offer continuous monitoring and strategic adjustments to ensure that your financial strategies remain relevant and effective.",
   },
 ];
@@ -159,7 +159,10 @@ export default function FinancialAnalysisAndStrategy() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter
                     href="/services/bookkeeping"

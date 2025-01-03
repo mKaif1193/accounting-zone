@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -95,18 +95,18 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Tailored Inventory Systems",
-    answer:
+    heading: "Tailored Inventory Systems",
+    description:
       "We assess your inventory needs and implement systems that track and value inventory in a way that aligns with your business model.",
   },
   {
-    question: "Comprehensive Reporting",
-    answer:
+    heading: "Comprehensive Reporting",
+    description:
       "We provide detailed inventory reports and analysis, helping you make data-driven decisions and optimize your inventory management practices.",
   },
   {
-    question: "Ongoing Monitoring and Adjustments",
-    answer:
+    heading: "Ongoing Monitoring and Adjustments",
+    description:
       "We offer continuous support to monitor inventory levels and reconcile records, ensuring that your inventory accounting remains accurate and up-to-date.",
   },
 ];
@@ -159,7 +159,10 @@ export default function InventoryAccounting() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter
                     href="/services/bookkeeping"

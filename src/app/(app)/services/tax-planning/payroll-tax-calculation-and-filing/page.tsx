@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -100,28 +100,28 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Comprehensive Payroll Setup",
-    answer:
+    heading: "Comprehensive Payroll Setup",
+    description:
       "We assist with setting up your payroll system, ensuring all necessary tax rates, deduction categories, and payroll processes are accurately configured.",
   },
   {
-    question: "Ongoing Payroll Tax Calculation",
-    answer:
+    heading: "Ongoing Payroll Tax Calculation",
+    description:
       "We calculate and track all employee wages and deductions, ensuring tax compliance with every payroll cycle, including employee and employer contributions.",
   },
   {
-    question: "Timely Filing and Payment Remittance",
-    answer:
+    heading: "Timely Filing and Payment Remittance",
+    description:
       "We handle all filings and payments to the IRS, state, and local agencies, ensuring everything is submitted on time and in the correct format.",
   },
   {
-    question: "Regular Reporting and Recordkeeping",
-    answer:
+    heading: "Regular Reporting and Recordkeeping",
+    description:
       "We provide regular reports on payroll taxes, filing statuses, and payment history, helping you stay informed and prepared for audits or future planning.",
   },
   {
-    question: "Dedicated Support",
-    answer:
+    heading: "Dedicated Support",
+    description:
       "Our team is available to answer any questions and provide guidance on payroll tax-related issues, offering solutions tailored to your business’s specific needs.",
   },
 ];
@@ -174,7 +174,10 @@ export default function PayrollTaxCalculationAndFiling() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter text="We are here to address any questions you may have as you implement your plan. Additionally, for clients seeking an ongoing partnership." />
                 </div>

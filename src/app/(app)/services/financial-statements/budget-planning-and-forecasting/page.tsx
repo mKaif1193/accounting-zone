@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -90,18 +90,18 @@ const BudgetPlanningForecastingCards = [
 
 const OurApproachCards = [
   {
-    question: "Collaborative Consultation",
-    answer:
+    heading: "Collaborative Consultation",
+    description:
       "We work closely with your team to understand your unique business needs, industry trends, and growth objectives.",
   },
   {
-    question: "Data-Driven Insights",
-    answer:
+    heading: "Data-Driven Insights",
+    description:
       "Using historical data, market analysis, and financial models, we craft precise budgets and forecasts that align with your vision.",
   },
   {
-    question: "Ongoing Support",
-    answer:
+    heading: "Ongoing Support",
+    description:
       "We provide continuous monitoring and updates to ensure your forecasts remain accurate, helping navigate changes.",
   },
 ];
@@ -138,16 +138,6 @@ export default function BudgetPlanningAndForecasting() {
                     </p>
                   </div>
 
-                  {/* <div className="m-[35px_0_28px] lg:m-[80px_0_77px]">
-                    <Image
-                      src="/accounting/accounting1.jpg"
-                      width={780}
-                      height={428}
-                      alt="Personal Accounting Assistance"
-                      className="w-full object-cover"
-                    />
-                  </div> */}
-
                   <ServicesGrid
                     title="Key Benefits"
                     gridCards={KeyBenefitsCards}
@@ -163,7 +153,10 @@ export default function BudgetPlanningAndForecasting() {
                     gridCards={BudgetPlanningForecastingCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter
                     href="/services/bookkeeping"

@@ -341,7 +341,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/advisory"
+                    href="/services/advisory/financial-strategy-development"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Financial Strategy Development
@@ -349,7 +349,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/advisory"
+                    href="/services/advisory/business-performance-optimization"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Business Performance Optimization
@@ -357,7 +357,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/advisory"
+                    href="/services/advisory/risk-management-consulting"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Risk Management Consulting
@@ -365,7 +365,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/advisory"
+                    href="/services/advisory/business-valuation-services"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Business Valuation Services
@@ -373,7 +373,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/advisory"
+                    href="/services/advisory/mergers-and-acquisitions-support"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Mergers and Acquisitions Support
@@ -381,7 +381,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/advisory"
+                    href="/services/advisory/cash-flow-optimization-strategies"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Cash Flow Optimization Strategies
@@ -389,7 +389,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/advisory"
+                    href="/services/advisory/start-up-financial-planning"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Start-Up Financial Planning
@@ -397,7 +397,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/advisory"
+                    href="/services/advisory/cost-reduction-and-planning"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Cost Reduction and Efficiency Planning

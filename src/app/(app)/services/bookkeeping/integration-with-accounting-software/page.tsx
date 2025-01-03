@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -100,23 +100,23 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "System Assessment and Integration Strategy",
-    answer:
+    heading: "System Assessment and Integration Strategy",
+    description:
       "We assess your current systems and recommend the best accounting software integrations that suit your business needs, ensuring a smooth and efficient connection.",
   },
   {
-    question: "Customization and Setup",
-    answer:
+    heading: "Customization and Setup",
+    description:
       "We customize the integration process to ensure that your accounting software works seamlessly with other business tools, automating workflows and ensuring data consistency.",
   },
   {
-    question: "Ongoing Support and Monitoring",
-    answer:
+    heading: "Ongoing Support and Monitoring",
+    description:
       "We provide continuous support to ensure that your integrations remain functional, troubleshoot issues as they arise, and help you optimize the integration for maximum benefit.",
   },
   {
-    question: "Training and Education",
-    answer:
+    heading: "Training and Education",
+    description:
       "We offer training to your team on how to use the integrated systems effectively, ensuring they understand the full functionality and benefits of the system.",
   },
 ];
@@ -170,7 +170,10 @@ export default function IntegrationWithAccountingSoftware() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter
                     href="/services/tax-planning"

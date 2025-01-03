@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -100,28 +100,28 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Comprehensive Tax Assessment",
-    answer:
+    heading: "Comprehensive Tax Assessment",
+    description:
       "We assess your business's income, expenses, and other financial factors to determine accurate quarterly tax estimates, taking into account your specific situation and tax obligations.",
   },
   {
-    question: "Timely Payment Assistance",
-    answer:
+    heading: "Timely Payment Assistance",
+    description:
       "We manage the submission of your quarterly tax payments, ensuring they are filed accurately and on time to avoid penalties and interest.",
   },
   {
-    question: "Ongoing Monitoring and Adjustments",
-    answer:
+    heading: "Ongoing Monitoring and Adjustments",
+    description:
       "We monitor changes in your business income and expenses and adjust your quarterly tax estimates as needed to keep them aligned with actual financial performance.",
   },
   {
-    question: "Year-End Reconciliation and Reporting",
-    answer:
+    heading: "Year-End Reconciliation and Reporting",
+    description:
       "We ensure that all quarterly payments are properly recorded and applied to your end-of-year tax return, ensuring accuracy and minimizing surprises during tax filing.",
   },
   {
-    question: "Education and Support",
-    answer:
+    heading: "Education and Support",
+    description:
       "We offer guidance on tax-saving strategies, deductions, and credits to reduce your overall tax liability, providing continuous support for your tax planning needs.",
   },
 ];
@@ -174,7 +174,10 @@ export default function QuarterlyTaxEstimatesAndPayments() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter text="We are here to address any questions you may have as you implement your plan. Additionally, for clients seeking an ongoing partnership." />
                 </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -95,23 +95,23 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Comprehensive Financial Review",
-    answer:
+    heading: "Comprehensive Financial Review",
+    description:
       "We thoroughly review your historical financial records to identify and correct any discrepancies, errors, missing information, or incomplete data.",
   },
   {
-    question: "Customized Cleanup Plan",
-    answer:
+    heading: "Customized Cleanup Plan",
+    description:
       "We develop a tailored cleanup strategy that addresses your specific needs, ensuring that past transactions are accurately categorized, reconciled, and reported.",
   },
   {
-    question: "Ongoing Monitoring",
-    answer:
+    heading: "Ongoing Monitoring",
+    description:
       "After the cleanup process, we provide continuous monitoring and support to ensure that your financial records remain accurate and up-to-date.",
   },
   {
-    question: "Training and Best Practices",
-    answer:
+    heading: "Training and Best Practices",
+    description:
       "We offer training to your team on how to avoid future bookkeeping errors, ensuring that best practices are followed in the future.",
   },
 ];
@@ -165,7 +165,10 @@ export default function HistoricalBookkeepingCleanup() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter
                     href="/services/tax-planning"

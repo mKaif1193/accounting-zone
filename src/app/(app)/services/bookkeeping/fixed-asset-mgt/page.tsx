@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -95,23 +95,23 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Custom Asset Management System",
-    answer:
+    heading: "Custom Asset Management System",
+    description:
       "We implement a fixed asset management system tailored to your business's needs, ensuring that all assets are accurately tracked and managed.",
   },
   {
-    question: "Ongoing Monitoring and Maintenance",
-    answer:
+    heading: "Ongoing Monitoring and Maintenance",
+    description:
       "We provide continuous support to monitor asset performance, schedule maintenance, and ensure that assets are being utilized efficiently.",
   },
   {
-    question: "Comprehensive Reporting",
-    answer:
+    heading: "Comprehensive Reporting",
+    description:
       "We offer detailed reports on asset value, depreciation, and usage, helping you make data-driven decisions about asset purchases, sales, and maintenance.",
   },
   {
-    question: "Training and Support",
-    answer:
+    heading: "Training and Support",
+    description:
       "We provide training for your team to ensure they can effectively use the asset management system and keep accurate records of all fixed assets.",
   },
 ];
@@ -165,7 +165,10 @@ export default function FixedAssetManagement() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter
                     href="/services/tax-planning"

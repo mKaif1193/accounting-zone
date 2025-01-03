@@ -1,8 +1,8 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
 import Slider from "@/components/Slider";
+import OurApproach from "@/components/services/OurApproach";
 
 const KeyBenefitsCards = [
   {
@@ -95,18 +95,18 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Customized Audit Plan",
-    answer:
+    heading: "Customized Audit Plan",
+    description:
       "We tailor the audit preparation plan based on your business's size, industry, and specific audit requirements.",
   },
   {
-    question: "Thorough Review and Organization",
-    answer:
+    heading: "Thorough Review and Organization",
+    description:
       "We conduct a comprehensive review of your financial documents and ensure everything is in place for a smooth audit.",
   },
   {
-    question: "Proactive Communication",
-    answer:
+    heading: "Proactive Communication",
+    description:
       "We maintain open communication with auditors, addressing concerns before the audit begins, ensuring a smooth process.",
   },
 ];
@@ -160,7 +160,10 @@ export default function AuditPreparationAssistance() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter
                     href="/services/bookkeeping"

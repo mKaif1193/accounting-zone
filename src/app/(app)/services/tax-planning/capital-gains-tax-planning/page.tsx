@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -100,28 +100,28 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Comprehensive Tax Assessment",
-    answer:
+    heading: "Comprehensive Tax Assessment",
+    description:
       "We begin by assessing your current capital gains situation, reviewing your investment portfolio, and identifying potential tax liabilities based on your assets and holdings.",
   },
   {
-    question: "Customized Tax Strategy",
-    answer:
+    heading: "Customized Tax Strategy",
+    description:
       "We develop a tailored tax strategy designed to minimize capital gains taxes, using a combination of exemptions, deductions, and deferral methods that align with your financial objectives.",
   },
   {
-    question: "Timing and Investment Recommendations",
-    answer:
+    heading: "Timing and Investment Recommendations",
+    description:
       "We provide recommendations on the best timing for asset sales, taking into account market conditions, tax implications, and your personal financial goals.",
   },
   {
-    question: "Ongoing Monitoring and Adjustments",
-    answer:
+    heading: "Ongoing Monitoring and Adjustments",
+    description:
       "We provide continuous monitoring and updates to your tax strategy as market conditions change, ensuring that your capital gains tax strategy remains optimized.",
   },
   {
-    question: "Education and Guidance",
-    answer:
+    heading: "Education and Guidance",
+    description:
       "We offer education and guidance on how capital gains taxes work, empowering you to make informed decisions regarding your investments and taxes.",
   },
 ];
@@ -176,7 +176,10 @@ export default function CapitalGainsTaxPlanning() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter text="We are here to address any questions you may have as you implement your plan. Additionally, for clients seeking an ongoing partnership." />
                 </div>

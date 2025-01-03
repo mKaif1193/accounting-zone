@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -95,23 +95,23 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Tailored Tax Strategy",
-    answer:
+    heading: "Tailored Tax Strategy",
+    description:
       "We begin by analyzing your startup's financial situation, identifying eligible tax-saving opportunities, and developing a customized strategy to minimize tax liability.",
   },
   {
-    question: "Ongoing Tax Optimization",
-    answer:
+    heading: "Ongoing Tax Optimization",
+    description:
       "We continuously monitor your financial situation and tax position, recommending adjustments to ensure you continue to benefit from available tax-saving strategies as your business grows.",
   },
   {
-    question: "Tax Filing and Documentation",
-    answer:
+    heading: "Tax Filing and Documentation",
+    description:
       "We assist with tax filings, ensuring all deductions and credits are properly claimed and substantiated, reducing the risk of audit and ensuring compliance with tax laws.",
   },
   {
-    question: "Education and Support",
-    answer:
+    heading: "Education and Support",
+    description:
       "We provide education on how tax-saving strategies work and offer ongoing support to ensure your startup is always maximizing its tax-saving potential.",
   },
 ];
@@ -165,7 +165,10 @@ export default function TaxSavingStrategiesForStartups() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter text="We are here to address any questions you may have as you implement your plan. Additionally, for clients seeking an ongoing partnership." />
                 </div>

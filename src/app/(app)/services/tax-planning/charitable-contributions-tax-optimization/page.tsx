@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -100,23 +100,23 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Custom Charitable Giving Strategy",
-    answer:
+    heading: "Custom Charitable Giving Strategy",
+    description:
       "We assess your financial situation and philanthropic goals to develop a tailored giving strategy that optimizes your tax benefits, aligns with your objectives, and supports the causes you care about.",
   },
   {
-    question: "Tax-Efficient Donation Planning",
-    answer:
+    heading: "Tax-Efficient Donation Planning",
+    description:
       "We help you structure charitable donations using tax-advantaged methods, such as donor-advised funds, appreciated asset gifts, and charitable remainder trusts, to maximize tax deductions.",
   },
   {
-    question: "Ongoing Monitoring and Adjustments",
-    answer:
+    heading: "Ongoing Monitoring and Adjustments",
+    description:
       "As your financial situation evolves, we provide ongoing guidance to adjust your charitable giving strategy, ensuring that your donations remain tax-efficient and aligned with your long-term financial plans.",
   },
   {
-    question: "Full Documentation and Reporting",
-    answer:
+    heading: "Full Documentation and Reporting",
+    description:
       "We assist with gathering and organizing all required documentation for charitable contributions, ensuring accuracy and that you are fully prepared for tax filing and IRS reporting requirements.",
   },
 ];
@@ -169,7 +169,10 @@ export default function CharitableContributionsTaxOptimization() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter text="We are here to address any questions you may have as you implement your plan. Additionally, for clients seeking an ongoing partnership." />
                 </div>

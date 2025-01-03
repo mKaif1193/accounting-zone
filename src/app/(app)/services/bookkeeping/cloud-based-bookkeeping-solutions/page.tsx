@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -95,18 +95,18 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Customized Cloud Setup",
-    answer:
+    heading: "Customized Cloud Setup",
+    description:
       "We tailor cloud-based bookkeeping solutions to suit your business’s size, industry, and specific needs, ensuring seamless integration with your operations.",
   },
   {
-    question: "Training and Support",
-    answer:
+    heading: "Training and Support",
+    description:
       "We offer comprehensive training to ensure that your team can fully utilize the cloud platform's capabilities, along with ongoing support for troubleshooting and updates.",
   },
   {
-    question: "Continuous Monitoring",
-    answer:
+    heading: "Continuous Monitoring",
+    description:
       "We regularly monitor your cloud-based bookkeeping system to ensure it’s functioning smoothly and that your financial data is accurate and up-to-date.",
   },
 ];
@@ -159,7 +159,10 @@ export default function CloudBasedBookkeepingSolutions() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter
                     href="/services/tax-planning"

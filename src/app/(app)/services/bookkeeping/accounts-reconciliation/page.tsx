@@ -1,7 +1,7 @@
 import React from "react";
 import ServicesGrid from "@/components/services/ServicesGrid";
 import ServicesFooter from "@/components/services/ServicesFooter";
-import FAQs from "@/components/services/FAQs";
+import OurApproach from "@/components/services/OurApproach";
 import Slider from "@/components/Slider";
 
 const KeyBenefitsCards = [
@@ -95,18 +95,18 @@ const WhyYouNeedCards = [
 
 const OurApproachCards = [
   {
-    question: "Thorough Review",
-    answer:
+    heading: "Thorough Review",
+    description:
       "We conduct a detailed review of your accounts payable and receivable records, identifying any discrepancies or issues.",
   },
   {
-    question: "Custom Reconciliation Process",
-    answer:
+    heading: "Custom Reconciliation Process",
+    description:
       "We develop a tailored reconciliation process that aligns with your needs and financial systems, ensuring accuracy and efficiency.",
   },
   {
-    question: "Ongoing Monitoring and Support",
-    answer:
+    heading: "Ongoing Monitoring and Support",
+    description:
       "We provide ongoing reconciliation services, ensuring that your accounts are continuously accurate and up-to-date.",
   },
 ];
@@ -160,7 +160,10 @@ export default function AccountsReconciliation() {
                     gridCards={WhyYouNeedCards}
                   />
 
-                  <FAQs title="Our Approach" faqs={OurApproachCards} />
+                  <OurApproach
+                    title="Our Approach"
+                    ourApproach={OurApproachCards}
+                  />
 
                   <ServicesFooter
                     href="/services/tax-planning"
