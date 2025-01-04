@@ -410,7 +410,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/compliance"
+                    href="/services/compliance/statutory-reporting-and-compliance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Statutory Reporting and Compliance
@@ -418,7 +418,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/compliance"
+                    href="/services/compliance/corporate-governance-advisory"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Corporate Governance Advisory
@@ -426,7 +426,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/compliance"
+                    href="/services/compliance/industry-regulatory-filings"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Industry-Specific Regulatory Filings
@@ -434,7 +434,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/compliance"
+                    href="/services/compliance/anti-money-laundering-compliance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Anti-Money Laundering (AML) Compliance
@@ -442,7 +442,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/compliance"
+                    href="/services/compliance/internal-controls-and-auditing"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Internal Controls and Auditing
@@ -450,7 +450,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/compliance"
+                    href="/services/compliance/employment-and-labor-law-compliance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Employment and Labor Law Compliance
@@ -458,7 +458,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/compliance"
+                    href="/services/compliance/corporate-secretarial-services"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Corporate Secretarial Services
@@ -466,7 +466,7 @@ export default function Navbar() {
                 </li>
                 <li>
                   <Link
-                    href="/services/compliance"
+                    href="/services/compliance/environmental-social-and-governance"
                     className="text-black hover:text-[#fbc710] transition-colors"
                   >
                     Environmental, Social, and Governance (ESG)
