@@ -2,9 +2,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import bcrypt from "bcrypt";
-// import dbConnect from "@/db/dbConnect";
-// import User from "@/models/userModel";
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -16,7 +13,7 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials: any): Promise<any> {
-        // await dbConnect();
+        
         try {
           //   const user = await User.findOne({
           //     $or: [
@@ -63,7 +60,6 @@ export const authOptions: NextAuthOptions = {
         // token.isAcceptingMessages = user.isAcceptingMessages;
         // token.username = user.username;
       }
-
       return token;
     },
   },
